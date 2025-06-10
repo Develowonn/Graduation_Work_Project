@@ -86,5 +86,5 @@ crashlytics-build.properties
 
 # Custom
 /[Aa]ssets/*
-!/[Aa]ssets/00. Src
+!/[Aa]ssets/00. Src/
 !/[Aa]ssets/00. Src/**
