@@ -88,5 +88,3 @@ crashlytics-build.properties
 /[Aa]ssets/*
 !/[Aa]ssets/00. Src/
 !/[Aa]ssets/00. Src/**
-!/[Aa]ssets/03. Levels/
-!/[Aa]ssets/03. Levels/**
