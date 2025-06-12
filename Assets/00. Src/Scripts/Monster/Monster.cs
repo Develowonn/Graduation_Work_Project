@@ -5,8 +5,8 @@ public class Monster : MonoBehaviour
 {
     [Header("Stats")]
     [SerializeField] private float moveSpeed = 1.5f;
-    [SerializeField] private int maxHp = 1;
-    private int currentHp;
+    [SerializeField] private float maxHp = 1;
+    private float currentHp;
     private string monsterName;
 
     private Transform target;
@@ -38,10 +38,10 @@ public class Monster : MonoBehaviour
 
         Vector3 nextPosition = direction * moveSpeed * Time.fixedDeltaTime;
         rb.MovePosition(rb.position + nextPosition);
-        
+        transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         currentHp -= damage;
         if (currentHp <= 0)
