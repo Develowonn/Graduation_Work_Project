@@ -8,6 +8,7 @@ public class Monster : MonoBehaviour
     [SerializeField] private float maxHp = 1;
     private float currentHp;
     private string monsterName;
+    [SerializeField] private float dropExp = 10f;
 
     private Transform target;
     private Rigidbody rb;
@@ -50,6 +51,7 @@ public class Monster : MonoBehaviour
 
     private void Die()
     {
+        StageManager.instance.MonsterDie(dropExp);
         ObjectPool.instance.ReturnToPool(monsterName, gameObject);
     }
 
