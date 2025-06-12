@@ -40,7 +40,8 @@ public class MonsterSpawnManager : MonoBehaviour
                 Vector3 spawnPosition = playerPosition.position + direction * distance;
 
                 spawnPosition.y = playerPosition.position.y;
-                ObjectPool.instance._SpawnFromPool(monsterNameList[Random.Range(0, monsterNameList.Count)], spawnPosition).GetComponent<Monster>().InitPlayer(playerPosition);
+                string monsterName = monsterNameList[Random.Range(0, monsterNameList.Count)];
+                ObjectPool.instance.SpawnFromPool(monsterName, spawnPosition).GetComponent<Monster>().InitMonster(playerPosition, monsterName);
 
                 yield return spawnDelaySeconds;
             }

@@ -34,10 +34,10 @@ public class ObjectPool : MonoBehaviour
         if (instance == null) instance = this;
         else Destroy(gameObject);
 
-        _Init();
+        Init();
     }
 
-    private void _Init()
+    private void Init()
     {
         foreach (Pool pool in poolList)
             poolDictionary.Add(pool.poolName, pool);
@@ -67,7 +67,7 @@ public class ObjectPool : MonoBehaviour
     /// <param name="name">풀링할 오브젝트 이름</param>
     /// <param name="position">위치</param>
     /// <returns></returns>
-    public GameObject _SpawnFromPool(string name, Vector3 position)
+    public GameObject SpawnFromPool(string name, Vector3 position)
     {
         Pool currentPool = poolDictionary[name];
 
@@ -93,7 +93,7 @@ public class ObjectPool : MonoBehaviour
     /// <param name="position">위치</param>
     /// <param name="rotate">방향</param>
     /// <returns></returns>
-    public GameObject _SpawnFromPool(string name, Vector3 position, Quaternion rotate)
+    public GameObject SpawnFromPool(string name, Vector3 position, Quaternion rotate)
     {
         Pool currentPool = poolDictionary[name];
 
@@ -118,7 +118,7 @@ public class ObjectPool : MonoBehaviour
     /// </summary>
     /// <param name="name">리턴할 이름</param>
     /// <param name="currentObject">리턴할 오브젝트</param>
-    public void _ReturnToPool(string name, GameObject currentObject)
+    public void ReturnToPool(string name, GameObject currentObject)
     {
         Pool pool = poolDictionary[name];
 

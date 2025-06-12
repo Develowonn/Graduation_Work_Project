@@ -7,6 +7,7 @@ public class Monster : MonoBehaviour
     [SerializeField] private float moveSpeed = 1.5f;
     [SerializeField] private int maxHp = 1;
     private int currentHp;
+    private string monsterName;
 
     private Transform target;
     private Rigidbody rb;
@@ -21,9 +22,10 @@ public class Monster : MonoBehaviour
         currentHp = maxHp;
     }
 
-    public void InitPlayer(Transform playerTransform)
+    public void InitMonster(Transform playerTransform, string monsterName)
     {
-        target = playerTransform;
+        this.target = playerTransform;
+        this.monsterName = monsterName;
     }
 
     private void FixedUpdate()
@@ -36,6 +38,7 @@ public class Monster : MonoBehaviour
 
         Vector3 nextPosition = direction * moveSpeed * Time.fixedDeltaTime;
         rb.MovePosition(rb.position + nextPosition);
+        
     }
 
     public void TakeDamage(int damage)
@@ -47,17 +50,17 @@ public class Monster : MonoBehaviour
 
     private void Die()
     {
-        gameObject.SetActive(false);
+        ObjectPool.instance.ReturnToPool(monsterName, gameObject);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             // 플레이어에게 데미지 주기 (예시)
             // other.GetComponent<Player>().TakeDamage(1);
 
-            Die(); // 자폭형 몬스터인 경우
+            // Die(); // 자폭형 몬스터인 경우
         }
     }
 }
