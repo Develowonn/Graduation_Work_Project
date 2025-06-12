@@ -23,4 +23,3 @@ public class MovementRigidbody : MonoBehaviour
         MovementDir = moveDir;
     }
 }
-e
