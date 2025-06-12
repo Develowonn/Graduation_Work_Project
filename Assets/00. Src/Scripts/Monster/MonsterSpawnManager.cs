@@ -28,22 +28,24 @@ public class MonsterSpawnManager : MonoBehaviour
 
     private IEnumerator SpawnMonster()
     {
-        int count = Random.Range(minSpawnMonsterCount, maxSpawnMonsterCount);
-        for (int i = 0; i < count; i++)
+        while (true)
         {
-            float angle = Random.Range(0f, 360f);
-            float distance = Random.Range(minDistance, maxDistance);
+            int count = Random.Range(minSpawnMonsterCount, maxSpawnMonsterCount);
+            for (int i = 0; i < count; i++)
+            {
+                float angle = Random.Range(0f, 360f);
+                float distance = Random.Range(minDistance, maxDistance);
 
-            // 회전 방향 벡터 계산 (XZ 평면 기준)
-            Vector3 direction = Quaternion.Euler(0, angle, 0) * Vector3.forward;
-            Vector3 spawnPosition = playerPosition.position + direction * distance;
+                Vector3 direction = Quaternion.Euler(0, angle, 0) * Vector3.forward;
+                Vector3 spawnPosition = playerPosition.position + direction * distance;
 
-            // 높이(y)는 플레이어 기준으로 유지하거나, 지형 따라 수정
-            spawnPosition.y = playerPosition.position.y;
-            ObjectPool.instance._SpawnFromPool("Monster", spawnPosition);
-            yield return spawnDelaySeconds;
+                spawnPosition.y = playerPosition.position.y;
+                ObjectPool.instance._SpawnFromPool(monsterNameList[Random.Range(0, monsterNameList.Count)], spawnPosition).GetComponent<Monster>().InitPlayer(playerPosition);
+
+                yield return spawnDelaySeconds;
+            }
+
+            yield return spawnCoroutineDelaySeconds; // 다음 웨이브까지 대기
         }
-        yield return spawnDelaySeconds;
-        StartCoroutine(SpawnMonster());
     }
 }
