@@ -36,6 +36,7 @@ public class StageManager : MonoBehaviour
     {
         if (levelUpPanel.activeSelf == false)
         {
+            Time.timeScale = 0f;
             levelUpPanel.SetActive(true);
             AnimatePop(levelUpBtn_1.transform);
             AnimatePop(levelUpBtn_2.transform);
@@ -47,6 +48,7 @@ public class StageManager : MonoBehaviour
     private void ClosePlayerLevelUpPanel()
     {
         levelUpPanel.SetActive(false);
+        Time.timeScale = 1f;
         if (playerLevelUpCount > 0)
         {
             PlayerLevelUp();
@@ -56,9 +58,10 @@ public class StageManager : MonoBehaviour
 
     private void AnimatePop(Transform target)
     {
-        target.localScale = Vector3.zero; // 시작 크기
+        target.localScale = Vector3.zero;
         target.DOScale(Vector3.one, 0.3f)
-              .SetEase(Ease.OutBack); // 팝 효과
+              .SetEase(Ease.OutBack)
+              .SetUpdate(true);
     }
 
     public void MonsterDie(float exp)
