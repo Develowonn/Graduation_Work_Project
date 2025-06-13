@@ -4,24 +4,34 @@ using UnityEngine;
 public class PlayerAttackManager : MonoBehaviour
 {
     private readonly List<PlayerAttackSkill> attackSkillList = new();
-    [SerializeField] private PlayerAttackSkill thunderStrikePrefab; // 임시
 
-    void Start()
+    public void EquipWeapon(PlayerAttackSkill skillPrefab)
     {
-        EquipWeapon(thunderStrikePrefab);  // ThunderStrike 오브젝트 인스턴스화됨
+        attackSkillList.Add(skillPrefab);
     }
 
-
-    public void EquipWeapon(PlayerAttackSkill weaponPrefab)
+    public void UnequipWeapon(PlayerAttackSkill skill)
     {
-        var w = Instantiate(weaponPrefab, transform);
-        attackSkillList.Add(w);
+        if (attackSkillList.Remove(skill))
+            Destroy(skill.gameObject);
     }
 
-    public void UnequipWeapon(PlayerAttackSkill weapon)
+    public void GetOrLevelUpSkill(PlayerSkillData skillData)
     {
-        if (attackSkillList.Remove(weapon))
-            Destroy(weapon.gameObject);
+        bool haveSkill = false;
+        foreach (var s in attackSkillList)
+        {
+            if(skillData.skillName == s.GetSkillName()) haveSkill = true;
+        }
+
+        if (haveSkill) // 스킬이 있다면
+        {
+            skillData.LevelUpSkill(); // 레벨업
+        }
+        else // 없을 때
+        {
+            EquipWeapon(skillData.NewSkill(transform)); // 스킬 생성 및 장착
+        }
     }
 
     private void Update()

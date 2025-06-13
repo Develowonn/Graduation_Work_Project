@@ -2,6 +2,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class StageManager : MonoBehaviour
 {
@@ -22,14 +23,18 @@ public class StageManager : MonoBehaviour
 
     [Header("Player")]
     [SerializeField] private PlayerStat playerStat;
+    [SerializeField] private PlayerAttackManager playerAttackManager;
     private int playerLevelUpCount = 0;
+    [SerializeField] private List<PlayerSkillData> playerSkillDataList = new List<PlayerSkillData>();
 
     private void Awake()
     {
         instance = this;
-        levelUpBtn_1.GetComponent<Button>().onClick.AddListener(ClosePlayerLevelUpPanel);
-        levelUpBtn_2.GetComponent<Button>().onClick.AddListener(ClosePlayerLevelUpPanel);
-        levelUpBtn_3.GetComponent<Button>().onClick.AddListener(ClosePlayerLevelUpPanel);
+    }
+
+    private void Start()
+    {
+        LevelUpPlayer();
     }
 
     public void LevelUpPlayer()
@@ -38,11 +43,19 @@ public class StageManager : MonoBehaviour
         {
             Time.timeScale = 0f;
             levelUpPanel.SetActive(true);
-            PopAnimate(levelUpBtn_1.transform);
-            PopAnimate(levelUpBtn_2.transform);
-            PopAnimate(levelUpBtn_3.transform);
+            InitLevelUpBtn(playerSkillDataList[Random.Range(0, playerSkillDataList.Count)], levelUpBtn_1);
+            InitLevelUpBtn(playerSkillDataList[Random.Range(0, playerSkillDataList.Count)], levelUpBtn_2);
+            InitLevelUpBtn(playerSkillDataList[Random.Range(0, playerSkillDataList.Count)], levelUpBtn_3);
         }
         else playerLevelUpCount++;
+    }
+
+    public void InitLevelUpBtn(PlayerSkillData skillData, LevelUpBtn btn)
+    {
+        Debug.Log("추가 : " + skillData.skillName);
+        btn.InitBtn(skillData, playerAttackManager); // 버튼 초기화 (강화할 스킬, 플레이어 공격 매니저)
+        PopAnimate(btn.transform); 
+        btn.GetComponent<Button>().onClick.AddListener(ClosePlayerLevelUpPanel); // 선택시 패널 끄기 추가
     }
 
     private void ClosePlayerLevelUpPanel()

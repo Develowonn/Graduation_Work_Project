@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22d2632c378c0440bfb86ca07a6d468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillName: ThunderStrike
   baseCooldown: 3
   level: 1
   damageMultiplier: 10

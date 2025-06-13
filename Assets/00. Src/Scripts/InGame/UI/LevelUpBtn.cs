@@ -8,11 +8,19 @@ public class LevelUpBtn : MonoBehaviour
     [SerializeField] private Image skillImage;
     [SerializeField] private TextMeshProUGUI skillName;
     [SerializeField] private TextMeshProUGUI skillExplanation;
+    [SerializeField] private Button button;
 
-    public void InitBtn(Sprite sprite, string skillName, string skillExplanation)
+    private void Awake()
     {
-        skillImage.sprite = sprite;
-        this.skillName.text = skillName;
-        this.skillExplanation.text = skillExplanation;
+        button = GetComponent<Button>();
+    }
+
+    public void InitBtn(PlayerSkillData playerSkillData, PlayerAttackManager playerAttackManager)
+    {
+        skillImage.sprite = playerSkillData.skillSprite;
+        this.skillName.text = playerSkillData.skillName;
+        this.skillExplanation.text = playerSkillData.skillDesription;
+        button.onClick.RemoveAllListeners();
+        button.onClick.AddListener(() => playerAttackManager.GetOrLevelUpSkill(playerSkillData));
     }
 }

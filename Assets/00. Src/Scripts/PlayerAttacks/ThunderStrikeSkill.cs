@@ -20,7 +20,7 @@ public class ThunderStrikeSkill : PlayerAttackSkill
         attackDelaySceconds = new WaitForSeconds(attackDelay);
     }
 
-    private void Start()
+    private void OnEnable()
     {
         targeting = new RandomNEnemyTargetingStrategy(range, targetCount, monsterMask);
     }
