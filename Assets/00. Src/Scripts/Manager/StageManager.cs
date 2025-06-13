@@ -25,7 +25,7 @@ public class StageManager : MonoBehaviour
     [SerializeField] private PlayerStat playerStat;
     [SerializeField] private PlayerAttackManager playerAttackManager;
     private int playerLevelUpCount = 0;
-    [SerializeField] private List<PlayerSkillData> playerSkillDataList = new List<PlayerSkillData>();
+    [SerializeField] private List<SkillSO> playerSkillDataList = new List<SkillSO>();
 
     private void Awake()
     {
@@ -50,7 +50,7 @@ public class StageManager : MonoBehaviour
         else playerLevelUpCount++;
     }
 
-    public void InitLevelUpBtn(PlayerSkillData skillData, LevelUpBtn btn)
+    public void InitLevelUpBtn(SkillSO skillData, LevelUpBtn btn)
     {
         Debug.Log("추가 : " + skillData.skillName);
         btn.InitBtn(skillData, playerAttackManager); // 버튼 초기화 (강화할 스킬, 플레이어 공격 매니저)

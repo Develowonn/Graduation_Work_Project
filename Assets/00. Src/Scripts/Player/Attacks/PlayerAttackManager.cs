@@ -16,7 +16,7 @@ public class PlayerAttackManager : MonoBehaviour
             Destroy(skill.gameObject);
     }
 
-    public void GetOrLevelUpSkill(PlayerSkillData skillData)
+    public void GetOrLevelUpSkill(SkillSO skillData)
     {
         bool haveSkill = false;
         foreach (var s in attackSkillList)

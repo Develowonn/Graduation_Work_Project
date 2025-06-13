@@ -22,7 +22,7 @@ public class ThunderStrikeSkill : PlayerAttackSkill
 
     private void OnEnable()
     {
-        targeting = new RandomNEnemyTargetingStrategy(range, targetCount, monsterMask);
+        targeting = new RandomEnemysTargetingStrategy(range, targetCount, monsterMask);
     }
 
     public override void Attack()
@@ -33,7 +33,7 @@ public class ThunderStrikeSkill : PlayerAttackSkill
     IEnumerator Co_AttackEffect()
     {
         Debug.Log("공격시도");
-        (targeting as RandomNEnemyTargetingStrategy).Init(range, targetCount + level, monsterMask);
+        (targeting as RandomEnemysTargetingStrategy).Init(range, targetCount + level, monsterMask);
         var targets = targeting.GetTargets(transform);
         foreach (var target in targets)
         {

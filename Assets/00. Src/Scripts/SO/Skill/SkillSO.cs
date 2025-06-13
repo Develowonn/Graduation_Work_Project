@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "PlayerSkillData", menuName = "Scriptable Objects/PlayerSkillData")]
-public class PlayerSkillData : ScriptableObject
+[CreateAssetMenu(fileName = "SkillSO", menuName = "Scriptable Objects/SkillSO")]
+public class SkillSO : ScriptableObject
 {
     public string skillName;
     public Sprite skillSprite;
