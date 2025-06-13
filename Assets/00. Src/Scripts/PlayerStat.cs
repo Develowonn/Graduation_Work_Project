@@ -19,7 +19,7 @@ public class PlayerStat : MonoBehaviour
         {
             currentExp -= maxExp;
             level = level + 1;
-            StageManager.instance.PlayerLevelUp();
+            StageManager.instance.LevelUpPlayer();
         }
         expBar.value = currentExp / maxExp;
     }

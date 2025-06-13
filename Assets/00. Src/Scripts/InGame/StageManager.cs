@@ -32,15 +32,15 @@ public class StageManager : MonoBehaviour
         levelUpBtn_3.GetComponent<Button>().onClick.AddListener(ClosePlayerLevelUpPanel);
     }
 
-    public void PlayerLevelUp()
+    public void LevelUpPlayer()
     {
         if (levelUpPanel.activeSelf == false)
         {
             Time.timeScale = 0f;
             levelUpPanel.SetActive(true);
-            AnimatePop(levelUpBtn_1.transform);
-            AnimatePop(levelUpBtn_2.transform);
-            AnimatePop(levelUpBtn_3.transform);
+            PopAnimate(levelUpBtn_1.transform);
+            PopAnimate(levelUpBtn_2.transform);
+            PopAnimate(levelUpBtn_3.transform);
         }
         else playerLevelUpCount++;
     }
@@ -51,12 +51,12 @@ public class StageManager : MonoBehaviour
         Time.timeScale = 1f;
         if (playerLevelUpCount > 0)
         {
-            PlayerLevelUp();
+            LevelUpPlayer();
             playerLevelUpCount--;
         }
     }
 
-    private void AnimatePop(Transform target)
+    private void PopAnimate(Transform target)
     {
         target.localScale = Vector3.zero;
         target.DOScale(Vector3.one, 0.3f)
@@ -64,12 +64,12 @@ public class StageManager : MonoBehaviour
               .SetUpdate(true);
     }
 
-    public void MonsterDie(float exp)
+    public void DieMonster(float exp)
     {
         playerStat.GetExp(exp);
     }
 
-    public void GameEnd(float time)
+    public void EndGame(float time)
     {
         resultTime = time;
         resultUI.SetActive(true);

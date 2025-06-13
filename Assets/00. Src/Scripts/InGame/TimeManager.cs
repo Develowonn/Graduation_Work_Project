@@ -34,7 +34,7 @@ public class TimeManager : MonoBehaviour
             else
             {
                 currentTime = maxTime;
-                StageManager.instance.GameEnd(currentTime);
+                StageManager.instance.EndGame(currentTime);
                 break;
             }
         }

@@ -2,7 +2,7 @@ using NUnit.Framework.Constraints;
 using System.Collections;
 using UnityEngine;
 
-public class ThunderStrikeSkill : PlayerAttackWeapon
+public class ThunderStrikeSkill : PlayerAttackSkill
 {
     [SerializeField] private float damageMultiplier = 10f;
     [SerializeField] private float range = 6f;

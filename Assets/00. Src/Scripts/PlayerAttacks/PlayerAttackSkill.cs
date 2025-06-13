@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public abstract class PlayerAttackWeapon : MonoBehaviour
+public abstract class PlayerAttackSkill : MonoBehaviour
 {
     [SerializeField] protected float baseCooldown = 1f;
     [SerializeField] protected int level = 1;

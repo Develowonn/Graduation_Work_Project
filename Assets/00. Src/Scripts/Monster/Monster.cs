@@ -51,7 +51,7 @@ public class Monster : MonoBehaviour
 
     private void Die()
     {
-        StageManager.instance.MonsterDie(dropExp);
+        StageManager.instance.DieMonster(dropExp);
         ObjectPool.instance.ReturnToPool(monsterName, gameObject);
     }
 
