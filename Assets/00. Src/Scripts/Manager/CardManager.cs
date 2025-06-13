@@ -25,6 +25,8 @@ public class CardManager : MonoBehaviour
 
     public Card GetRandomCard()
     {
+        if (cardDatabase.Count <= 0) return null;
+
         int randomIndex = Random.Range(0, cardDatabase.Count);
         Card card       = Instantiate(cardDatabase[randomIndex].card);
 
