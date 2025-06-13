@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ca1056b85a4b444b9ae85fa3830dac, type: 3}
   m_Name: ThunderStrike
   m_EditorClassIdentifier: 
-  skillName: ThunderStrike
-  skillSprite: {fileID: 21300000, guid: 7ab74e659e1f0a34d9cfec21c478fc12, type: 3}
-  skillDesription: kwang kwang
+  skillName: "\uBC88\uAC1C"
+  skillSprite: {fileID: 21300000, guid: c46440772bef16343bf72f7fe790b547, type: 3}
+  skillDesription: "\uC6B0\uB974\uB974 \uCF85"
   skillObject: {fileID: 5268442356170747994, guid: 52b95b28ff5f3294b8f9b2e50a5d6ba4, type: 3}
   inGameSkillObject: {fileID: 0}

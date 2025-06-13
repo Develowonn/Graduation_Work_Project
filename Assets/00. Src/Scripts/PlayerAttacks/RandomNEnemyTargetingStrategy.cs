@@ -15,6 +15,13 @@ public class RandomNEnemyTargetingStrategy : IMultiTargetingStrategy
         this.targetMask = targetMask;
     }
 
+    public void Init(float radius, int count, LayerMask targetMask)
+    {
+        this.radius = radius;
+        this.count = count;
+        this.targetMask = targetMask;
+    }
+
     public List<Transform> GetTargets(Transform origin)
     {
         Collider[] hits = Physics.OverlapSphere(origin.position, radius, targetMask);

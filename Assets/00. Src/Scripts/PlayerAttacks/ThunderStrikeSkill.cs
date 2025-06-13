@@ -33,6 +33,7 @@ public class ThunderStrikeSkill : PlayerAttackSkill
     IEnumerator Co_AttackEffect()
     {
         Debug.Log("공격시도");
+        (targeting as RandomNEnemyTargetingStrategy).Init(range, targetCount + level, monsterMask);
         var targets = targeting.GetTargets(transform);
         foreach (var target in targets)
         {
