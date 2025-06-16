@@ -22,4 +22,9 @@ public class MovementRigidbody : MonoBehaviour
     {
         MovementDir = moveDir;
     }
+
+	public void MoveToLocal(Vector3 moveDir)
+	{
+		MovementDir = transform.TransformDirection(moveDir);
+	}
 }
