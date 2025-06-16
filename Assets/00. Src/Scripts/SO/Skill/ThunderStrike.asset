@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a7ef1ff40dd0984597c8cec772027cf, type: 3}
+  m_Script: {fileID: 11500000, guid: c4368bc794a5b03479ddcf870d30ecfc, type: 3}
   m_Name: ThunderStrike
   m_EditorClassIdentifier: 
-  skillName: 
-  skillSprite: {fileID: 0}
-  skillDesription: 
-  skillObject: {fileID: 0}
+  skillName: "\uBC88\uAC1C"
+  skillSprite: {fileID: 21300012, guid: 09e4c6a7d75923945afe43953ef58ad2, type: 3}
+  skillDesription: "\uC6B0\uB974\uB974 \uCF85!"
+  skillObject: {fileID: 5268442356170747994, guid: 52b95b28ff5f3294b8f9b2e50a5d6ba4, type: 3}
   inGameSkillObject: {fileID: 0}
