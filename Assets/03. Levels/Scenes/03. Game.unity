@@ -2265,8 +2265,8 @@ MonoBehaviour:
   levelUpBtn_2: {fileID: 1701475245}
   levelUpBtn_3: {fileID: 48250591}
   resultTime: 0
-  playerStat: {fileID: 1908867419}
-  playerAttackManager: {fileID: 1908867418}
+  playerStat: {fileID: 1463758350}
+  playerAttackManager: {fileID: 1463758351}
   playerSkillDataList:
   - {fileID: 11400000, guid: d3a2946fc97d46048b4999f5a996919f, type: 2}
 --- !u!1 &361448464
@@ -8886,7 +8886,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!95 &1463758356
 Animator:
@@ -8919,7 +8919,7 @@ Transform:
   m_GameObject: {fileID: 1463758349}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.235, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
