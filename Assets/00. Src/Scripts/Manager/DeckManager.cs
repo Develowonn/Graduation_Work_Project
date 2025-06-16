@@ -11,14 +11,31 @@ public class DeckManager : MonoBehaviour
     [SerializeField]
     private int         maxDeckSize;
 
+    [Header("UI")]
+    [SerializeField]
+    private Transform   myDeckUIParents;
+    private Animator    myDeckAnimator;
+    private bool        isUsingDeck;
+
     private Card        selectedCard;
 
     private void Start()
     {
         myDeck = new List<Card>();
+
+        myDeckAnimator = myDeckUIParents.GetComponent<Animator>();
     }
 
-    private void InitializeDeck()
+	private void Update()
+	{
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+			isUsingDeck = isUsingDeck != true;
+			myDeckAnimator.SetBool("IsUsingDeck", isUsingDeck);
+		}
+    }
+
+	private void InitializeDeck()
     {
         for(int i = 0; i < maxDeckSize; i++)
         {

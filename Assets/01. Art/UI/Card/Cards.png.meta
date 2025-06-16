@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d18cc080677c4a14f80b607bb7aa9dfe
+guid: 1434e6820ef53654f90f8a39387c58c3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -44,7 +44,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: card-removebg-preview_0
+      name: Cards_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 32
-        width: 196
-        height: 296
+        x: 17
+        y: 13
+        width: 1283
+        height: 1953
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42ec8545a5cb9774a917b0fb266f1dbe
-      internalID: 1049838814
+      spriteID: 6d7ebc29d925de4479339563a3911f4e
+      internalID: 1314126986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: card-removebg-preview_1
+      name: Cards_1
       rect:
         serializedVersion: 2
-        x: 244
-        y: 32
-        width: 195
-        height: 294
+        x: 1700
+        y: 13
+        width: 1283
+        height: 1953
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 621eb447c30edac4f8884e6ac833abfa
-      internalID: -1019890963
+      spriteID: 71366bc2de52db1459b9328a3a14a6ff
+      internalID: -839644036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: card-removebg-preview_2
+      name: Cards_2
       rect:
         serializedVersion: 2
-        x: 460
-        y: 32
-        width: 194
-        height: 294
+        x: 3384
+        y: 0
+        width: 1281
+        height: 1966
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,8 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcf9e16469be62a48be85f09181a429c
-      internalID: -719279212
+      spriteID: 5c7bdfe36873e59439ecb4231d7f6cef
+      internalID: -1667699335
       vertices: []
       indices: 
       edges: []
@@ -166,7 +166,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7fac282a0d28ab94bb9ca37ff77f8d4c
+    spriteID: be5eea8dd3b26dc4ca8ae034d0503537
     internalID: 0
     vertices: []
     indices: 
@@ -176,9 +176,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      card-removebg-preview_0: 1049838814
-      card-removebg-preview_1: -1019890963
-      card-removebg-preview_2: -719279212
+      Cards_0: 1314126986
+      Cards_1: -839644036
+      Cards_2: -1667699335
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
