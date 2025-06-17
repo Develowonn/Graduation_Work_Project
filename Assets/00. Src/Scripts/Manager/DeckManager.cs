@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class DeckManager : MonoBehaviour
 {
-    [Space(10), SerializeField]
-    private List<Card>  myDeck;
     [SerializeField]
     private int         maxDeckSize;
 
@@ -17,6 +15,7 @@ public class DeckManager : MonoBehaviour
     private Animator    myDeckAnimator;
     private bool        isUsingDeck;
 
+    private List<Card>  myDeck;
     private Card        selectedCard;
 
     private void Start()
@@ -24,6 +23,8 @@ public class DeckManager : MonoBehaviour
         myDeck = new List<Card>();
 
         myDeckAnimator = myDeckUIParents.GetComponent<Animator>();
+
+        InitializeDeck();
     }
 
 	private void Update()

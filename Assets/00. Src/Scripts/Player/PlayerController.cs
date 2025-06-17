@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     private int               xDirHash;
 
     private Animator          animator;
+
+    private PlayerStat        playerStat;
     private MovementRigidbody movementRigidbody;
 
     private void Start()
@@ -18,6 +20,8 @@ public class PlayerController : MonoBehaviour
         xDirHash          = Animator.StringToHash("XDir");
 
         animator          = GetComponent<Animator>();
+
+        playerStat        = GetComponent<PlayerStat>();
         movementRigidbody = GetComponent<MovementRigidbody>();
     }
 
@@ -29,5 +33,16 @@ public class PlayerController : MonoBehaviour
     private void MoveToForward()
     {
         movementRigidbody.MoveToLocal(Vector3.forward);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        float reduceedDamage = damage * (1.0f - playerStat.GetDamageReduction());
+        playerStat.ReduceHP(reduceedDamage);
+
+        if(playerStat.GetCurrentHP() <= 0.0f)
+        {
+
+        }
     }
 }
