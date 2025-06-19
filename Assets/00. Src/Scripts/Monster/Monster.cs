@@ -10,6 +10,7 @@ public class Monster : MonoBehaviour
     private float currentHp;
     private string monsterName;
     [SerializeField] private float dropExp = 10f;
+    [SerializeField] private float attackPower;
 
     [Header("UI")]
     [SerializeField] private Image hpBar;
@@ -44,6 +45,11 @@ public class Monster : MonoBehaviour
         Vector3 nextPosition = direction * moveSpeed * Time.fixedDeltaTime;
         rb.MovePosition(rb.position + nextPosition);
         transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
+    }
+
+    public float GetAttackPower()
+    {
+        return attackPower;
     }
 
     public void TakeDamage(float damage)

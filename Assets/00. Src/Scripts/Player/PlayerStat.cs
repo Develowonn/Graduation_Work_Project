@@ -26,7 +26,8 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] private float damageReduction;
 
     [Header("UI")]
-    [SerializeField] private Slider expBar;
+    [SerializeField] private Image expBar;
+    [SerializeField] private Image hpBar;
 
     private float currentExp = 0;
 
@@ -44,7 +45,8 @@ public class PlayerStat : MonoBehaviour
             level = level + 1;
             StageManager.instance.LevelUpPlayer();
         }
-        expBar.value = currentExp / maxExp;
+        expBar.fillAmount = currentExp / maxExp;
+        Debug.Log($"ExpBar Value : {expBar.fillAmount} | currentExp / maxExp {currentExp / maxExp}");
     }
 
     public float GetMaxHP() { return maxHP; }
@@ -61,6 +63,8 @@ public class PlayerStat : MonoBehaviour
     public void ReduceHP(float value)
     {
         currentHP = Mathf.Clamp(currentHP - value, 0, maxHP);
+        hpBar.fillAmount = currentHP / maxHP;
+        Debug.Log($"HpBar Value : {hpBar.fillAmount} | currentHp / maxHp {currentHP / maxHP}");
     }
 
     public void IncreaseMovementSpeed(float value)

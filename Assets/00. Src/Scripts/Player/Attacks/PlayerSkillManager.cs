@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttackManager : MonoBehaviour
+public class PlayerSkillManager : MonoBehaviour
 {
     private readonly List<PlayerAttackSkill> attackSkillList = new();
 
-    public void EquipWeapon(PlayerAttackSkill skillPrefab)
+    public void EquipSkill(PlayerAttackSkill skillPrefab)
     {
         attackSkillList.Add(skillPrefab);
     }
 
-    public void UnequipWeapon(PlayerAttackSkill skill)
+    public void UnequipSkill(PlayerAttackSkill skill)
     {
         if (attackSkillList.Remove(skill))
             Destroy(skill.gameObject);
@@ -30,7 +30,7 @@ public class PlayerAttackManager : MonoBehaviour
         }
         else // 없을 때
         {
-            EquipWeapon(skillData.NewSkill(transform)); // 스킬 생성 및 장착
+            EquipSkill(skillData.NewSkill(transform)); // 스킬 생성 및 장착
         }
     }
 
