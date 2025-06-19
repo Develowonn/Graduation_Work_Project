@@ -23,7 +23,7 @@ public class StageManager : MonoBehaviour
 
     [Header("Player")]
     [SerializeField] private PlayerStat playerStat;
-    [SerializeField] private PlayerAttackManager playerAttackManager;
+    [SerializeField] private PlayerSkillManager playerAttackManager;
     private int playerLevelUpCount = 0;
     [SerializeField] private List<SkillSO> playerSkillDataList = new List<SkillSO>();
 

@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     private PlayerStat        playerStat;
     private MovementRigidbody movementRigidbody;
 
+    [SerializeField] private float damageInterval = 1f; // 피해 간격
+    private float lastDamageTime;
+
     private void Start()
     {
         facingDirection   = FacingDirection.Forward;
@@ -43,6 +46,18 @@ public class PlayerController : MonoBehaviour
         if(playerStat.GetCurrentHP() <= 0.0f)
         {
 
+        }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.CompareTag("Monster"))
+        {
+            if (Time.time >= lastDamageTime + damageInterval)
+            {
+                TakeDamage(collision.collider.GetComponent<Monster>().GetAttackPower());
+                lastDamageTime = Time.time;
+            }
         }
     }
 }

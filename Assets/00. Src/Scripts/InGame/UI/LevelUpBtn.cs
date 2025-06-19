@@ -15,7 +15,7 @@ public class LevelUpBtn : MonoBehaviour
         button = GetComponent<Button>();
     }
 
-    public void InitBtn(SkillSO playerSkillData, PlayerAttackManager playerAttackManager)
+    public void InitBtn(SkillSO playerSkillData, PlayerSkillManager playerAttackManager)
     {
         skillImage.sprite = playerSkillData.skillSprite;                                            // 스킬 이미지
         this.skillName.text = playerSkillData.skillName;                                            // 스킬 이름
