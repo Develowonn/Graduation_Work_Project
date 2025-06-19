@@ -7,6 +7,7 @@ public abstract class PlayerAttackSkill : MonoBehaviour
     [SerializeField] private string skillName;
     [SerializeField] protected float baseCooldown = 1f;
     [SerializeField] protected int level = 1;
+    [SerializeField] protected string effectName = "ThunderEffect";
 
     protected float timer;
 

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4368bc794a5b03479ddcf870d30ecfc, type: 3}
+  m_Name: FireBallTrigger
+  m_EditorClassIdentifier: 
+  skillName: "\uD654\uC5FC\uAD6C"
+  skillSprite: {fileID: 21300000, guid: 8a7942d785433e640844a2e2ba9a59e8, type: 3}
+  skillDesription: "\uD654\uB974\uB975!"
+  skillObject: {fileID: 8413745170652661713, guid: 3665ad9ce5f3ad941b9c17a0931904f7, type: 3}
+  inGameSkillObject: {fileID: 0}
