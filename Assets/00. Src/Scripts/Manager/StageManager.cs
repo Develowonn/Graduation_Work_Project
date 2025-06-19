@@ -34,7 +34,6 @@ public class StageManager : MonoBehaviour
 
     private void Start()
     {
-        LevelUpPlayer();
     }
 
     public void LevelUpPlayer()
