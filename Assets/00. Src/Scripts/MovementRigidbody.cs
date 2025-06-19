@@ -11,6 +11,7 @@ public class MovementRigidbody : MonoBehaviour
     private void Start()
     {
         rigid    = GetComponent<Rigidbody>();
+        movementSpeed = GetComponent<PlayerStat>().GetMovementSpeedStat();
     }
 
     private void FixedUpdate()

@@ -12,9 +12,6 @@ public class Monster : MonoBehaviour
     [SerializeField] private float dropExp = 10f;
     [SerializeField] private float attackPower;
 
-    [Header("UI")]
-    [SerializeField] private Image hpBar;
-
     private Transform target;
     private Rigidbody rb;
 
@@ -55,7 +52,6 @@ public class Monster : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHp -= damage;
-        SetHPBar(currentHp / maxHp);
         if (currentHp <= 0)
             Die();
     }
@@ -64,10 +60,5 @@ public class Monster : MonoBehaviour
     {
         StageManager.instance.DieMonster(dropExp);
         ObjectPool.instance.ReturnToPool(monsterName, gameObject);
-    }
-
-    private void SetHPBar(float value)
-    {
-        hpBar.fillAmount = value;
     }
 }

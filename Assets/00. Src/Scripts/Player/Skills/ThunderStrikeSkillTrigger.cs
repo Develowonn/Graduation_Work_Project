@@ -2,14 +2,13 @@ using NUnit.Framework.Constraints;
 using System.Collections;
 using UnityEngine;
 
-public class ThunderStrikeSkill : PlayerAttackSkill
+public class ThunderStrikeSkillTrigger : PlayerAttackSkill
 {
     [SerializeField] private float damageMultiplier = 10f;
     [SerializeField] private float range = 6f;
     [SerializeField] private int targetCount = 3;
     [SerializeField] private LayerMask monsterMask;
     [SerializeField] private GameObject thunderEffectPrefab;
-    [SerializeField] private string effectName = "ThunderEffect";
     [SerializeField] private float attackDelay;
     private WaitForSeconds attackDelaySceconds;
 
