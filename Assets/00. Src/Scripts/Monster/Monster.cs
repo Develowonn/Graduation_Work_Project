@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Monster : MonoBehaviour
@@ -9,6 +10,9 @@ public class Monster : MonoBehaviour
     private float currentHp;
     private string monsterName;
     [SerializeField] private float dropExp = 10f;
+
+    [Header("UI")]
+    [SerializeField] private Image hpBar;
 
     private Transform target;
     private Rigidbody rb;
@@ -45,6 +49,7 @@ public class Monster : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHp -= damage;
+        SetHPBar(currentHp / maxHp);
         if (currentHp <= 0)
             Die();
     }
@@ -55,14 +60,8 @@ public class Monster : MonoBehaviour
         ObjectPool.instance.ReturnToPool(monsterName, gameObject);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void SetHPBar(float value)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            // 플레이어에게 데미지 주기 (예시)
-            // other.GetComponent<Player>().TakeDamage(1);
-
-            // Die(); // 자폭형 몬스터인 경우
-        }
+        hpBar.fillAmount = value;
     }
 }
