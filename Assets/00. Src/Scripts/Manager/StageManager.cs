@@ -4,9 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
+public enum InGameState
+{
+    playing,
+    end
+}
+
 public class StageManager : MonoBehaviour
 {
     public static StageManager instance;
+
+    [Header("State")]
+    [SerializeField] private InGameState currentGameState;
 
     [Header("UI")]
     [SerializeField] private GameObject resultUI;
@@ -34,6 +43,12 @@ public class StageManager : MonoBehaviour
 
     private void Start()
     {
+        currentGameState = InGameState.playing;
+    }
+
+    public InGameState GetCurrentGameState()
+    {
+        return currentGameState;
     }
 
     public void LevelUpPlayer()
@@ -83,6 +98,7 @@ public class StageManager : MonoBehaviour
 
     public void EndGame(float time)
     {
+        currentGameState = InGameState.end;
         resultTime = time;
         resultUI.SetActive(true);
         int minutes = (int)resultTime / 60;

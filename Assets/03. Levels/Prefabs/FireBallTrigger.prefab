@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42bb1eb802cacd14fa83e626ac45249e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: FireBall
+  skillName: "\uD654\uC5FC\uAD6C"
   baseCooldown: 2
   level: 1
   effectName: FireBallEffect
