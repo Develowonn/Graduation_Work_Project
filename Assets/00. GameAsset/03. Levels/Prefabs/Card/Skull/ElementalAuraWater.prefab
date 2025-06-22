@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4328916648751730767}
   - component: {fileID: 8242339546918537957}
   - component: {fileID: 2360561289588983148}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
+      maxColor: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4923,7 +4923,7 @@ GameObject:
   - component: {fileID: 7520365460193103517}
   - component: {fileID: 6458047210815251181}
   - component: {fileID: 4134194892358972902}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ElementalAuraWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4940,8 +4940,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 7.72, y: -0, z: -19.45}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4328916648751730767}
   m_Father: {fileID: 0}
@@ -5136,7 +5136,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.122641504, g: 0.122063, b: 0.122063, a: 1}
+      maxColor: {r: 0, g: 0, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

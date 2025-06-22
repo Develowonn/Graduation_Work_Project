@@ -27,18 +27,26 @@ public class DeckManager : MonoBehaviour
         myDeckAnimator = myDeckUIParents.GetComponent<Animator>();
 
         InitializeDeck();
-
-        myDeck[0].Execute();
     }
 
 	private void Update()
 	{
-        if (Input.GetKeyDown(KeyCode.Q))
+		//isUsingDeck = isUsingDeck != true;
+		//myDeckAnimator.SetBool("IsUsingDeck", isUsingDeck);
+
+		if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-			isUsingDeck = isUsingDeck != true;
-			myDeckAnimator.SetBool("IsUsingDeck", isUsingDeck);
+            myDeck[0].Execute();
 		}
-    }
+		else if (Input.GetKeyDown(KeyCode.Alpha2))
+		{
+			myDeck[1].Execute();
+		}
+		else if(Input.GetKeyDown(KeyCode.Alpha3))
+		{
+			myDeck[2].Execute();
+		}
+	}
 
 	private void InitializeDeck()
     {

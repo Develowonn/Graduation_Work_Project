@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1440702296890624531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7675630362054873359}
+  - component: {fileID: 5034386687440938878}
+  m_Layer: 0
+  m_Name: SkullCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7675630362054873359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440702296890624531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5034386687440938878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440702296890624531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda964dd768bf064eb22d04200002ba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: {x: 7, y: 7}
+  attackCoolTime: 0.2
+  skullLegCount: 30
+  zoomOutOffset: {x: 0, y: 12, z: -6}
+  completionTime: 1
+  skullOffset: {x: 0, y: 1.2, z: 0}
+  skullAuraOffset: {x: 0, y: 0.5, z: 0.1}
+  skullExplosionOffset: {x: 0, y: 1, z: 0}
+  skullLegBigAuraOffset: {x: 0, y: 0, z: 0}
+  skullLegAttackAuraOffset: {x: 0, y: 0.5, z: 0}
+  skullVFX: {fileID: 4318488197108944752, guid: 090fc9c98221bc24cae4cfe40e75e05f, type: 3}
+  skullAuraVFX: {fileID: 8591675646363167821, guid: 4a7afbf8acf73a94189ffffa7d90fa0f, type: 3}
+  skullAttackVFX: {fileID: 3707785849623107936, guid: e4faf97a894ddcd4d9f8ac2ab86880c4, type: 3}
+  skullExplosionVFX: {fileID: 4387482976666195449, guid: 31ee2ce995b10474fb2634025826764c, type: 3}
+  skullLegSmallAreaVFX: {fileID: 2029994919305669434, guid: 2ca14504b032eb548bdbc1f035fd9ff1, type: 3}
+  skullLegBigAreaVFX: {fileID: 4305017228978245934, guid: 73772b8b72fc99b4a91701aeb99623ad, type: 3}
+  skullLegAttackAreaVFX: {fileID: 8455459536711560211, guid: 718392c81cfb901419fe965471cdf288, type: 3}

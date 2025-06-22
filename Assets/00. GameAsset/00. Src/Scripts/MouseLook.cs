@@ -1,9 +1,12 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class MouseLook : MonoBehaviour
 {
 	[SerializeField]
 	private float	 rotationSpeed;
+	[SerializeField]
+	private float	 minMouseDistance;
 
 	private Plane	 plane;
 	private Ray		 ray;
@@ -23,19 +26,19 @@ public class MouseLook : MonoBehaviour
 	{
 		ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-		if(plane.Raycast(ray, out distance))
+		if (plane.Raycast(ray, out distance))
 		{
 			Vector3 targetPoint = ray.GetPoint(distance);
-			Vector3 direction	= (targetPoint - transform.position).normalized;
+			Vector3 toTarget    = targetPoint - transform.position;
 
-			// 너무 가까우면 회전하지 않게함.
-			if(direction.sqrMagnitude > 0.001f)
-			{
-				Quaternion targetRotation = Quaternion.LookRotation(direction);
+			if (toTarget.sqrMagnitude < minMouseDistance)
+				return;
 
-				transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 
-					Time.deltaTime * rotationSpeed);
-			}
+			Vector3    direction      = toTarget.normalized;
+			Quaternion targetRotation = Quaternion.LookRotation(direction);
+
+			transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation,
+				Time.deltaTime * rotationSpeed);
 		}
 	}
 }

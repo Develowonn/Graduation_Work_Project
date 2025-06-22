@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3710397129264803880}
   - component: {fileID: 3581065536220845598}
   - component: {fileID: 3582326478784418898}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Debris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4995,7 +4995,7 @@ GameObject:
   - component: {fileID: 3709850833950874184}
   - component: {fileID: 3580989095956366522}
   - component: {fileID: 3580721853198427090}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Embers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5011,7 +5011,7 @@ Transform:
   m_GameObject: {fileID: 3707710904686883102}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.8492596, y: -2.191533, z: 0.9560002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9898,7 +9898,7 @@ GameObject:
   - component: {fileID: 3703041947729165354}
   - component: {fileID: 3588714729425858596}
   - component: {fileID: 3582386948124068680}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BonePrisonFast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9935,7 +9935,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 4
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 3
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -14889,7 +14889,7 @@ GameObject:
   - component: {fileID: 3709880292027875370}
   - component: {fileID: 3581069419552485078}
   - component: {fileID: 3581718883795275118}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19846,7 +19846,7 @@ GameObject:
   - component: {fileID: 5289104469631616647}
   - component: {fileID: 615140161321622467}
   - component: {fileID: 5236038433380946250}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DebrisSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24830,7 +24830,7 @@ GameObject:
   - component: {fileID: 7866748797639326807}
   - component: {fileID: 8061689253897489311}
   - component: {fileID: 8062637713511065991}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24846,7 +24846,7 @@ Transform:
   m_GameObject: {fileID: 7865385478448316501}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.90446293, y: 0.48207933, z: 0.012000054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
