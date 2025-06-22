@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &665370058076161880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5430788826225445765}
+  - component: {fileID: 2471442842353328765}
+  m_Layer: 0
+  m_Name: TornadoCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5430788826225445765
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665370058076161880}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2471442842353328765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665370058076161880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0e5a4d61947fdf4395f8ddcffe799ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tornadoCount: 10
+  tornadoSpawnTime: 0.05
+  radius: 1.5
+  explosionTime: 1.5
+  auraOffset: {x: 0, y: 0.2, z: 0}
+  particleOffset: {x: 0, y: 0.5, z: 0}
+  auraVfx: {fileID: 1653487616914306, guid: 5dc1f03faa163e94dbe0e8d8d318544e, type: 3}
+  paritcleVfx: {fileID: 1657702766857390, guid: a83aec7e1c788524da887a9e74201dd1, type: 3}
+  tornadoVfx: {fileID: 1166697705615292, guid: 323180324945eae4c8218b2dc98ccafd, type: 3}
+  ExplosionVfx: {fileID: 1962406821623320, guid: 3195570c45f382040b9a27817837a0f9, type: 3}
