@@ -74,8 +74,10 @@ public class DeckManager : MonoBehaviour
 
 	public void SelectCard(Card selectedCard, int selectedCardIndex)
 	{
+		if(isUsingCard) return;
+
 		// 선택된 카드를 한 번 더 클릭 했다면 스킬 사용
-		if (!isUsingCard && IsSameCardSelected(selectedCardIndex))
+		if (IsSameCardSelected(selectedCardIndex))
 		{
 			isUsingCard = true;
 			UseCard().Forget();
