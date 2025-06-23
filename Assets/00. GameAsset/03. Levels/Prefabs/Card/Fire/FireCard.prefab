@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCount: 5
   warningAreaDuration: 1.5
-  fireDuration: 2
+  fireDuration: 1.5
   fireAreaVFX: {fileID: 1222500388518033249, guid: 7254f0ad0af6bf942be38accaa188a9a, type: 3}
   fireVFX: {fileID: 1424548914531632, guid: 666031acd0dfbd746a63610219705cb4, type: 3}
   explosionVFX: {fileID: 2433282508537954060, guid: a5490a26d58b94e49b98c4bca6280cb6, type: 3}
