@@ -6,59 +6,58 @@ using UnityEngine;
 
 // # ETC
 using Cysharp.Threading.Tasks;
-using DG.Tweening;
 
 public class SkullCard : Card
 {
-	private GameObject	skull;
-	private GameObject	skullAura;
-	private GameObject	skullLegSmallAura;
-	private GameObject  skullLegBigAura;
-	private GameObject  skullLegAttackAura;
+	private GameObject			skull;
+	private GameObject			skullAura;
+	private GameObject			skullLegSmallAura;
+	private GameObject			skullLegBigAura;
+	private GameObject			skullLegAttackAura;
 
 	[SerializeField]
-	private Vector2		attackRange;
+	private Vector2				attackRange;
 	[SerializeField]
-	private float		attackCoolTime;
+	private float				attackCoolTime;
 	[SerializeField]
-	private float		skullLegCount;
+	private float				skullLegCount;
 
 	[Header("Camera")]
 	[SerializeField]
-	private Vector3			   zoomOutOffset;
+	private Vector3				zoomOutOffset;
 	[SerializeField]
-	private float			   completionTime;
-	private CameraFollowTarget camaraFollowTarget;
+	private float				completionTime;
+	private CameraFollowTarget	camaraFollowTarget;
 
 	[Header("Offset")]
 	[SerializeField]
-	private Vector3		skullOffset;
+	private Vector3				skullOffset;
 	[SerializeField]
-	private Vector3		skullAuraOffset;
+	private Vector3				skullAuraOffset;
 	[SerializeField]
-	private Vector3		skullExplosionOffset;
+	private Vector3				skullExplosionOffset;
 	[SerializeField]
-	private Vector3		skullLegBigAuraOffset;
+	private Vector3				skullLegBigAuraOffset;
 	[SerializeField]
-	private Vector3		skullLegAttackAuraOffset;
+	private Vector3				skullLegAttackAuraOffset;
 
 	[Header("VFX")]
 	[SerializeField]
-	private GameObject	skullVFX;
+	private GameObject			skullVFX;
 	[SerializeField]
-	private GameObject	skullAuraVFX;
+	private GameObject			skullAuraVFX;
 	[SerializeField]
-	private GameObject	skullAttackVFX;
+	private GameObject			skullAttackVFX;
 	[SerializeField]
-	private GameObject  skullExplosionVFX;
+	private GameObject			skullExplosionVFX;
 	[SerializeField]
-	private GameObject  skullLegSmallAreaVFX;
+	private GameObject			skullLegSmallAreaVFX;
 	[SerializeField]
-	private GameObject  skullLegBigAreaVFX;
+	private GameObject			skullLegBigAreaVFX;
 	[SerializeField]
-	private GameObject  skullLegAttackAreaVFX;
+	private GameObject			skullLegAttackAreaVFX;
 
-	private Transform	player;
+	private Transform			player;
 
 	public override void Execute()
 	{
@@ -87,7 +86,6 @@ public class SkullCard : Card
 
 	private void SpawnSkull()
 	{
-
 		skull = Instantiate(skullVFX, player.position + skullOffset, Quaternion.Euler(-105, 0, 0));
 		skull.transform.SetParent(player.transform);
 	}
@@ -106,7 +104,7 @@ public class SkullCard : Card
 			float z = UnityEngine.Random.Range(player.position.z - attackRange.y, player.position.z + attackRange.y);
 			Vector3 spawnPosition = new Vector3(x, 0, z);
 
-			GameObject obj = Instantiate(skullAttackVFX, spawnPosition, Quaternion.Euler(-90, 0, 0));
+			Instantiate(skullAttackVFX, spawnPosition, Quaternion.Euler(-90, 0, 0));
 			await UniTask.Delay(TimeSpan.FromSeconds(attackCoolTime));
 		}
 	}

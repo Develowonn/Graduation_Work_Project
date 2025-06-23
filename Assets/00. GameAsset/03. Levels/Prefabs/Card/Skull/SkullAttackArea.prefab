@@ -9787,7 +9787,7 @@ GameObject:
   - component: {fileID: 1380915567010498598}
   - component: {fileID: 5814656735300712865}
   m_Layer: 0
-  m_Name: BoneWaveSimple
+  m_Name: SkullAttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
