@@ -11,12 +11,6 @@ public class DeckManager : MonoBehaviour
     [SerializeField]
     private Transform   deckParent;
 
-    [Header("UI")]
-    [SerializeField]
-    private Transform   myDeckUIParents;
-    private Animator    myDeckAnimator;
-    private bool        isUsingDeck;
-
     private List<Card>  myDeck;
     private Card        selectedCard;
 
@@ -24,16 +18,11 @@ public class DeckManager : MonoBehaviour
     {
         myDeck = new List<Card>();
 
-        myDeckAnimator = myDeckUIParents.GetComponent<Animator>();
-
         InitializeDeck();
     }
 
 	private void Update()
 	{
-		//isUsingDeck = isUsingDeck != true;
-		//myDeckAnimator.SetBool("IsUsingDeck", isUsingDeck);
-
 		if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             myDeck[0].Execute();
