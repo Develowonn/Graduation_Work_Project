@@ -51,9 +51,12 @@ public class CooltimeReductionCard : Card
     private async UniTask ReduceSkillCooltime()
     {
         // 쿨타임 감소율 적용 O
+        PlayerSkillManager p = player.GetComponent<PlayerSkillManager>();
+        p.SkillCoolTimeBuffTrigger(coolTimeReductionPercent, true);
 
         await UniTask.Delay(TimeSpan.FromSeconds(cooolTimeReductionDuration));
 
+        p.SkillCoolTimeBuffTrigger(coolTimeReductionPercent, false);
         // 쿨타임 감소율 적용 X 
     }
 }
