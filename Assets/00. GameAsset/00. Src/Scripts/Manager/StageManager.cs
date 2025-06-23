@@ -57,9 +57,9 @@ public class StageManager : MonoBehaviour
         {
             Time.timeScale = 0f;
             levelUpPanel.SetActive(true);
-            InitLevelUpBtn(playerSkillDataList[Random.Range(0, playerSkillDataList.Count)], levelUpBtn_1);
-            InitLevelUpBtn(playerSkillDataList[Random.Range(0, playerSkillDataList.Count)], levelUpBtn_2);
-            InitLevelUpBtn(playerSkillDataList[Random.Range(0, playerSkillDataList.Count)], levelUpBtn_3);
+            InitLevelUpBtn(GetRandomSkill(), levelUpBtn_1);
+            InitLevelUpBtn(GetRandomSkill(), levelUpBtn_2);
+            InitLevelUpBtn(GetRandomSkill(), levelUpBtn_3);
         }
         else playerLevelUpCount++;
     }
@@ -81,7 +81,6 @@ public class StageManager : MonoBehaviour
 
     public void InitLevelUpBtn(SkillSO skillData, LevelUpBtn btn)
     {
-        Debug.Log("추가 : " + skillData.skillName);
         btn.InitBtn(skillData, playerAttackManager); // 버튼 초기화 (강화할 스킬, 플레이어 공격 매니저)
         PopAnimate(btn.transform);
         btn.GetComponent<Button>().onClick.AddListener(ClosePlayerLevelUpPanel); // 선택시 패널 끄기 추가

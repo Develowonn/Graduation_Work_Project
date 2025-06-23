@@ -48,5 +48,8 @@ MonoBehaviour:
   baseCooldown: 1
   level: 0
   effectName: CristalStrike
-  damage: 1
+  damage: 3
   rage: 3
+  monsterMask:
+    serializedVersion: 2
+    m_Bits: 64
