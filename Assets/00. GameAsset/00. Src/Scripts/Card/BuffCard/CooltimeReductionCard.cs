@@ -7,12 +7,16 @@ using UnityEngine;
 // # ETC
 using Cysharp.Threading.Tasks;
 
-public class InvincibilityCard : Card
+
+public class CooltimeReductionCard : Card
 {
     private GameObject  aura;
 
     [SerializeField]
-    private float       invincibilityDuration;
+    private float       cooolTimeReductionDuration;
+    // 쿨타임 감소율
+    [SerializeField]
+    private float       coolTimeReductionPercent; 
 
     [Header("Offset")]
     [SerializeField]
@@ -23,12 +27,10 @@ public class InvincibilityCard : Card
     private GameObject  auraVFX;
 
     private Transform   player;
-    private PlayerStat  playerStat;
 
     public override void Execute()
     {
-        player      = InGameManager.Instance.GetPlayerObject().transform;
-        playerStat  = player.GetComponent<PlayerStat>();
+        player = InGameManager.Instance.GetPlayerObject().transform;
 
         ExecuteSkill().Forget();
     }
@@ -36,8 +38,8 @@ public class InvincibilityCard : Card
     private async UniTask ExecuteSkill()
     {
         SpawnAura();
-        await ActivateInvincibility();
 
+        await ReduceSkillCooltime();
         Destroy(aura);
     }
 
@@ -46,10 +48,12 @@ public class InvincibilityCard : Card
         aura = Instantiate(auraVFX, player.transform.position + auraOffset, Quaternion.Euler(-90, 0, 0));
     }
 
-    private async UniTask ActivateInvincibility()
+    private async UniTask ReduceSkillCooltime()
     {
-        playerStat.SetInvincibility(true);
-        await UniTask.Delay(TimeSpan.FromSeconds(invincibilityDuration));
-        playerStat.SetInvincibility(false);
+        // 쿨타임 감소율 적용 O
+
+        await UniTask.Delay(TimeSpan.FromSeconds(cooolTimeReductionDuration));
+
+        // 쿨타임 감소율 적용 X 
     }
 }
