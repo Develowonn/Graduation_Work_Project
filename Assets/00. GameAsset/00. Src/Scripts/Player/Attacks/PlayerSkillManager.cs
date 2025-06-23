@@ -1,19 +1,25 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerSkillManager : MonoBehaviour
 {
     private readonly List<PlayerAttackSkill> attackSkillList = new();
+    private Action<float, bool> OnCoolTimeBuff; // 버프를 한번에 실행할 액션 변수
 
     public void EquipSkill(PlayerAttackSkill skillPrefab)
     {
         attackSkillList.Add(skillPrefab);
+        OnCoolTimeBuff += skillPrefab.OnCoolDownButff;
     }
 
     public void UnequipSkill(PlayerAttackSkill skill)
     {
         if (attackSkillList.Remove(skill))
+        {
+            OnCoolTimeBuff -= skill.OnCoolDownButff;
             Destroy(skill.gameObject);
+        }
     }
 
     public void GetOrLevelUpSkill(SkillSO skillData)
@@ -34,6 +40,13 @@ public class PlayerSkillManager : MonoBehaviour
             skillData.LevelUpSkill(); // 레벨업
         }
     }
+
+    /// <summary>
+    /// 스킬 쿨타임 감소 버프 트리거 함수
+    /// </summary>
+    /// <param name="value">감소할 비율</param>
+    /// <param name="isOn">활성화 여부</param>
+    public void SkillCoolTimeBuffTrigger(float value, bool isOn) => OnCoolTimeBuff?.Invoke(value, isOn);
 
     private void Update()
     {
