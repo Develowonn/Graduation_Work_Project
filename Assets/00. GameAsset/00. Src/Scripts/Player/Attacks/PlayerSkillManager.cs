@@ -31,6 +31,7 @@ public class PlayerSkillManager : MonoBehaviour
         else // 없을 때
         {
             EquipSkill(skillData.NewSkill(transform)); // 스킬 생성 및 장착
+            skillData.LevelUpSkill(); // 레벨업
         }
     }
 

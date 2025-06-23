@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4368bc794a5b03479ddcf870d30ecfc, type: 3}
-  m_Name: FireBallTrigger
+  m_Name: CristalStrike
   m_EditorClassIdentifier: 
-  skillName: "\uD654\uC5FC\uAD6C"
-  skillSprite: {fileID: 21300000, guid: e93b64833e2d6014f80d6ce123d3fa24, type: 3}
-  skillDesription: "\uD654\uC5FC\uAD6C\uB97C \uBC1C\uC0AC\uD569\uB2C8\uB2E4!"
-  skillObject: {fileID: 8413745170652661713, guid: 3665ad9ce5f3ad941b9c17a0931904f7, type: 3}
+  skillName: "\uC218\uC815"
+  skillSprite: {fileID: 0}
+  skillDesription: "\uC8FC\uBCC0\uC5D0 \uC218\uC815\uC774 \uC19F\uAD6C\uCE69\uB2C8\uB2E4!"
+  skillObject: {fileID: 7865364470779737212, guid: 12dedbb46b8e1ea488245844a1e1fdfe, type: 3}
   inGameSkillObject: {fileID: 0}
-  gradeSO: {fileID: 11400000, guid: cd5155e73cbf85145b06a6a650f93a43, type: 2}
+  gradeSO: {fileID: 11400000, guid: 7ac94eed07e94b549b5fba2509b33a27, type: 2}
