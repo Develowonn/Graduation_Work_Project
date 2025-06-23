@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78218c53b6d6cba438f8ace39797580a, type: 3}
   m_Name: Skull
   m_EditorClassIdentifier: 
-  cardName: Skull
+  cardName: "\uD574\uACE8 \uC601\uC5ED\uC804\uAC1C"
   cardSprite: {fileID: 0}
-  cardInfo: 
+  cardInfo: "\uC601\uC5ED\uC804\uAC1C! \uD574\uACE8 \uC18C\uD658 "
   cardType: 0
   card: {fileID: 5034386687440938878, guid: 2533b1145b1ec524a966ab97c40e868a, type: 3}

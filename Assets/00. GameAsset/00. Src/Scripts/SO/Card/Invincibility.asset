@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78218c53b6d6cba438f8ace39797580a, type: 3}
   m_Name: Invincibility
   m_EditorClassIdentifier: 
-  cardName: Invincibility
+  cardName: "\uD2BC\uD2BC\uBC29\uD328"
   cardSprite: {fileID: 0}
-  cardInfo: 
+  cardInfo: "10\uCD08\uB3D9\uC548 \uBB34\uC801\uC785\uB2C8\uB2E4! \uC2F8\uC6B0\uC138\uC694"
   cardType: 1
   card: {fileID: 1082108621959925363, guid: 45889f76cdaee494d96c8a3363e16957, type: 3}

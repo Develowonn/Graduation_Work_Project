@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78218c53b6d6cba438f8ace39797580a, type: 3}
-  m_Name: Tsunami
+  m_Name: Tornado
   m_EditorClassIdentifier: 
-  cardName: Tsunami
+  cardName: "\uD1A0\uB124\uC774\uB3C4"
   cardSprite: {fileID: 0}
-  cardInfo: 
+  cardInfo: "\uC5ED\uB300\uAE09 \uD1A0\uB124\uC774\uB3C4\uAC00 \uC635\uB2C8\uB2E4!"
   cardType: 0
   card: {fileID: 2471442842353328765, guid: 5adadebeee42b074cb9abd46d96b1ade, type: 3}

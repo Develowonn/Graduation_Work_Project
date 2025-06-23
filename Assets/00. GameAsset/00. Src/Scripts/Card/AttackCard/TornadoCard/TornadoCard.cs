@@ -39,8 +39,14 @@ public class TornadoCard : Card
 	[SerializeField]
 	private GameObject		ExplosionVfx;
 
+	private bool			isDone;
+
 	public override void Execute()
 	{
+		if(isDone) return;
+
+		isDone = true;
+
 		ExecuteSkill().Forget();
 	}
 

@@ -22,13 +22,17 @@ public class InvincibilityCard : Card
     [SerializeField]
     private GameObject  auraVFX;
 
-    private Transform   player;
+	private bool        isDone;
+	private Transform   player;
     private PlayerStat  playerStat;
 
     public override void Execute()
     {
+        if(isDone) return;
+
         player      = InGameManager.Instance.GetPlayerObject().transform;
         playerStat  = player.GetComponent<PlayerStat>();
+        isDone      = true;
 
         ExecuteSkill().Forget();
     }

@@ -57,12 +57,16 @@ public class SkullCard : Card
 	[SerializeField]
 	private GameObject			skullLegAttackAreaVFX;
 
+	private bool				isDone;
 	private Transform			player;
 
 	public override void Execute()
 	{
+		if(isDone) return;
+
 		player				= InGameManager.Instance.GetPlayerObject().transform;
 		camaraFollowTarget	= Camera.main.GetComponent<CameraFollowTarget>();
+		isDone				= true;
 
 		ExecuteSkill().Forget();
 	}

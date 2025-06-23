@@ -98,9 +98,8 @@ MonoBehaviour:
   cardIconImage: {fileID: 2424141938404757040}
   cardNameText: {fileID: 525410128833403560}
   cardInfoText: {fileID: 3184158495211536683}
-  cardIconObject: {fileID: 7204054897598517232}
-  cardNameObject: {fileID: 5413882747518110889}
-  cardInfoObject: {fileID: 4827892669559050158}
+  selectedScale: {x: 1.2, y: 1.2, z: 1.2}
+  scaleDuration: 0.5
 --- !u!1 &4827892669559050158
 GameObject:
   m_ObjectHideFlags: 0

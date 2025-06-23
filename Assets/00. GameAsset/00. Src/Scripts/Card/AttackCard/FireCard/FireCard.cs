@@ -29,11 +29,16 @@ public class FireCard : Card
     [SerializeField]
     private GameObject  explosionVFX;
 
+    private bool        isDone;
     private Transform   player;
 
     public override void Execute()
     {
+        if(isDone) return;
+
         player = InGameManager.Instance.GetPlayerObject().transform;
+
+        isDone = true;
 
         ExecuteSkill().Forget();
     }

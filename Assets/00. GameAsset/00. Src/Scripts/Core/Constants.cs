@@ -1,6 +1,16 @@
 public static class Constants
 {
-    public static class BlendTreeThreshold
+
+    public static class MyDeck
+    {
+		public const int MaxDeckSize = 3;
+
+        public const int FirstCard   = 0;
+		public const int SecondCard  = 1;
+		public const int ThirdCard   = 2;
+	}
+
+	public static class BlendTreeThreshold
     {
         public static class PlayerMove
         {

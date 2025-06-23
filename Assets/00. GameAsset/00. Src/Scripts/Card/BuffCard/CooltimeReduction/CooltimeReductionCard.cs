@@ -15,7 +15,7 @@ public class CooltimeReductionCard : Card
     [SerializeField]
     private float       cooolTimeReductionDuration;
     // 쿨타임 감소율
-    [SerializeField]
+    [SerializeField, Range(0f, 1f)]
     private float       coolTimeReductionPercent; 
 
     [Header("Offset")]
@@ -26,13 +26,17 @@ public class CooltimeReductionCard : Card
     [SerializeField]
     private GameObject  auraVFX;
 
-    private Transform   player;
+	private bool        isDone;
+	private Transform   player;
 
     public override void Execute()
     {
-        player = InGameManager.Instance.GetPlayerObject().transform;
+		if (isDone) return;
 
-        ExecuteSkill().Forget();
+		player = InGameManager.Instance.GetPlayerObject().transform;
+		isDone = true;
+
+		ExecuteSkill().Forget();
     }
 
     private async UniTask ExecuteSkill()
@@ -56,7 +60,7 @@ public class CooltimeReductionCard : Card
 
         await UniTask.Delay(TimeSpan.FromSeconds(cooolTimeReductionDuration));
 
-        p.SkillCoolTimeBuffTrigger(coolTimeReductionPercent, false);
-        // 쿨타임 감소율 적용 X 
+		// 쿨타임 감소율 적용 X 
+		p.SkillCoolTimeBuffTrigger(coolTimeReductionPercent, false);
     }
 }
