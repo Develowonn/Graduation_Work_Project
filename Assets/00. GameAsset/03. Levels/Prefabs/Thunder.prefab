@@ -47,12 +47,11 @@ MonoBehaviour:
   skillName: "\uBC88\uAC1C"
   baseCooldown: 3
   level: 1
-  damageMultiplier: 10
+  effectName: ThunderEffect
+  damage: 5
   range: 10
   targetCount: 3
   monsterMask:
     serializedVersion: 2
     m_Bits: 8
-  thunderEffectPrefab: {fileID: 13301048646092075, guid: 334ccdade87a4194b9f1855c484967dc, type: 3}
-  effectName: ThunderEffect
   attackDelay: 0.2

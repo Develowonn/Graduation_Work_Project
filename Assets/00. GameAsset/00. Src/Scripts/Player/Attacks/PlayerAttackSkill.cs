@@ -17,6 +17,11 @@ public abstract class PlayerAttackSkill : MonoBehaviour
 
     protected float timer;
 
+    private void Start()
+    {
+        maxCooldown = baseCooldown;
+    }
+
     /// <summary>
     /// 스킬 이름 반환 함수
     /// </summary>
