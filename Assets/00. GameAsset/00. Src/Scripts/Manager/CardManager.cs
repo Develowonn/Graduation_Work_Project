@@ -18,6 +18,14 @@ public class CardManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
+    public CardSO GetRandomCardSO()
+    {
+        if (cardDatabase.Count <= 0) return null;
+
+        int randomIndex = Random.Range(0, cardDatabase.Count);
+        return cardDatabase[randomIndex];
+    }
+
     public Card GetRandomCard()
     {
         if (cardDatabase.Count <= 0) return null;

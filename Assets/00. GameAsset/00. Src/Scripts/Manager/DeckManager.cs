@@ -6,10 +6,14 @@ using UnityEngine;
 
 public class DeckManager : MonoBehaviour
 {
-    [SerializeField]
-    private int         maxDeckSize;
+    private const int   maxDeckSize = 3;
+
     [SerializeField]
     private Transform   deckParent;
+
+    [Header("UI")]
+    [SerializeField]
+    private CardUI[]    cardUiList;
 
     private List<Card>  myDeck;
     private Card        selectedCard;
@@ -21,29 +25,16 @@ public class DeckManager : MonoBehaviour
         InitializeDeck();
     }
 
-	private void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            myDeck[0].Execute();
-		}
-		else if (Input.GetKeyDown(KeyCode.Alpha2))
-		{
-			myDeck[1].Execute();
-		}
-		else if(Input.GetKeyDown(KeyCode.Alpha3))
-		{
-			myDeck[2].Execute();
-		}
-	}
-
 	private void InitializeDeck()
     {
         for(int i = 0; i < maxDeckSize; i++)
         {
-            Card card = CardManager.Instance.GetRandomCard();
-            card.transform.SetParent(deckParent);
+            CardSO  cardSO  = CardManager.Instance.GetRandomCardSO();
+            cardUiList[i].Initialize(cardSO.cardName, cardSO.cardInfo, cardSO.cardSprite, cardSO.cardType);
+            cardUiList[i].ActivateBack();
 
+            Card    card    = Instantiate(cardSO.card);
+            card.transform.SetParent(deckParent);
 			myDeck.Add(card);
         }
     }
