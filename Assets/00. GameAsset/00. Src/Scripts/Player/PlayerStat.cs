@@ -39,6 +39,7 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] 
     private Image       hpBar;
 
+    private bool        isInvincibility;
     private float       currentExp = 0;
 
     private void Start()
@@ -67,6 +68,11 @@ public class PlayerStat : MonoBehaviour
     public float GetAttackPowerStat()   { return attackPower; }
     public float GetDamageReduction()   { return damageReduction; }
 
+    public void SetInvincibility(bool activate)
+    {
+        isInvincibility = activate;
+    }
+
     public void IncreaseHP(float value)
     {
         currentHP = Mathf.Clamp(currentHP + value, 0, maxHP);
@@ -74,6 +80,8 @@ public class PlayerStat : MonoBehaviour
 
     public void ReduceHP(float value)
     {
+        if (isInvincibility) return;
+
         currentHP = Mathf.Clamp(currentHP - value, 0, maxHP);
         hpBar.fillAmount = currentHP / maxHP;
         Debug.Log($"HpBar Value : {hpBar.fillAmount} | currentHp / maxHp {currentHP / maxHP}");

@@ -7,7 +7,6 @@ using UnityEngine;
 // # ETC
 using Cysharp.Threading.Tasks;
 
-
 public class WeakenCard : Card
 {
     private GameObject  aura;
