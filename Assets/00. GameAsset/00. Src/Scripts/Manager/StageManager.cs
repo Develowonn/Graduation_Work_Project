@@ -64,11 +64,26 @@ public class StageManager : MonoBehaviour
         else playerLevelUpCount++;
     }
 
+    public SkillSO GetRandomSkill()
+    {
+        List<SkillSO> availableSkills = playerSkillDataList.FindAll(
+        s => s.inGameSkillObject == null || s.inGameSkillObject.GetSkillLevel() < 5);
+
+        if (availableSkills.Count == 0)
+        {
+            Debug.LogWarning("모든 스킬이 최대 레벨입니다!");
+            return null; // TODO. 모든 스킬 최대 레벨 시 시스템 구현
+        }
+
+        int index = Random.Range(0, availableSkills.Count);
+        return availableSkills[index];
+    }
+
     public void InitLevelUpBtn(SkillSO skillData, LevelUpBtn btn)
     {
         Debug.Log("추가 : " + skillData.skillName);
         btn.InitBtn(skillData, playerAttackManager); // 버튼 초기화 (강화할 스킬, 플레이어 공격 매니저)
-        PopAnimate(btn.transform); 
+        PopAnimate(btn.transform);
         btn.GetComponent<Button>().onClick.AddListener(ClosePlayerLevelUpPanel); // 선택시 패널 끄기 추가
     }
 

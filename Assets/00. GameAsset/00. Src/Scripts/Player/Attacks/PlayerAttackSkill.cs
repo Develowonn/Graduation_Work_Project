@@ -73,4 +73,10 @@ public abstract class PlayerAttackSkill : MonoBehaviour
             maxCooldown = baseCooldown;
         }
     }
+
+    /// <summary>
+    /// 스킬 레벨 반환 함수
+    /// </summary>
+    /// <returns></returns>
+    public int GetSkillLevel() => level;
 }
