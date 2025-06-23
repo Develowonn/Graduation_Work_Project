@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: "\uD654\uC5FC\uAD6C"
   skillSprite: {fileID: 21300000, guid: e93b64833e2d6014f80d6ce123d3fa24, type: 3}
-  skillDesription: "\uD654\uB974\uB975!"
+  skillDesription: "\uD654\uC5FC\uAD6C\uB97C \uBC1C\uC0AC\uD569\uB2C8\uB2E4!"
   skillObject: {fileID: 8413745170652661713, guid: 3665ad9ce5f3ad941b9c17a0931904f7, type: 3}
   inGameSkillObject: {fileID: 0}
+  rarelity: 3
