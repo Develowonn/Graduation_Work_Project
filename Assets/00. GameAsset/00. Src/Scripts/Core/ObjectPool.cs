@@ -114,6 +114,33 @@ public class ObjectPool : MonoBehaviour
     }
 
     /// <summary>
+    /// 풀에서 가져와 스폰
+    /// </summary>
+    /// <param name="name">풀링할 오브젝트 이름</param>
+    /// <param name="position">위치</param>
+    /// <param name="size">크기</param>
+    /// <returns></returns>
+    public GameObject SpawnFromPool(string name, Vector3 position, float size)
+    {
+        Pool currentPool = poolDictionary[name];
+
+        if (currentPool.poolLength <= 0)
+        {
+            GameObject obj = Instantiate(currentPool.poolObject, currentPool.parentObject);
+            obj.SetActive(false);
+            currentPool.Enqueue(obj);
+        }
+
+        GameObject currentObject = currentPool.Dequeue();
+        currentObject.transform.position = position;
+        currentObject.transform.localScale = new Vector3(size, size, size);
+
+        currentObject.SetActive(true);
+
+        return currentObject;
+    }
+
+    /// <summary>
     /// 오브젝트 풀로 리턴
     /// </summary>
     /// <param name="name">리턴할 이름</param>

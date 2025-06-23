@@ -5,26 +5,31 @@ using UnityEngine;
 public class FireBallSkill : MonoBehaviour
 {
     [Header("Stat")]
-    [SerializeField] private string effectName;
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private float attackPower;
-    [SerializeField] private int penetrateCount;
+    [SerializeField] private string effectName;                 // 이펙트 이름 ( 풀로 리턴하는 용도 )
+    [SerializeField] private float moveSpeed;                   // 움직임 속도
+    [SerializeField] private float attackPower;                 // 기본 데미지
+    [SerializeField] private int duration;                      // 지속시간
 
-    private Vector3 moveDirection;
-
-    private HashSet<Monster> hitMonsters = new HashSet<Monster>();
+    private Vector3 moveDirection;                              // 움직일 방향
 
     private void OnEnable()
     {
-        hitMonsters.Clear();
         StartCoroutine(Co_ObjectOff());
     }
-
-    public void Init(string effectName, float moveSpeed, float attackPower, int hp, Transform enemyTrans)
+    /// <summary>
+    /// 화염구 초기화 함수
+    /// </summary>
+    /// <param name="effectName">스킬 이펙트 이름</param>
+    /// <param name="moveSpeed">움직임 속도</param>
+    /// <param name="attackPower">기본 데미지</param>
+    /// <param name="duration">지속 시간</param>
+    /// <param name="enemyTrans">방향</param>
+    public void Init(string effectName, float moveSpeed, float attackPower, int duration, Transform enemyTrans)
     {
         this.effectName = effectName;
         this.moveSpeed = moveSpeed;
         this.attackPower = attackPower;
+        this.duration = duration + 2;
 
         Vector3 dir = enemyTrans.position - transform.position;
         dir.y = 0f;
@@ -36,6 +41,9 @@ public class FireBallSkill : MonoBehaviour
         MoveFireBall();
     }
 
+    /// <summary>
+    /// 화염구 이동 함수
+    /// </summary>
     private void MoveFireBall()
     {
         transform.position += moveDirection * moveSpeed * Time.deltaTime;
@@ -43,27 +51,21 @@ public class FireBallSkill : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Monster"))
+        if (other.CompareTag("Monster")) // 몬스터에 닿았을 때 피격하도록
         {
             Monster monster = other.GetComponent<Monster>();
 
-            // 이미 맞은 몬스터는 무시 
-            //if (hitMonsters.Contains(monster)) return;
-
             monster.TakeDamage(attackPower);
-            //hitMonsters.Add(monster);
-
-            //penetrateCount -= 1;
-            //if (penetrateCount <= 0)
-            //{
-            //    ObjectPool.instance.ReturnToPool(effectName, gameObject);
-            //}
         }
     }
 
+    /// <summary>
+    /// 지속 시간 후 pool로 리턴
+    /// </summary>
+    /// <returns></returns>
     IEnumerator Co_ObjectOff()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(duration);
         ObjectPool.instance.ReturnToPool(effectName, gameObject);
     }
 }

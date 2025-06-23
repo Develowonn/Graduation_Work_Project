@@ -1,14 +1,14 @@
 using UnityEngine;
 
+// 화염구 스킬 트리거
 public class FireBallSkillTrigger : PlayerAttackSkill
 {
-    [SerializeField] private float range = 6f;
-    [SerializeField] private LayerMask monsterMask;
+    [SerializeField] private float range = 6f;                  // 범위
+    [SerializeField] private LayerMask monsterMask;             // 몬스터 레이어
 
-    [SerializeField] private float fireBallMoveSpeed;
-    [SerializeField] private float damageMultiplier = 10f;
+    [SerializeField] private float fireBallMoveSpeed;           // 화염구 이동속도
 
-    private IMultiTargetingStrategy targeting;
+    private IMultiTargetingStrategy targeting;                  // 타겟팅
 
     private void OnEnable()
     {
@@ -22,7 +22,7 @@ public class FireBallSkillTrigger : PlayerAttackSkill
         foreach (var target in targets)
         {
             FireBallSkill fireBallSkill = ObjectPool.instance.SpawnFromPool(effectName, transform.position).GetComponent<FireBallSkill>();
-            fireBallSkill.Init(effectName, fireBallMoveSpeed, damageMultiplier, level + 2, target);
+            fireBallSkill.Init(effectName, fireBallMoveSpeed, damage, level, target);
         }
     }
 }
