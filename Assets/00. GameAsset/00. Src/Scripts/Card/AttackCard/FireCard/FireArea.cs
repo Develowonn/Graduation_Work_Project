@@ -12,7 +12,7 @@ public class FireArea : MonoBehaviour
 
     public WarningArea GetRandomWarningArea()
     {
-        int i         = 0;
+        int i = 0;
 
         // 이전 경고 영역이랑 중복되지 않도록
         do
