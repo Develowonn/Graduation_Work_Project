@@ -59,7 +59,6 @@ public class PlayerStat : MonoBehaviour
             StageManager.instance.LevelUpPlayer();
         }
         expBar.fillAmount = currentExp / maxExp;
-        Debug.Log($"ExpBar Value : {expBar.fillAmount} | currentExp / maxExp {currentExp / maxExp}");
     }
 
     public float GetMaxHP()             { return maxHP; }
@@ -84,7 +83,6 @@ public class PlayerStat : MonoBehaviour
 
         currentHP = Mathf.Clamp(currentHP - value, 0, maxHP);
         hpBar.fillAmount = currentHP / maxHP;
-        Debug.Log($"HpBar Value : {hpBar.fillAmount} | currentHp / maxHp {currentHP / maxHP}");
     }
 
     public void SetMovementSpeed(float value)

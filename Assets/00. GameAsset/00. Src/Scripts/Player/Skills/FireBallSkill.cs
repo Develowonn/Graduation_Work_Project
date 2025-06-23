@@ -12,10 +12,6 @@ public class FireBallSkill : MonoBehaviour
 
     private Vector3 moveDirection;                              // 움직일 방향
 
-    private void OnEnable()
-    {
-        StartCoroutine(Co_ObjectOff());
-    }
     /// <summary>
     /// 화염구 초기화 함수
     /// </summary>
@@ -34,6 +30,8 @@ public class FireBallSkill : MonoBehaviour
         Vector3 dir = enemyTrans.position - transform.position;
         dir.y = 0f;
         moveDirection = dir.normalized;
+
+        StartCoroutine(Co_ObjectOff());
     }
 
     private void FixedUpdate()

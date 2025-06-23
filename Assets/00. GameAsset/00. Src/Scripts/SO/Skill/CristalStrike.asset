@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4368bc794a5b03479ddcf870d30ecfc, type: 3}
   m_Name: CristalStrike
   m_EditorClassIdentifier: 
-  skillName: "\uC218\uC815"
+  skillName: "\uC218\uC815\uD30C"
   skillSprite: {fileID: 0}
   skillDesription: "\uC8FC\uBCC0\uC5D0 \uC218\uC815\uC774 \uC19F\uAD6C\uCE69\uB2C8\uB2E4!"
   skillObject: {fileID: 7865364470779737212, guid: 12dedbb46b8e1ea488245844a1e1fdfe, type: 3}
