@@ -1,5 +1,13 @@
 using UnityEngine;
 
+public enum Rarelity
+{
+    Legend,
+    Epic,
+    Rare,
+    Common
+}
+
 [CreateAssetMenu(fileName = "SkillSO", menuName = "Scriptable Objects/SkillSO")]
 public class SkillSO : ScriptableObject
 {
@@ -8,6 +16,7 @@ public class SkillSO : ScriptableObject
     public string skillDesription;
     public PlayerAttackSkill skillObject;
     public PlayerAttackSkill inGameSkillObject;
+    public Rarelity rarelity;
 
     public void LevelUpSkill()
     {

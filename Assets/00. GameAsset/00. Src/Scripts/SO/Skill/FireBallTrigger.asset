@@ -17,3 +17,4 @@ MonoBehaviour:
   skillDesription: "\uD654\uB974\uB975!"
   skillObject: {fileID: 8413745170652661713, guid: 3665ad9ce5f3ad941b9c17a0931904f7, type: 3}
   inGameSkillObject: {fileID: 0}
+  rarelity: 3
