@@ -4,36 +4,49 @@ using UnityEngine.UI;
 
 public class PlayerStat : MonoBehaviour
 {
+    private const float minPercent = 0.0f;
+    private const float maxPercent = 1.0f;
+
     [Header("Level Stat")]
-    [SerializeField] private int level;
-    [SerializeField] private float maxExp;
+    [SerializeField] 
+    private int         level;
+    [SerializeField] 
+    private float       maxExp;
 
     [Header("HP Stat")]
-    [SerializeField] private float maxHP;
-    [SerializeField] private float currentHP;
+    [SerializeField] 
+    private float       maxHP;
+    [SerializeField] 
+    private float       currentHP;
 
     [Header("Movement Stat")]
-    [SerializeField] private float movementSpeed;
-    [SerializeField] private float minMovementSpeed;
-    [SerializeField] private float maxMovementSpeed;
+    [SerializeField]
+    private float       movementSpeed;
+    private float       maxMovementSpeed;
 
     [Header("Attack Power Stat")]
-    [SerializeField] private float attackPower;
-    [SerializeField] private float minAttackPower;
-    [SerializeField] private float maxAttackPower;
+    [SerializeField] 
+    private float       attackPower;
+    private float       maxAttackPower;
 
     [Header("Damage Reduction Stat")]
-    [SerializeField] private float damageReduction;
+    [SerializeField] 
+    private float       damageReduction;
 
     [Header("UI")]
-    [SerializeField] private Image expBar;
-    [SerializeField] private Image hpBar;
+    [SerializeField] 
+    private Image       expBar;
+    [SerializeField] 
+    private Image       hpBar;
 
-    private float currentExp = 0;
+    private bool        isInvincibility;
+    private float       currentExp = 0;
 
     private void Start()
     {
-        currentHP = maxHP;
+        currentHP        = maxHP;
+        maxMovementSpeed = movementSpeed;
+        maxAttackPower   = attackPower;
     }
 
     public void GetExp(float exp)
@@ -49,11 +62,16 @@ public class PlayerStat : MonoBehaviour
         Debug.Log($"ExpBar Value : {expBar.fillAmount} | currentExp / maxExp {currentExp / maxExp}");
     }
 
-    public float GetMaxHP() { return maxHP; }
-    public float GetCurrentHP() { return currentHP; }
+    public float GetMaxHP()             { return maxHP; }
+    public float GetCurrentHP()         { return currentHP; }
     public float GetMovementSpeedStat() { return movementSpeed; }
-    public float GetDamageReduction() { return damageReduction; }
-    public float GetAttackPowerStat() { return attackPower; }
+    public float GetAttackPowerStat()   { return attackPower; }
+    public float GetDamageReduction()   { return damageReduction; }
+
+    public void SetInvincibility(bool activate)
+    {
+        isInvincibility = activate;
+    }
 
     public void IncreaseHP(float value)
     {
@@ -62,33 +80,36 @@ public class PlayerStat : MonoBehaviour
 
     public void ReduceHP(float value)
     {
+        if (isInvincibility) return;
+
         currentHP = Mathf.Clamp(currentHP - value, 0, maxHP);
         hpBar.fillAmount = currentHP / maxHP;
         Debug.Log($"HpBar Value : {hpBar.fillAmount} | currentHp / maxHp {currentHP / maxHP}");
     }
 
-    public void IncreaseMovementSpeed(float value)
+    public void SetMovementSpeed(float value)
     {
-        movementSpeed = Mathf.Clamp(movementSpeed + value, minMovementSpeed, maxMovementSpeed);
+        movementSpeed = value;
     }
 
-    public void ReduceMovementSpeed(float value)
+    public void ReduceMoveSpeedByPercent(float value)
     {
-        movementSpeed = Mathf.Clamp(movementSpeed - value, minMovementSpeed, maxMovementSpeed);
+        float ratio     = Mathf.Clamp(value, minPercent, maxPercent);
+        float reduction = movementSpeed * ratio;
+
+        movementSpeed   = Mathf.Max(movementSpeed - reduction, 1);
     }
 
-    public void  ModifyAttackPower(float value)
+    public void SetAttackPower(float value)
     {
-        movementSpeed = Mathf.Clamp(attackPower + value, minAttackPower, maxAttackPower);
+        attackPower = value;
     }
 
-    public void IncreaseDamageReduction(float value)
+    public void ReduceAttackPowerByPercent(float value)
     {
-        damageReduction = Mathf.Clamp01(damageReduction + value);
-    }
+        float ratio     = Mathf.Clamp(value, minPercent, maxPercent);
+        float reduction = maxAttackPower * ratio;
 
-    public void ReduceDamageReduction(float value)
-    {
-        damageReduction = Mathf.Clamp01(damageReduction - value);
+        attackPower     = Mathf.Max(attackPower - reduction, 1);
     }
 }
