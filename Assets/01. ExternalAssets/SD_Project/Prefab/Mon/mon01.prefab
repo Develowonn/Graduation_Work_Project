@@ -302,6 +302,7 @@ MonoBehaviour:
   maxHp: 30
   dropExp: 10
   attackPower: 10
+  baseTexture: {fileID: 0}
 --- !u!54 &2689717139084666450
 Rigidbody:
   m_ObjectHideFlags: 0
