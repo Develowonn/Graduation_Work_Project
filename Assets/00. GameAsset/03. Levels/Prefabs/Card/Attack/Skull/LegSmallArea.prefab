@@ -9872,8 +9872,9 @@ GameObject:
   - component: {fileID: 2203072765948150398}
   - component: {fileID: 2227170721981856018}
   - component: {fileID: -7000983159062250743}
+  - component: {fileID: 3554033557100443681}
   m_Layer: 6
-  m_Name: SmallLegArea
+  m_Name: LegSmallArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13609,7 +13610,7 @@ ParticleSystem:
   CollisionModule:
     enabled: 0
     serializedVersion: 4
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -13790,7 +13791,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
@@ -14865,6 +14866,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8f3a6d3630e1154ba2edb125330d333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &3554033557100443681
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029994919305669434}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.3}
 --- !u!1 &2030670830374374414
 GameObject:
   m_ObjectHideFlags: 0

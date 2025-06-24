@@ -1,12 +1,7 @@
 using UnityEngine;
 
-public class SkullLegSmallArea : MonoBehaviour
+public class SkullAttackArea : MonoBehaviour
 {
-    private void Update()
-    {
-        transform.position = InGameManager.Instance.GetPlayerObject().transform.position;
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         Monster monster = other.GetComponent<Monster>();

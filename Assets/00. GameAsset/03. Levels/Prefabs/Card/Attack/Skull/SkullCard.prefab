@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda964dd768bf064eb22d04200002ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: {x: 7, y: 7}
-  attackCoolTime: 0.2
-  skullLegCount: 30
+  attackRange: {x: 2, y: 2}
+  attackCoolTime: 0.1
+  skullLegCount: 50
   zoomOutOffset: {x: 0, y: 12, z: -6}
   completionTime: 1
   skullOffset: {x: 0, y: 1.2, z: 0}

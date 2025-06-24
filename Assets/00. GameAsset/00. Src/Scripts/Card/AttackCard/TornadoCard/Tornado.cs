@@ -8,7 +8,7 @@ public class Tornado : MonoBehaviour
 
         if(monster != null)
         {
-            monster.TakeDamage(0);
+            monster.TakeDamage(Constants.maxDamage);
         }
     }
 }

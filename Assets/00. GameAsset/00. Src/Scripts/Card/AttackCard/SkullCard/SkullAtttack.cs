@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class SkullLegSmallArea : MonoBehaviour
+public class SkullAtttack : MonoBehaviour
 {
-    private void Update()
-    {
-        transform.position = InGameManager.Instance.GetPlayerObject().transform.position;
-    }
+	private void Update()
+	{
+		transform.rotation = Quaternion.Euler(-90, 0, 0);
+	}
 
     private void OnTriggerEnter(Collider other)
     {
