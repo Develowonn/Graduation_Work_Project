@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78218c53b6d6cba438f8ace39797580a, type: 3}
-  m_Name: Weaken
+  m_Name: CooltimeReduction
   m_EditorClassIdentifier: 
-  cardName: "\uAC00\uAC00\uAC00\uAC00"
+  cardName: "\uCFE0\uCFE0\uCFE0\uCFE0\uCFE0"
   cardSprite: {fileID: 0}
-  cardInfo: "\uAC00\uAC00\uAC00\uAC01"
+  cardInfo: "\uCFE0\uCFE0\uCFE0\uCFE0\uCFE0\uCFE0"
   cardType: 1
-  card: {fileID: 1556949165937049762, guid: 729c6668ed7e0d24d93d629ed307cdd2, type: 3}
+  card: {fileID: 4319645413991109669, guid: 4db20a95c5d579142a994c5af2746916, type: 3}

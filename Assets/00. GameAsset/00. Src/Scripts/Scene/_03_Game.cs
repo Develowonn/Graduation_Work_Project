@@ -2,14 +2,23 @@ using UnityEngine;
 
 public class _03_Game : MonoBehaviour
 {
+	public static _03_Game Instance { get; private set; }
+
 	[SerializeField]
 	private Animator myDeckUIAnimator;
 
 	private int		 introTriggerHash;
 
+	private bool	 isIntro;
 	private bool	 isAnimating;
 
-	private void Start()
+    private void Awake()
+    {
+		if (Instance == null)
+			Instance = this;
+    }
+
+    private void Start()
 	{
 		introTriggerHash = Animator.StringToHash("OnIntro");
 
@@ -41,9 +50,12 @@ public class _03_Game : MonoBehaviour
             {
 				myDeckUIAnimator.enabled = false;
 				isAnimating	= false;
+				isIntro		= true;
 
 				StageManager.instance.LevelUpPlayer();
             }
         }
     }
+
+	public bool IsIntro() { return isIntro; }
 }

@@ -39,7 +39,8 @@ public class DeckManager : MonoBehaviour
 
 	private void Update()
 	{
-		SelectCardByInput();
+		if (!_03_Game.Instance.IsIntro()) return;
+			SelectCardByInput();
 	}
 
 	private void InitializeDeck()
