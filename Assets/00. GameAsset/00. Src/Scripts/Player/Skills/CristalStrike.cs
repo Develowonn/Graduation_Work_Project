@@ -10,14 +10,17 @@ public class CristalStrike : PlayerAttackSkill
 
     public override void Attack()
     {
+        Debug.Log("실행 : " + Time.time);
         Collider[] objects = Physics.OverlapSphere(transform.position, rage + (level * (rage * 10)), monsterMask);
         GameObject skillObject = ObjectPool.instance.SpawnFromPool(effectName, transform.position, 0.5f + (level * 0.1f));
         StartCoroutine(Co_EffectDelay(skillObject));
-        Debug.Log($"감지된 몬스터 수: {objects.Length}");
+
         foreach (Collider obj in objects)
         {
-            Monster monster = obj.GetComponent<Monster>();
-            monster.TakeDamage(damage);
+            if (obj.TryGetComponent(out Monster monster))
+            {
+                monster.TakeDamage(damage);
+            }
         }
     }
 
