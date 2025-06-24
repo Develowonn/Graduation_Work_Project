@@ -22,8 +22,6 @@ public class TornadoCard : Card
 	private float			radius;
 	[SerializeField]
 	private float			explosionTime;
-	[SerializeField]
-	private float			explosionDestroyTime;
 
 	[Header("Offset")]
 	[SerializeField]
@@ -84,8 +82,6 @@ public class TornadoCard : Card
 	{
 		explosion = Instantiate(ExplosionVfx, InGameManager.Instance.GetPlayerObject().transform.position + auraOffset, Quaternion.Euler(-90, 0, 0));
 		explosion.transform.SetParent(InGameManager.Instance.GetPlayerObject().transform);
-
-		Destroy(explosion, explosionDestroyTime);
 	}
 
 	private void SpawnTornado()
