@@ -37,16 +37,20 @@ public class ThunderStrikeSkillTrigger : PlayerAttackSkill
         Debug.Log("공격시도");
         (targeting as RandomEnemysTargetingStrategy).Init(range, targetCount + level, monsterMask);
         var targets = targeting.GetTargets(transform);
-        foreach (var target in targets)
-        {
-            GameObject obj = ObjectPool.instance.SpawnFromPool(effectName, target.position);
-            StartCoroutine(Co_EffectDelay(obj));
 
-            if (target.TryGetComponent<Monster>(out var monster))
+        if (targets.Count > 0)      // 예외 처리
+        {
+            foreach (var target in targets)
             {
-                monster.TakeDamage(damage);
+                GameObject obj = ObjectPool.instance.SpawnFromPool(effectName, target.position);
+                StartCoroutine(Co_EffectDelay(obj));
+
+                if (target.TryGetComponent<Monster>(out var monster))
+                {
+                    monster.TakeDamage(damage);
+                }
+                yield return attackDelaySceconds;
             }
-            yield return attackDelaySceconds;
         }
     }
 

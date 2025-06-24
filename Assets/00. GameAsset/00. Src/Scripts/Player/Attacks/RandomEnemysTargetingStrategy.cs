@@ -27,6 +27,8 @@ public class RandomEnemysTargetingStrategy : IMultiTargetingStrategy
     {
         Collider[] hits = Physics.OverlapSphere(origin.position, radius, targetMask);
 
+        if(hits.Length <= 0) return null;       // 예외 처리
+
         return hits
             .Select(h => h.transform)           // Trasnform 추출
             .OrderBy(_ => Random.value)         // 랜덤정렬
