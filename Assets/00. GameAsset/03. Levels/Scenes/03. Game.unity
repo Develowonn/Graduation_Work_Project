@@ -2253,6 +2253,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 215918378540523358, guid: 346e53e0327f2df468e1079324706e29, type: 3}
+      propertyPath: cardCooltimeImage
+      value: 
+      objectReference: {fileID: 1772854182}
+    - target: {fileID: 215918378540523358, guid: 346e53e0327f2df468e1079324706e29, type: 3}
       propertyPath: usedPositionOffset.y
       value: 150
       objectReference: {fileID: 0}
@@ -4130,6 +4134,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2587156182966324022, guid: d71fb8fdd7564124591ae9173367da6e, type: 3}
   m_PrefabInstance: {fileID: 153143977}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &153155268 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2926007143805276810, guid: 346e53e0327f2df468e1079324706e29, type: 3}
+  m_PrefabInstance: {fileID: 1935826386}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &154087389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9214,7 +9229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &362118568
 Transform:
   m_ObjectHideFlags: 0
@@ -10739,6 +10754,10 @@ PrefabInstance:
       propertyPath: usedMoveDuration
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 215918378540523358, guid: 346e53e0327f2df468e1079324706e29, type: 3}
+      propertyPath: cardCooltimeImage
+      value: 
+      objectReference: {fileID: 883403004}
     - target: {fileID: 215918378540523358, guid: 346e53e0327f2df468e1079324706e29, type: 3}
       propertyPath: usedPositionOffset.x
       value: 0
@@ -20020,6 +20039,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2587156182966324022, guid: d71fb8fdd7564124591ae9173367da6e, type: 3}
   m_PrefabInstance: {fileID: 879132114}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &883403004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2926007143805276810, guid: 346e53e0327f2df468e1079324706e29, type: 3}
+  m_PrefabInstance: {fileID: 471515965}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &884372516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38824,7 +38854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1682432644
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41365,6 +41395,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3063450851153204193, guid: 473e58a45cf2c5b46a6172709dec44b5, type: 3}
   m_PrefabInstance: {fileID: 1769738135}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1772854182 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2926007143805276810, guid: 346e53e0327f2df468e1079324706e29, type: 3}
+  m_PrefabInstance: {fileID: 81239758}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1782398347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44562,6 +44603,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 215918378540523358, guid: 346e53e0327f2df468e1079324706e29, type: 3}
+      propertyPath: cardCooltimeImage
+      value: 
+      objectReference: {fileID: 153155268}
+    - target: {fileID: 215918378540523358, guid: 346e53e0327f2df468e1079324706e29, type: 3}
       propertyPath: usedPositionOffset.y
       value: 150
       objectReference: {fileID: 0}
@@ -44647,6 +44692,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2688780298507056088, guid: 346e53e0327f2df468e1079324706e29, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617259072686117913, guid: 346e53e0327f2df468e1079324706e29, type: 3}
+      propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
