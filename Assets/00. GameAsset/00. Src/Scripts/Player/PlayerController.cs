@@ -5,7 +5,6 @@ public class PlayerController : MonoBehaviour
     private FacingDirection   facingDirection;
 
     private int               isMovingHash;
-    private int               xDirHash;
 
     private Animator          animator;
 
@@ -18,9 +17,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         facingDirection   = FacingDirection.Forward;
-
-        isMovingHash      = Animator.StringToHash("IsMove");
-        xDirHash          = Animator.StringToHash("XDir");
+        isMovingHash      = Animator.StringToHash("isMovable");
 
         animator          = GetComponent<Animator>();
 
@@ -46,6 +43,22 @@ public class PlayerController : MonoBehaviour
         if(playerStat.GetCurrentHP() <= 0.0f)
         {
             StageManager.instance.EndGame(TimeManager.instance.GetCurrentTime());
+        }
+    }
+
+    public void SetMovable(bool value)
+    {
+        switch (value) 
+        {
+            case true:
+                movementRigidbody.SetMovable(true);
+                animator.SetBool(isMovingHash, true);
+                break;
+
+            case false:
+                movementRigidbody.SetMovable(false);
+                animator.SetBool(isMovingHash, false);
+                break;
         }
     }
 
