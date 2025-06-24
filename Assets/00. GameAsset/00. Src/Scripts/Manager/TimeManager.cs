@@ -36,7 +36,7 @@ public class TimeManager : MonoBehaviour
     {
         while (true)
         {
-            if (maxTime > currentTime)
+            if (maxTime > currentTime && StageManager.instance.GetCurrentGameState() != InGameState.end)
             {
                 currentTime += Time.deltaTime;
                 minutes = (int)currentTime / 60;
@@ -44,9 +44,13 @@ public class TimeManager : MonoBehaviour
                 currentTimeText.text = $"{minutes:00} : {seconds:00}";
                 yield return null;
             }
-            else if (StageManager.instance.GetCurrentGameState() != InGameState.end)
+            else if (StageManager.instance.GetCurrentGameState() == InGameState.end)
             {
-                currentTime = maxTime;
+                StageManager.instance.EndGame(currentTime);
+                break;
+            }
+            else if (maxTime <= currentTime)
+            {
                 StageManager.instance.EndGame(currentTime);
                 break;
             }
