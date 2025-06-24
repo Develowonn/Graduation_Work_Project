@@ -1,5 +1,6 @@
 public static class Constants
 {
+    public const int maxDamage = 1000000;
 
     public static class MyDeck
     {

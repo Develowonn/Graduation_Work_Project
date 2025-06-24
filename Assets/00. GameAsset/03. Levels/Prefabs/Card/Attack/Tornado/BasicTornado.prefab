@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 199380040608345850}
   - component: {fileID: 114828354333688536}
   - component: {fileID: -5618016414959452552}
+  - component: {fileID: 3952470166029666989}
   m_Layer: 0
   m_Name: BasicTornado
   m_TagString: Untagged
@@ -3747,9 +3748,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -3930,7 +3931,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
@@ -5000,7 +5001,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterType: 1
-  movementSpeed: 2.5
+  movementSpeed: 1
+--- !u!114 &3952470166029666989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166697705615292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4a255f56668504bb9bc19f2fd65262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1442534876973244
 GameObject:
   m_ObjectHideFlags: 0

@@ -47,7 +47,8 @@ MonoBehaviour:
   tornadoCount: 10
   tornadoSpawnTime: 0.05
   radius: 1.5
-  explosionTime: 1.5
+  explosionTime: 4
+  explosionDestroyTime: 0.1
   auraOffset: {x: 0, y: 0.2, z: 0}
   particleOffset: {x: 0, y: 0.5, z: 0}
   auraVfx: {fileID: 1653487616914306, guid: 5dc1f03faa163e94dbe0e8d8d318544e, type: 3}
