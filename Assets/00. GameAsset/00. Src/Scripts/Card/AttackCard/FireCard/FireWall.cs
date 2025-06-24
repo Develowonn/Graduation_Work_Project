@@ -3,13 +3,13 @@ using UnityEngine;
 public class FireWall : MonoBehaviour
 {
     [SerializeField, Range(0.0f, 1.0f)]
-    private float playerHealthReductionRate;
+    private float       playerHealthReductionRate;
 
     [Header("VFX")]
     [SerializeField]
-    private GameObject fireVfx;
-    [SerializeField]
-    private float      fireVfxDestroyTime;
+    private GameObject  fireVfx;
+    [SerializeField]    
+    private float       fireVfxDestroyTime;
 
     private void OnPlayerTouchWall(Collision collider)
     {

@@ -6,7 +6,7 @@ public class FireaAreaKiller : MonoBehaviour
     [SerializeField]
     private GameObject fireVfx;
     [SerializeField]
-    private float fireVfxDestroyTime;
+    private float      fireVfxDestroyTime;
 
     private void OnTriggerEnter(Collider other)
     {
