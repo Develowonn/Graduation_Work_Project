@@ -2,9 +2,18 @@ using UnityEngine;
 
 public class SkullLegSmallArea : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         transform.position = InGameManager.Instance.GetPlayerObject().transform.position;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Monster monster = other.GetComponent<Monster>();
+
+        if (monster != null)
+        {
+            monster.TakeDamage(Constants.maxDamage);
+        }
     }
 }

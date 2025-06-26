@@ -39,7 +39,8 @@ public class DeckManager : MonoBehaviour
 
 	private void Update()
 	{
-		SelectCardByInput();
+		if (!_03_Game.Instance.IsIntro()) return;
+			SelectCardByInput();
 	}
 
 	private void InitializeDeck()
@@ -106,6 +107,12 @@ public class DeckManager : MonoBehaviour
 
 		await UniTask.Delay(TimeSpan.FromSeconds(cardUiList[selectedCardIndex].GetUsedMoveDuration() + usedDisappearDelay));
 		cardUiList[selectedCardIndex].gameObject.SetActive(false);
+
+		// 카드 쿨타임 UI에 표시
+		foreach(var cardUI in cardUiList)
+        {
+			cardUI.ProcessCooltime(cardCooltime).Forget();
+        }
 
 		await UniTask.Delay(TimeSpan.FromSeconds(cardCooltime));
 		isUsingCard = false;

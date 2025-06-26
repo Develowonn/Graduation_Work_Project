@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c922837c038949146a9f385a2e7840ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooolTimeReductionDuration: 0
-  coolTimeReductionPercent: 0
-  auraOffset: {x: 0, y: 0, z: 0}
-  auraVFX: {fileID: 0}
+  cooolTimeReductionDuration: 10
+  coolTimeReductionPercent: 0.5
+  auraOffset: {x: 0, y: 0, z: -0.2}
+  auraVFX: {fileID: 242248617604943412, guid: 7599d1149664bc747a0ed76c69811105, type: 3}

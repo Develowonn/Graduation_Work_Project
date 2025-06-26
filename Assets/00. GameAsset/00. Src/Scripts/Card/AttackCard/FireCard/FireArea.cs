@@ -5,6 +5,8 @@ public class FireArea : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] warningAreas;
+    [SerializeField]
+    private GameObject[] monsterKillerAreas;
 
     private int          previousIndex = -1;
 
@@ -43,5 +45,13 @@ public class FireArea : MonoBehaviour
             WarningArea.RightDown => warningAreas[(int)WarningArea.RightDown],
             _ => null
         };
+    }
+
+    public void SetKillerArea(bool value)
+    {
+        for(int i = 0; i < monsterKillerAreas.Length; i++)
+        {
+            monsterKillerAreas[i].SetActive(value);
+        }
     }
 }

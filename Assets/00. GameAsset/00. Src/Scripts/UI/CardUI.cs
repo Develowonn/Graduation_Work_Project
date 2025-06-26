@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // # ETC
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using TMPro;
 
@@ -10,6 +11,8 @@ public class CardUI : MonoBehaviour
 {
     [SerializeField]
     private Image               cardBackroundImage;
+    [SerializeField]
+    private Image               cardCooltimeImage;
 
     [Header("Back")]
     [SerializeField]
@@ -44,8 +47,6 @@ public class CardUI : MonoBehaviour
 	private CardType            cardType;
     private RectTransform       rectTransform;
 
-    public float GetUsedMoveDuration() { return usedMoveDuration; }
-        
     public void Initialize(string cardName, string cardInfo, Sprite iconSprite, CardType cardType)
     {
         rectTransform = GetComponent<RectTransform>();
@@ -75,12 +76,32 @@ public class CardUI : MonoBehaviour
         cardInfoText.gameObject.SetActive(true);
     }
 
+    public async UniTaskVoid ProcessCooltime(float value)
+    {
+        float maxCooltime = value;
+        float curCooltime = value;
+
+        cardCooltimeImage.gameObject.SetActive(true);
+
+        while(curCooltime > 0.0f)
+        {
+            curCooltime -= Time.deltaTime;
+            curCooltime  = Mathf.Max(curCooltime, 0);
+
+            cardCooltimeImage.fillAmount = curCooltime / maxCooltime;
+
+            await UniTask.Yield(PlayerLoopTiming.Update);
+        }
+        cardCooltimeImage.gameObject.SetActive(false);
+    }
+
     public void OnUsed()
     {
         rectTransform.DOScale(usedScale, scaleDuration).OnComplete(() =>
         {
 			rectTransform.DOAnchorPos(rectTransform.anchoredPosition + usedPositionOffset, usedMoveDuration);
 		});
+
     }
 
     public void OnSelected()
@@ -93,4 +114,5 @@ public class CardUI : MonoBehaviour
 		rectTransform.DOScale(Vector3.one, scaleDuration);
 
 	}
+    public float GetUsedMoveDuration() { return usedMoveDuration; }
 }

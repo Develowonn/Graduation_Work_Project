@@ -9,12 +9,16 @@ public class MovementRigidbody : MonoBehaviour
     [SerializeField]
     private float           movementSpeed;
 
+    private bool            isMovable;
+
     private PlayerStat      playerStat;
     private Rigidbody       rigid;
 
     private void Start()
     {
-        rigid    = GetComponent<Rigidbody>();
+        isMovable = true;
+
+        rigid     = GetComponent<Rigidbody>();
 
         if (characterType == CharacterType.Player)
             playerStat = GetComponent<PlayerStat>();
@@ -32,6 +36,8 @@ public class MovementRigidbody : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!isMovable) return;
+
         rigid.linearVelocity = MovementDir.normalized * movementSpeed;
     }
 
@@ -44,4 +50,9 @@ public class MovementRigidbody : MonoBehaviour
 	{
 		MovementDir = transform.TransformDirection(moveDir);
 	}
+
+    public void SetMovable(bool value)
+    {
+        isMovable = value;
+    }
 }

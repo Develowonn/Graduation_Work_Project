@@ -85,6 +85,15 @@ public class PlayerStat : MonoBehaviour
         hpBar.fillAmount = currentHP / maxHP;
     }
 
+    public void ReduceHPByPercent(float percent)
+    {
+        if (isInvincibility) return;
+
+        float damage = currentHP * Mathf.Clamp01(percent); // 0.0~1.0 안전 보정
+        currentHP    = Mathf.Clamp(currentHP - damage, 0, maxHP);
+        hpBar.fillAmount = currentHP / maxHP;
+    }
+
     public void SetMovementSpeed(float value)
     {
         movementSpeed = value;

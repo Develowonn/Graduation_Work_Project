@@ -123,6 +123,9 @@ public class SkullCard : Card
 		skullLegSmallAura.transform.SetParent(player.transform);
 
 		await UniTask.Delay(TimeSpan.FromSeconds(1.5f));
+		// 플레이어 움직임 제약
+		player.GetComponent<PlayerController>().SetMovable(false);
+
 		skullLegBigAura = Instantiate(skullLegBigAreaVFX, player.position + skullLegBigAuraOffset, Quaternion.Euler(-90, 0, 0));
 		skullLegBigAura.transform.SetParent(player.transform);
 
@@ -131,9 +134,9 @@ public class SkullCard : Card
 
 		await UniTask.Delay(TimeSpan.FromSeconds(1.0f));
 		skullLegAttackAura = Instantiate(skullLegAttackAreaVFX, player.position + skullLegAttackAuraOffset, Quaternion.Euler(-90, 0, 0));
-		skullLegAttackAura.transform.SetParent(player.transform);
 
 		await UniTask.Delay(TimeSpan.FromSeconds(2.0f));
+		player.GetComponent<PlayerController>().SetMovable(true);
 		camaraFollowTarget.SetOffset(origionCameraOffset);
 	}
 }

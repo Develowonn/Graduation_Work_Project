@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78218c53b6d6cba438f8ace39797580a, type: 3}
   m_Name: Weaken
   m_EditorClassIdentifier: 
-  cardName: Debufffff
+  cardName: "\uAC00\uAC00\uAC00\uAC00"
   cardSprite: {fileID: 0}
-  cardInfo: ahahahahahah
+  cardInfo: "\uAC00\uAC00\uAC00\uAC01"
   cardType: 1
   card: {fileID: 1556949165937049762, guid: 729c6668ed7e0d24d93d629ed307cdd2, type: 3}

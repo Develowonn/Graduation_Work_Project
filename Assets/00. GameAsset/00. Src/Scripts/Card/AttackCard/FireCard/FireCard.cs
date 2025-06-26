@@ -46,6 +46,8 @@ public class FireCard : Card
     private async UniTask ExecuteSkill()
 	{
         SpawnFireArea();
+        await UniTask.Delay(TimeSpan.FromSeconds(1.0f));
+        fireArea.SetKillerArea(false);
 
         await UniTask.Delay(TimeSpan.FromSeconds(2.0f));
         await ShowWarningAndAttackArea();

@@ -1,5 +1,12 @@
 public static class Constants
 {
+    public const int maxDamage = 1000000;
+
+    public static class Tag 
+    {
+        public const string Player  = "Player";
+        public const string Monster = "Monster";
+    }
 
     public static class MyDeck
     {

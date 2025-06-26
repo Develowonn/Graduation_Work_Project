@@ -8,16 +8,25 @@ public class CristalStrike : PlayerAttackSkill
     public float rage;                                      // 범위
     [SerializeField] private LayerMask monsterMask;         // 몬스터 레이어
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, rage + (level * (rage / 10)));
+    }
+
     public override void Attack()
     {
-        Collider[] objects = Physics.OverlapSphere(transform.position, rage + (level * (rage * 10)), monsterMask);
+        Debug.Log("실행 : " + Time.time);
+        Collider[] objects = Physics.OverlapSphere(transform.position, rage + (level * (rage / 10)), monsterMask);
         GameObject skillObject = ObjectPool.instance.SpawnFromPool(effectName, transform.position, 0.5f + (level * 0.1f));
         StartCoroutine(Co_EffectDelay(skillObject));
-        Debug.Log($"감지된 몬스터 수: {objects.Length}");
+
         foreach (Collider obj in objects)
         {
-            Monster monster = obj.GetComponent<Monster>();
-            monster.TakeDamage(damage);
+            if (obj.TryGetComponent(out Monster monster))
+            {
+                monster.TakeDamage(damage);
+            }
         }
     }
 

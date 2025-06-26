@@ -5002,8 +5002,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6455287272735414385}
+  - component: {fileID: 3694447243490165122}
   - component: {fileID: 6582749117994376451}
   - component: {fileID: 6583856290699374003}
+  - component: {fileID: 1079013219169614618}
   m_Layer: 0
   m_Name: WallFire
   m_TagString: Untagged
@@ -5028,6 +5030,27 @@ Transform:
   - {fileID: 5625718942428687425}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3694447243490165122
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6456318934539712061}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4, y: 1, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &6582749117994376451
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -9970,6 +9993,21 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &1079013219169614618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6456318934539712061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6657b3cc5cd2e94f9b68a0c38a34b06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthReductionRate: 0.05
+  fireVfx: {fileID: 1286065187986076, guid: 92123b7ad1b757e439385771899b5e1b, type: 3}
+  fireVfxDestroyTime: 2
 --- !u!1 &6457640387689850861
 GameObject:
   m_ObjectHideFlags: 0
