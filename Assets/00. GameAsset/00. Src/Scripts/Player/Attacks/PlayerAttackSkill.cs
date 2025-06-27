@@ -9,7 +9,8 @@ public abstract class PlayerAttackSkill : MonoBehaviour
     [SerializeField] protected float baseCooldown = 1f;                             // 스킬 기본 쿨타임
     [SerializeField] protected int level = 1;                                       // 스킬 레벨
     [SerializeField] protected string effectName = "ThunderEffect";                 // 스킬 이펙트 이름 (Pool에서 가져올 용도)
-    [SerializeField] protected float damage;                                        // 스킬 기본 데미지
+    [SerializeField] protected float baseAttackPower;                               // 스킬 기본 데미지
+    [SerializeField] protected float attackPowerPerLevel;
 
     [Header("value")]
     private float maxCooldown;
@@ -84,4 +85,10 @@ public abstract class PlayerAttackSkill : MonoBehaviour
     /// </summary>
     /// <returns></returns>
     public int GetSkillLevel() => level;
+
+    protected float GetAttackPower()
+    {
+        float totalAttackPower = baseAttackPower + (GetSkillLevel() * attackPowerPerLevel);
+        return totalAttackPower;
+    }
 }

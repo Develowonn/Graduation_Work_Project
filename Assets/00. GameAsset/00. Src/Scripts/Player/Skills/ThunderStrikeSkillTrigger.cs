@@ -47,7 +47,7 @@ public class ThunderStrikeSkillTrigger : PlayerAttackSkill
 
                 if (target.TryGetComponent<Monster>(out var monster))
                 {
-                    monster.TakeDamage(damage);
+                    monster.TakeDamage(GetAttackPower());
                 }
                 yield return attackDelaySceconds;
             }

@@ -18155,7 +18155,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
-  maxExp: 200
+  maxExp:
+  - 100
+  - 200
+  - 250
+  - 300
+  - 400
+  - 450
+  - 500
+  - 600
+  - 650
+  - 700
+  - 800
+  - 850
+  - 900
+  - 950
+  - 1000
   maxHP: 1000
   currentHP: 0
   movementSpeed: 3
