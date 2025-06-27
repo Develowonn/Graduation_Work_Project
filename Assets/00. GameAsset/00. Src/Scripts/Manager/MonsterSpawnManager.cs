@@ -24,6 +24,7 @@ public class MonsterSpawnManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(SpawnMonster());
+        TimeManager.instance.AddBossWaveAction(SpawnBossMonster);
     }
 
     private IEnumerator SpawnMonster()
@@ -41,12 +42,35 @@ public class MonsterSpawnManager : MonoBehaviour
 
                 spawnPosition.y = playerPosition.position.y;
                 string monsterName = monsterNameList[Random.Range(0, monsterNameList.Count)];
-                ObjectPool.instance.SpawnFromPool(monsterName, spawnPosition).GetComponent<Monster>().InitMonster(playerPosition, monsterName);
+
+                SpawnMonster(monsterName, spawnPosition);
 
                 yield return spawnDelaySeconds;
             }
 
             yield return spawnCoroutineDelaySeconds; // 다음 웨이브까지 대기
         }
+    }
+
+    private void SpawnMonster (string monsterName, Vector3 spawnPosition)
+    {
+        ObjectPool.instance.SpawnFromPool(monsterName, spawnPosition).GetComponent<Monster>().InitMonster(playerPosition, monsterName);
+    }
+
+    public void SpawnBossMonster()
+    {
+        string monsterName = StageManager.instance.GetBossMonster();
+
+        if (monsterName == null) return;
+
+        float angle = Random.Range(0f, 360f);
+        float distance = Random.Range(minDistance, maxDistance);
+
+        Vector3 direction = Quaternion.Euler(0, angle, 0) * Vector3.forward;
+        Vector3 spawnPosition = playerPosition.position + direction * distance;
+
+        spawnPosition.y = playerPosition.position.y;
+
+        ObjectPool.instance.SpawnFromPool(monsterName, spawnPosition).GetComponent<Monster>().InitMonster(playerPosition, monsterName);
     }
 }

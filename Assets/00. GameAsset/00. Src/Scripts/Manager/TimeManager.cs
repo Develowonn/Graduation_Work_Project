@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
@@ -11,11 +12,15 @@ public class TimeManager : MonoBehaviour
     [Header("TimeSetting")]
     [SerializeField] private float maxTime;
     [SerializeField] private float currentTime;
+    [SerializeField] private float bossWaveTime;
+    private float lastBossWaveTime;
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI currentTimeText;
     private int minutes;
     private int seconds;
+
+    private Action bossWave = null;
 
     private void Awake()
     {
@@ -54,6 +59,35 @@ public class TimeManager : MonoBehaviour
                 StageManager.instance.EndGame(currentTime);
                 break;
             }
+
+            int currentTimeInt = Mathf.FloorToInt(currentTime);
+            if (currentTimeInt % Mathf.FloorToInt(bossWaveTime) == 0 && currentTimeInt != lastBossWaveTime)
+            {
+                ExecutionBossWave();
+                lastBossWaveTime = currentTimeInt;
+            }
+
         }
+    }
+
+    private void ExecutionBossWave()
+    {
+        Debug.Log("보스 소환");
+
+        if (bossWave != null)
+        {
+            bossWave();
+            ResetBossWaveAction();
+        }
+    }
+
+    public void AddBossWaveAction(Action function)
+    {
+        this.bossWave += function;
+    }
+
+    private void ResetBossWaveAction()
+    {
+        this.bossWave = null;
     }
 }
