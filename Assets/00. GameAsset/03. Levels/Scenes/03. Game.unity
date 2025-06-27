@@ -9126,10 +9126,11 @@ MonoBehaviour:
   monsterList:
   - monsterNameList:
     - Monster
-    time: 500
+    - Monster2
+    time: 10
   - monsterNameList:
     - Monster
-    time: 300
+    time: 20
   minSpawnMonsterCount: 10
   maxSpawnMonsterCount: 15
   playerPosition: {fileID: 816597816}
@@ -16738,6 +16739,10 @@ MonoBehaviour:
   - poolCount: 1
     poolName: CristalStrike
     poolObject: {fileID: 1898679254100978, guid: 334df1225587c454fa189da1584a4d1f, type: 3}
+    parentObject: {fileID: 0}
+  - poolCount: 10
+    poolName: Monster2
+    poolObject: {fileID: 133524, guid: 0b3a8cb02aed9de4ca47edae92afba06, type: 3}
     parentObject: {fileID: 0}
 --- !u!1001 &781655485
 PrefabInstance:

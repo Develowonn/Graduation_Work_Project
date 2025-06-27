@@ -49,7 +49,7 @@ public class MonsterSpawnManager : MonoBehaviour
 
                 spawnPosition.y = playerPosition.position.y;
                 TimeMonsterIndex monsterList = GetMonsterIndex();
-                string monsterName = monsterList.monsterNameList[Random.Range(0, monsterList.monsterNameList.Count - 1)];
+                string monsterName = monsterList.monsterNameList[Random.Range(0, monsterList.monsterNameList.Count)];
 
                 SpawnMonster(monsterName, spawnPosition);
 
@@ -84,11 +84,27 @@ public class MonsterSpawnManager : MonoBehaviour
 
     private TimeMonsterIndex GetMonsterIndex()
     {
-        foreach (var index in monsterList)
+        float currentTime = TimeManager.instance.GetCurrentTime();
+
+        int left = 0;
+        int right = monsterList.Count - 1;
+        int bestIndex = 0;
+
+        while (left <= right)
         {
-            if (TimeManager.instance.GetCurrentTime() > index.time) return index;
+            int mid = (left + right) / 2;
+
+            if (monsterList[mid].time <= currentTime)
+            {
+                bestIndex = mid; // 현재 시간 이하인 가장 오른쪽 값을 저장
+                left = mid + 1;
+            }
+            else
+            {
+                right = mid - 1;
+            }
         }
 
-        return monsterList[monsterList.Count - 1];
+        return monsterList[bestIndex];
     }
 }
