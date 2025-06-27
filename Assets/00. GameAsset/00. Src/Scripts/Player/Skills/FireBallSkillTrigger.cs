@@ -19,12 +19,12 @@ public class FireBallSkillTrigger : PlayerAttackSkill
     {
         var targets = targeting.GetTargets(transform);
 
-        if (targets.Count <= 0) return; // 예외 처리
+        if (targets.Count <= 0 && targets == null) return; // 예외 처리
         foreach (var target in targets)
         {
             Debug.Log("화염구 발사");
             FireBallSkill fireBallSkill = ObjectPool.instance.SpawnFromPool(effectName, transform.position).GetComponent<FireBallSkill>();
-            fireBallSkill.Init(effectName, fireBallMoveSpeed, damage, level, target);
+            fireBallSkill.Init(effectName, fireBallMoveSpeed, GetAttackPower(), level, target);
         }
     }
 }

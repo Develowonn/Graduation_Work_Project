@@ -42,14 +42,17 @@ public class ThunderStrikeSkillTrigger : PlayerAttackSkill
         {
             foreach (var target in targets)
             {
-                GameObject obj = ObjectPool.instance.SpawnFromPool(effectName, target.position);
-                StartCoroutine(Co_EffectDelay(obj));
-
-                if (target.TryGetComponent<Monster>(out var monster))
+                if (target != null)         // 예외 처리
                 {
-                    monster.TakeDamage(damage);
+                    GameObject obj = ObjectPool.instance.SpawnFromPool(effectName, target.position);
+                    StartCoroutine(Co_EffectDelay(obj));
+
+                    if (target.TryGetComponent<Monster>(out var monster))
+                    {
+                        monster.TakeDamage(GetAttackPower());
+                    }
+                    yield return attackDelaySceconds;
                 }
-                yield return attackDelaySceconds;
             }
         }
     }

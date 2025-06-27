@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,7 @@ public class PlayerStat : MonoBehaviour
     [SerializeField] 
     private int         level;
     [SerializeField] 
-    private float       maxExp;
+    private List<float> maxExp;
 
     [Header("HP Stat")]
     [SerializeField] 
@@ -51,14 +52,17 @@ public class PlayerStat : MonoBehaviour
 
     public void GetExp(float exp)
     {
+        if(level == maxExp.Count) { return; }
+
         currentExp += exp;
-        if (currentExp >= maxExp)
+        if (currentExp >= maxExp[level])
         {
-            currentExp -= maxExp;
+            currentExp -= maxExp[level];
             level = level + 1;
             StageManager.instance.LevelUpPlayer();
         }
-        expBar.fillAmount = currentExp / maxExp;
+ 
+        expBar.fillAmount = currentExp / maxExp[level];
     }
 
     public float GetMaxHP()             { return maxHP; }

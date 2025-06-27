@@ -25,7 +25,7 @@ public class CristalStrike : PlayerAttackSkill
         {
             if (obj.TryGetComponent(out Monster monster))
             {
-                monster.TakeDamage(damage);
+                monster.TakeDamage(GetAttackPower());
             }
         }
     }
