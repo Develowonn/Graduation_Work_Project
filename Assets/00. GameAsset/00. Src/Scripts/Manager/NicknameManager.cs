@@ -67,7 +67,7 @@ public class NicknameManager : MonoBehaviour
             () => nicknameSettingPanel.SetActive(false));
 
         GameManager.Instance.SetPlayerName(text);
-        lobby.SetProfileNickname(text);
+        lobby.SetProfileNicknameText(text);
     }
 
     private bool IsInputfieldLengthInRange(string text)

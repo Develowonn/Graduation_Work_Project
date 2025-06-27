@@ -2,12 +2,25 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    private string playerName;
+    [SerializeField]
+    private int     maxEnergy;
 
-    public string GetPlayerName() { return playerName; }
+    private string  playerName;
+    private int     playerGold;
+    private int     currentEnergy;
+
+    public string GetPlayerName()    { return playerName; }
+    public int    GetPlayerGold()    { return playerGold; }
+    public int    GetMaxEnergy()     { return maxEnergy; }
+    public int    GetCurrentEnergy() { return currentEnergy; }
 
     public void SetPlayerName(string value)
     {
         playerName = value;
+    }
+
+    public void AddPlayerGold(int gold)
+    {
+        playerGold += gold;
     }
 }
