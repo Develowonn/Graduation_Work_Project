@@ -10,6 +10,12 @@ public class SkillSO : ScriptableObject
     public PlayerAttackSkill inGameSkillObject;             // 게임 플레이 시 참조용 인게임 오브젝트
     public GradeSO gradeSO;                                 // 등급 SO
 
+    public int GetSkillLevel()
+    {
+        if (inGameSkillObject != null) return inGameSkillObject.GetSkillLevel();
+        else return 1;
+    }
+
     public void LevelUpSkill()
     {
         inGameSkillObject.UPLevel();

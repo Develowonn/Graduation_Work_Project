@@ -72,6 +72,8 @@ public class TimeManager : MonoBehaviour
 
     private void ExecutionBossWave()
     {
+        Debug.Log("보스 소환");
+
         if (bossWave != null)
         {
             bossWave();

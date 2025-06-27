@@ -61,6 +61,8 @@ public class MonsterSpawnManager : MonoBehaviour
     {
         string monsterName = StageManager.instance.GetBossMonster();
 
+        if (monsterName == null) return;
+
         float angle = Random.Range(0f, 360f);
         float distance = Random.Range(minDistance, maxDistance);
 

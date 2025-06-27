@@ -9,6 +9,7 @@ public class LevelUpBtn : MonoBehaviour
     [SerializeField] private TextMeshProUGUI skillName;
     [SerializeField] private TextMeshProUGUI skillExplanation;
     [SerializeField] private TextMeshProUGUI rarelityText;
+    [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private Button button;
 
     private void Awake()
@@ -23,6 +24,7 @@ public class LevelUpBtn : MonoBehaviour
         this.skillExplanation.text = playerSkillData.skillDesription;                               // 스킬 설명
         this.rarelityText.text = playerSkillData.gradeSO.grade.ToString();                          // 스킬 등급
         this.rarelityText.color = playerSkillData.gradeSO.color;                                    // 스킬 등급에 따른 색상
+        this.levelText.text = $"Lv. {playerSkillData.GetSkillLevel()}";
         button.onClick.RemoveAllListeners();                                                        // 전에 남은 레벨업 제거
         button.onClick.AddListener(() => playerAttackManager.GetOrLevelUpSkill(playerSkillData));   // 지정된 스킬 레벨업
     }
