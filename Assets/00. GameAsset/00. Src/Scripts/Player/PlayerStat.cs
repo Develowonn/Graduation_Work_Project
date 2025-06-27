@@ -61,7 +61,8 @@ public class PlayerStat : MonoBehaviour
             level = level + 1;
             StageManager.instance.LevelUpPlayer();
         }
-        expBar.fillAmount = currentExp / maxExp[level - 1];
+ 
+        expBar.fillAmount = currentExp / maxExp[level];
     }
 
     public float GetMaxHP()             { return maxHP; }
