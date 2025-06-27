@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/00. GameAsset/03. Levels/Scenes/00. Logo.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/00. GameAsset/03. Levels/Scenes/01. Title.unity
+    guid: 9f5f883baba2094468aa903d7c6da748
+  - enabled: 1
+    path: Assets/00. GameAsset/03. Levels/Scenes/02. Lobby.unity
+    guid: 3a9030b602a56ea4b8de27a5bb081347
+  - enabled: 1
     path: Assets/00. GameAsset/03. Levels/Scenes/03. Game.unity
     guid: a6aca345623791942897109a0f92464b
   m_configObjects:
