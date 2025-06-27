@@ -14,6 +14,9 @@ public class StageManager : MonoBehaviour
 {
     public static StageManager instance;
 
+    [Header("StageData")]
+    [SerializeField] private StageSO stageData;
+
     [Header("State")]
     [SerializeField] private InGameState currentGameState;
 
@@ -118,5 +121,14 @@ public class StageManager : MonoBehaviour
         int minutes = (int)resultTime / 60;
         int seconds = (int)resultTime % 60;
         resultTimeText.text = $"LifeTime : {minutes:00}:{seconds:00}";
+    }
+
+    public string GetBossMonster()
+    {
+        if (stageData.bossNameList.Count <= 0) return null;
+
+        string name = stageData.bossNameList[0];
+        stageData.bossNameList.RemoveAt(0);
+        return name;
     }
 }
