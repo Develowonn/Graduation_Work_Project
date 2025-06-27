@@ -9123,8 +9123,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDelay: 2
-  monsterNameList:
-  - Monster
+  monsterList:
+  - monsterNameList:
+    - Monster
+    time: 500
+  - monsterNameList:
+    - Monster
+    time: 300
   minSpawnMonsterCount: 10
   maxSpawnMonsterCount: 15
   playerPosition: {fileID: 816597816}
