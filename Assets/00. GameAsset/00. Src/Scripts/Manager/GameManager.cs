@@ -14,7 +14,12 @@ public class GameManager : Singleton<GameManager>
     public int    GetMaxEnergy()     { return maxEnergy; }
     public int    GetCurrentEnergy() { return currentEnergy; }
 
-    public void SetPlayerName(string value)
+	private void Start()
+	{
+		currentEnergy = maxEnergy;
+	}
+
+	public void SetPlayerName(string value)
     {
         playerName = value;
     }

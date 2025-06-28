@@ -2208,6 +2208,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2926007143805276810, guid: 346e53e0327f2df468e1079324706e29, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cee45c3514d9a704dbe03d0eacaedda8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10548,6 +10552,30 @@ PrefabInstance:
     - target: {fileID: 2688780298507056088, guid: 346e53e0327f2df468e1079324706e29, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926007143805276810, guid: 346e53e0327f2df468e1079324706e29, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cee45c3514d9a704dbe03d0eacaedda8, type: 3}
+    - target: {fileID: 2926007143805276810, guid: 346e53e0327f2df468e1079324706e29, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827892669559050158, guid: 346e53e0327f2df468e1079324706e29, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002007110658709993, guid: 346e53e0327f2df468e1079324706e29, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413882747518110889, guid: 346e53e0327f2df468e1079324706e29, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204054897598517232, guid: 346e53e0327f2df468e1079324706e29, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43472,6 +43500,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2926007143805276810, guid: 346e53e0327f2df468e1079324706e29, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cee45c3514d9a704dbe03d0eacaedda8, type: 3}
     - target: {fileID: 7617259072686117913, guid: 346e53e0327f2df468e1079324706e29, type: 3}
       propertyPath: m_Type
       value: 0
@@ -47802,7 +47834,7 @@ MonoBehaviour:
   fadeInTargetSize: {x: 0, y: 0}
   fadeOutTargetSize: {x: 3000, y: 3000}
   fadeImage: {fileID: 5153460775241884428}
-  fadeDuration: 1.5
+  fadeDuration: 0.8
 --- !u!1 &4468361709061379094
 GameObject:
   m_ObjectHideFlags: 0

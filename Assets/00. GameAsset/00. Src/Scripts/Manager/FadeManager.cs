@@ -81,6 +81,12 @@ public class FadeManager : MonoBehaviour
 	public void FadeOut(TweenCallback tweenCallback, TweenCallback tweenCallback1)
 	{
 		fadeImage.sizeDelta = fadeInTargetSize;
-		fadeImage.DOSizeDelta(fadeOutTargetSize, fadeDuration).OnComplete(tweenCallback).OnComplete(tweenCallback1);
+
+		fadeImage.DOSizeDelta(fadeOutTargetSize, fadeDuration)
+			.OnComplete(() =>
+			{
+				tweenCallback?.Invoke();
+				tweenCallback1?.Invoke();
+			});
 	}
 }
