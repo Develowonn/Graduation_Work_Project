@@ -128,7 +128,7 @@ public class StageManager : MonoBehaviour
         if (stageData.bossNameList.Count <= 0) return null;
 
         string name = stageData.bossNameList[0];
-        stageData.bossNameList.RemoveAt(0);
+        //stageData.bossNameList.RemoveAt(0);
         return name;
     }
 }
