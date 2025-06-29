@@ -63,7 +63,7 @@ public class NicknameManager : MonoBehaviour
             return;
         }
 
-        Utils.Dotween.PlayScaleAnimation(nicknameSettingPanel.transform, Vector3.zero, 0.1f, 
+        Utils.Dotween.PlayScaleAnimation(nicknameSettingPanel.transform, Vector3.zero, 0.4f, 
             () => nicknameSettingPanel.SetActive(false));
 
         GameManager.Instance.SetPlayerName(text);

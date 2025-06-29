@@ -2,7 +2,20 @@ public static class Constants
 {
     public const int maxDamage = 1000000;
 
-    public static class Tag 
+    public static class Channel
+    {
+        public const string JsonChannel = "Resources/Datas/";
+	}
+
+    public static class MonsterName
+    {
+        public const string Mushroom = "Mushroom";
+		public const string Radish   = "Radish";
+		public const string Cat      = "Cat";
+		public const string Golem    = "Golem";
+	}
+
+	public static class Tag 
     {
         public const string Player  = "Player";
         public const string Monster = "Monster";
