@@ -44,8 +44,6 @@ public abstract class UiButton : MonoBehaviour
 
 				uiButton.colors = colorBlock;
 				uiImage.DOFade(0.6f, 0.0f);
-
-				uiButton.onClick.AddListener(() => _02_Lobby.Instance.TriggerErrorMessage()); 
 				break;
 		}
 	}

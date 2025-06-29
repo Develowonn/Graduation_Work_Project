@@ -11,54 +11,55 @@ using TMPro;
 using DG.Tweening;
 using Cysharp.Threading.Tasks;
 using UnityEngine.SceneManagement;
+using System.Threading;
 
 public class _02_Lobby : MonoBehaviour
 {
-    public static _02_Lobby Instance { get; private set; }
+	public static _02_Lobby Instance { get; private set; }
 
-    [Header("Dungeon UI")]
-    [SerializeField]
-    private Button     dungeonOpenButton;
+	[Header("Dungeon UI")]
 	[SerializeField]
-	private Button     dungeonStartButton;
+	private Button dungeonOpenButton;
 	[SerializeField]
-    private GameObject dungeonPanel;
+	private Button dungeonStartButton;
 	[SerializeField]
-	private string	   dungeonName;
+	private GameObject dungeonPanel;
+	[SerializeField]
+	private string dungeonName;
 
-    [Header("Error UI")]
+	[Header("Error UI")]
 	[SerializeField]
-	private Image    errorUiImage;
+	private Image errorUiImage;
 	[SerializeField]
 	private TMP_Text errorUiText;
 	[SerializeField]
-	private float    showTime;
+	private float showTime;
 	[SerializeField]
-	private float    fadeDuration;
+	private float fadeDuration;
 
 	[Header("Text UI")]
 	[SerializeField]
-    private TMP_Text profileNicknameText;
-    [SerializeField]
-    private TMP_Text playerGoldText;
-    [SerializeField]
-    private TMP_Text playerEnergyText;
+	private TMP_Text profileNicknameText;
+	[SerializeField]
+	private TMP_Text playerGoldText;
+	[SerializeField]
+	private TMP_Text playerEnergyText;
 
 	private void Awake()
 	{
-        Instance = this;
+		Instance = this;
 	}
 
 	private void Start()
-    {
+	{
 		InitializeDungeonUI();
 
 		UpdatePlayerGoldText();
-        UpdatePlayerEnergyText();
+		UpdatePlayerEnergyText();
 
-        FadeManager.Instance.Fade();
-    }
-	
+		FadeManager.Instance.Fade();
+	}
+
 	public void InitializeDungeonUI()
 	{
 		dungeonOpenButton.onClick.AddListener(() => OnClickDungeonOpenButton());
@@ -67,44 +68,32 @@ public class _02_Lobby : MonoBehaviour
 	}
 
 	public void SetProfileNicknameText(string text)
-    {
-        profileNicknameText.text = text;
-    }
-
-    public void UpdatePlayerGoldText()
-    {
-        playerGoldText.text = GameManager.Instance.GetPlayerGold().ToString();
-    }
-
-    public void UpdatePlayerEnergyText()
-    {
-        GameManager gameManager = GameManager.Instance;
-        playerEnergyText.text   = $"{gameManager.GetCurrentEnergy().ToString()}/{gameManager.GetMaxEnergy().ToString()}";
-    }
-
-    public void TriggerErrorMessage()
-    {
-        TriggerErrorMessageAsync().Forget();
-    }
-
-	private async UniTaskVoid TriggerErrorMessageAsync()
 	{
-        errorUiImage.gameObject.SetActive(true);
-		errorUiImage.DOFade(1.0f, fadeDuration);
-		errorUiText.DOFade(1.0f, fadeDuration);
-
-		await UniTask.Delay(TimeSpan.FromSeconds(showTime));
-
-		errorUiText.DOFade(0.0f, fadeDuration);
-		errorUiImage.DOFade(0.0f, fadeDuration).OnComplete(() =>
-        {
-			errorUiImage.gameObject.SetActive(false);
-		});
+		profileNicknameText.text = text;
 	}
 
-    private void OnClickDungeonOpenButton()
-    {
-        dungeonPanel.gameObject.SetActive(true);
+	public void UpdatePlayerGoldText()
+	{
+		playerGoldText.text = GameManager.Instance.GetPlayerGold().ToString();
+	}
+
+	public void UpdatePlayerEnergyText()
+	{
+		GameManager gameManager = GameManager.Instance;
+
+		if (gameManager.IsEnergtInfinity())
+		{
+			playerEnergyText.text = $"¡Ä / ¡Ä";
+		}
+		else
+		{
+			playerEnergyText.text = $"{gameManager.GetCurrentEnergy()}/{gameManager.GetMaxEnergy()}";
+		}
+	}
+
+	private void OnClickDungeonOpenButton()
+	{
+		dungeonPanel.gameObject.SetActive(true);
 		Utils.Dotween.PlayScaleAnimation(dungeonPanel.transform, Vector3.one, 0.4f);
 	}
 
