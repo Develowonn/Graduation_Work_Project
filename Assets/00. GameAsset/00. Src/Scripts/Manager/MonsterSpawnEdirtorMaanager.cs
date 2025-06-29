@@ -67,6 +67,7 @@ public class MonsterSpawnEdirtorMaanager : MonoBehaviour
 			Destroy(monster);
 		}
 		monsterObjectLists.Clear();
+		monsterSpawnDatas.Clear();
 
 		string fileName							  = $"{stageDropdown.options[stageDropdown.value].text}";
 		MonsterSpawnDataList monsterSpawnDataList = EnemySpawnEditorJsonManager.Instance.LoadData(fileName);

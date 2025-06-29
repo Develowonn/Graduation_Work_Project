@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 // # Unity
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class EnemySpawnEditorJsonManager : MonoBehaviour
 {
@@ -21,6 +24,10 @@ public class EnemySpawnEditorJsonManager : MonoBehaviour
 		string json                   = JsonUtility.ToJson(dataList, true);
 		
 		File.WriteAllText(savePath, json);
+
+		#if UNITY_EDITOR
+		AssetDatabase.Refresh();
+		#endif
 	}
 
 	public MonsterSpawnDataList LoadData(string fileName)
@@ -42,5 +49,9 @@ public class EnemySpawnEditorJsonManager : MonoBehaviour
 	{
 		string savePath = Path.Combine(Application.dataPath, Constants.Channel.JsonChannel, fileName);
 		File.WriteAllText(savePath, string.Empty);
+
+		#if UNITY_EDITOR
+		AssetDatabase.Refresh();
+		#endif
 	}
 }
