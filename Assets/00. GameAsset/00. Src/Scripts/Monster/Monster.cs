@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,15 +6,16 @@ using UnityEngine.UI;
 public class Monster : MonoBehaviour
 {
     [Header("Stats")]
-    [SerializeField] private float moveSpeed = 1.5f;
-    [SerializeField] private float maxHp = 1;
-    private float currentHp;
-    private string monsterName;
-    [SerializeField] private float dropExp = 10f;
-    [SerializeField] private float attackPower;
+    [SerializeField] protected float moveSpeed = 1.5f;          // 이동속도
+    [SerializeField] protected float maxHp = 1;                 // 최대 체력
+    protected float currentHp;                                  // 현재 체력
+    protected string monsterName;                               // 몬스터 이름
+    [SerializeField] protected float dropExp = 10f;             // 처치 시 경험치 드랍량
+    [SerializeField] protected float attackPower;               // 공격력
+    protected bool isMoveStop = false;                          // 움직임 정지
 
-    private Transform target;
-    private Rigidbody rb;
+    protected Transform target;
+    protected Rigidbody rb;
 
     private void Awake()
     {
@@ -35,6 +37,11 @@ public class Monster : MonoBehaviour
     {
         if (target == null) return;
 
+        if (!isMoveStop) Move();
+    }
+
+    protected void Move()
+    {
         Vector3 direction = (target.position - transform.position);
         direction.y = 0f; // Y축 고정
         direction = direction.normalized;

@@ -32,6 +32,7 @@ public class MonsterSpawnManager : MonoBehaviour
     {
         StartCoroutine(SpawnMonster());
         TimeManager.instance.AddBossWaveAction(SpawnBossMonster);
+        SpawnBossMonster();
     }
 
     private IEnumerator SpawnMonster()
