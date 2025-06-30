@@ -34,6 +34,7 @@ public class StageManager : MonoBehaviour
     [SerializeField] private float resultTime;
 
     [Header("Player")]
+    [SerializeField] private GameObject playerCharacterObject;
     [SerializeField] private PlayerStat playerStat;
     [SerializeField] private PlayerSkillManager playerAttackManager;
     private int playerLevelUpCount = 0;
@@ -65,6 +66,11 @@ public class StageManager : MonoBehaviour
             InitLevelUpBtn(GetRandomSkill(), levelUpBtn_3);
         }
         else playerLevelUpCount++;
+    }
+
+    public GameObject GetPlayerObject()
+    {
+        return playerCharacterObject;
     }
 
     public SkillSO GetRandomSkill()

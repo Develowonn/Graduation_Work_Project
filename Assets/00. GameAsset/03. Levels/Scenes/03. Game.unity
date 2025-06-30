@@ -1066,6 +1066,7 @@ MonoBehaviour:
   levelUpBtn_2: {fileID: 812251710}
   levelUpBtn_3: {fileID: 1545883785}
   resultTime: 0
+  playerCharacterObject: {fileID: 816597807}
   playerStat: {fileID: 816597809}
   playerAttackManager: {fileID: 816597817}
   playerSkillDataList:

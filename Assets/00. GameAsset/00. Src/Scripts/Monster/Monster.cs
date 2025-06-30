@@ -27,6 +27,11 @@ public class Monster : MonoBehaviour
         currentHp = maxHp;
     }
 
+    /// <summary>
+    /// 몬스터 초기화 함수
+    /// </summary>
+    /// <param name="playerTransform">따라갈 타겟</param>
+    /// <param name="monsterName">몬스터 이름(풀링용)</param>
     public void InitMonster(Transform playerTransform, string monsterName)
     {
         this.target = playerTransform;
