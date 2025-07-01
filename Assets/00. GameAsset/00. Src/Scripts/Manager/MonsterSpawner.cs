@@ -43,12 +43,12 @@ public class MonsterSpawner : MonoBehaviour
 		{
 			foreach(var monsterSpawnData in monsterSpawnDatas)
 			{
-				if(monsterSpawnData.spawnTime != elapsedTime)
-					break;
-
-				Vector3 spawnPos = player.transform.position + monsterSpawnData.spawnPosition;
-				Monster monster = ObjectPool.instance.SpawnFromPool(monsterSpawnData.monsterName, spawnPos).GetComponent<Monster>();
-				monster.InitMonster(StageManager.instance.GetPlayerObject().transform, monsterSpawnData.monsterName);
+				if(elapsedTime == monsterSpawnData.spawnTime)
+				{
+					Vector3 spawnPos = player.transform.position + monsterSpawnData.spawnPosition;
+					Monster monster = ObjectPool.instance.SpawnFromPool(monsterSpawnData.monsterName, spawnPos).GetComponent<Monster>();
+					monster.InitMonster(StageManager.instance.GetPlayerObject().transform, monsterSpawnData.monsterName);
+				}
 			}
 
 			elapsedTime += 1.0m;
