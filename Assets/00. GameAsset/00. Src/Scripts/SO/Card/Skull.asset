@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78218c53b6d6cba438f8ace39797580a, type: 3}
   m_Name: Skull
   m_EditorClassIdentifier: 
-  cardName: "\uD574\uACE8 \uC601\uC5ED\uC804\uAC1C"
-  cardSprite: {fileID: 0}
-  cardInfo: "\uC601\uC5ED\uC804\uAC1C! \uD574\uACE8 \uC18C\uD658 "
+  cardName: "\uC2A4\uCEEC \uBC84\uC2A4\uD2B8"
+  cardSprite: {fileID: 21300000, guid: b828cdfdaafed0a45aacd74bb2e98bd7, type: 3}
+  cardInfo: "\uD574\uACE8 \uB2E4\uB9AC\uB97C \uC19F\uAD6C\uCE58\uAC8C \uD55C \uB4A4,
+    \uC9C0\uC5F0 \uD3ED\uBC1C\uB85C \uAD11\uC5ED \uD53C\uD574\uB97C \uC8FC\uB294
+    \uADFC\uAC70\uB9AC \uC2A4\uD0AC."
   cardType: 0
   card: {fileID: 5034386687440938878, guid: 2533b1145b1ec524a966ab97c40e868a, type: 3}

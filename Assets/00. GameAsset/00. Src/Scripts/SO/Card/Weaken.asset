@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78218c53b6d6cba438f8ace39797580a, type: 3}
   m_Name: Weaken
   m_EditorClassIdentifier: 
-  cardName: "\uAC00\uAC00\uAC00\uAC00"
-  cardSprite: {fileID: 0}
-  cardInfo: "\uAC00\uAC00\uAC00\uAC01"
+  cardName: "\uCCB4\uC778 \uC5B5\uC81C"
+  cardSprite: {fileID: 21300000, guid: d03dbb2c45a68ee4392ffff3923ed7ae, type: 3}
+  cardInfo: "5\uCD08 \uB3D9\uC548 \uC0AC\uC2AC\uC774 \uCE90\uB9AD\uD130\uB97C \uAC10\uC2F8\uBA70
+    \uACF5\uACA9\uB825\uACFC \uC774\uB3D9 \uC18D\uB3C4\uAC00 \uAC10\uC18C\uD569\uB2C8\uB2E4."
   cardType: 1
   card: {fileID: 1556949165937049762, guid: 729c6668ed7e0d24d93d629ed307cdd2, type: 3}

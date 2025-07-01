@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78218c53b6d6cba438f8ace39797580a, type: 3}
   m_Name: Fire
   m_EditorClassIdentifier: 
-  cardName: "\uD654\uC5FC\uAC10\uC625 "
-  cardSprite: {fileID: 0}
-  cardInfo: "\uD654\uC5FC\uAC10\uC625\uC785\uB2C8\uB2E4. \uD328\uD134\uC744 \uACF5\uB7B5\uD558\uC138\uC694."
+  cardName: "\uD30C\uBA78\uC758 \uBD88\uC7A5\uD310"
+  cardSprite: {fileID: 21300000, guid: 0c776dcb26982264a92c638214b3a6be, type: 3}
+  cardInfo: "X\uC790 \uBD88\uAF43\uC744 \uAE54\uACE0 \uBB34\uC791\uC704 \uD3ED\uBC1C\uC744
+    \uC77C\uC73C\uD0A4\uB294 \uC790\uD3ED\uD615 \uAD11\uC5ED\uAE30."
   cardType: 0
   card: {fileID: 6447568836879822599, guid: ebd49ecf30afe4e499cfeb7ffb4bbc98, type: 3}
