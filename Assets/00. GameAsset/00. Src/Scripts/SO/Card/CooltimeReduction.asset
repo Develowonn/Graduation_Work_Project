@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78218c53b6d6cba438f8ace39797580a, type: 3}
   m_Name: CooltimeReduction
   m_EditorClassIdentifier: 
-  cardName: "\uCFE0\uCFE0\uCFE0\uCFE0\uCFE0"
-  cardSprite: {fileID: 0}
-  cardInfo: "\uCFE0\uCFE0\uCFE0\uCFE0\uCFE0\uCFE0"
+  cardName: "\uC2DC\uAC04 \uC65C\uACE1"
+  cardSprite: {fileID: 21300000, guid: c67599e80ab5e204c8a6e25b3c46da59, type: 3}
+  cardInfo: "10\uCD08 \uB3D9\uC548 \uC2A4\uD0AC \uCFE8\uD0C0\uC784\uC774 50%\uB9CC\uD07C
+    \uAC10\uC18C\uD558\uB294 \uBC84\uD504\uD615 \uCE74\uB4DC."
   cardType: 1
   card: {fileID: 4319645413991109669, guid: 4db20a95c5d579142a994c5af2746916, type: 3}

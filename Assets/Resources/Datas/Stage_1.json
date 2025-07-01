@@ -4,18 +4,216 @@
             "monsterName": "Mushroom",
             "spawnTime": 0,
             "spawnPosition": {
-                "x": 0.07362265139818192,
-                "y": 1.0,
-                "z": -0.000006566783667949494
+                "x": -1.8443145751953126,
+                "y": 0.0,
+                "z": -7.5376739501953129
             }
         },
         {
             "monsterName": "Mushroom",
             "spawnTime": 0,
             "spawnPosition": {
-                "x": 47.391143798828128,
-                "y": 1.0,
-                "z": 25.49981689453125
+                "x": -2.00469970703125,
+                "y": 0.0,
+                "z": -8.018798828125
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 0,
+            "spawnPosition": {
+                "x": 2.48583984375,
+                "y": 0.0,
+                "z": -7.5376739501953129
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 0,
+            "spawnPosition": {
+                "x": 6.4952392578125,
+                "y": 0.0,
+                "z": -6.7357940673828129
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 0,
+            "spawnPosition": {
+                "x": 10.665069580078125,
+                "y": 0.0,
+                "z": -5.7735443115234379
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 0,
+            "spawnPosition": {
+                "x": 14.193267822265625,
+                "y": 0.0,
+                "z": 1.122650146484375
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 0,
+            "spawnPosition": {
+                "x": 7.136749267578125,
+                "y": 0.0,
+                "z": 8.49993896484375
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 0,
+            "spawnPosition": {
+                "x": -0.0801849365234375,
+                "y": 0.0,
+                "z": 11.226348876953125
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 0,
+            "spawnPosition": {
+                "x": -7.61785888671875,
+                "y": 0.0,
+                "z": 10.7452392578125
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 0,
+            "spawnPosition": {
+                "x": -16.117767333984376,
+                "y": 0.0,
+                "z": 9.782928466796875
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 0,
+            "spawnPosition": {
+                "x": -19.004547119140626,
+                "y": 0.0,
+                "z": 0.6414947509765625
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 0,
+            "spawnPosition": {
+                "x": -18.363052368164064,
+                "y": 0.0,
+                "z": -3.6886444091796877
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 0,
+            "spawnPosition": {
+                "x": -13.070663452148438,
+                "y": 0.0,
+                "z": -7.858428955078125
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 0,
+            "spawnPosition": {
+                "x": -10.985763549804688,
+                "y": 0.0,
+                "z": -8.339553833007813
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 6,
+            "spawnPosition": {
+                "x": -5.6933441162109379,
+                "y": 0.0,
+                "z": -12.188583374023438
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 6,
+            "spawnPosition": {
+                "x": -12.268768310546875,
+                "y": 0.0,
+                "z": -8.499923706054688
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 6,
+            "spawnPosition": {
+                "x": -16.598922729492189,
+                "y": 0.0,
+                "z": 3.68865966796875
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 6,
+            "spawnPosition": {
+                "x": -15.155532836914063,
+                "y": 0.0,
+                "z": 9.622589111328125
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 6,
+            "spawnPosition": {
+                "x": -10.02349853515625,
+                "y": 0.0,
+                "z": 11.70745849609375
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 6,
+            "spawnPosition": {
+                "x": 6.4952392578125,
+                "y": 0.0,
+                "z": 11.226348876953125
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 6,
+            "spawnPosition": {
+                "x": 12.268798828125,
+                "y": 0.0,
+                "z": 5.6131439208984379
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 6,
+            "spawnPosition": {
+                "x": 11.146148681640625,
+                "y": 0.0,
+                "z": -4.490509033203125
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 6,
+            "spawnPosition": {
+                "x": 5.05181884765625,
+                "y": 0.0,
+                "z": -11.065933227539063
+            }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 6,
+            "spawnPosition": {
+                "x": -1.6839447021484376,
+                "y": 0.0,
+                "z": 11.547088623046875
             }
         }
     ]

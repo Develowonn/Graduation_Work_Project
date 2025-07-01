@@ -103,7 +103,7 @@ public class MonsterSpawnEdirtorMaanager : MonoBehaviour
 			GameObject monsterObj = monsterData[monsterDropdown.value].monsterObject;	
 
 			Vector3 spawnPos	  = hit.point;
-			spawnPos.y            = 1.0f;
+			spawnPos.y            = 0.0f;
 
 		    EditorMonster monster = Instantiate(monsterObj, spawnPos, Quaternion.identity)
 				.GetComponent<EditorMonster>();
