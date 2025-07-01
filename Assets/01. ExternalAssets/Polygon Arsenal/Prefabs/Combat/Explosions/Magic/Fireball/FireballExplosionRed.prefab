@@ -14730,6 +14730,7 @@ GameObject:
   - component: {fileID: 198094002163677414}
   - component: {fileID: 199346489615907956}
   - component: {fileID: 114159877719465520}
+  - component: {fileID: -8513958763992651529}
   m_Layer: 0
   m_Name: FireballExplosionRed
   m_TagString: Untagged
@@ -14747,8 +14748,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4434374915138438}
   - {fileID: 4740630842776472}
@@ -19641,3 +19642,22 @@ MonoBehaviour:
   destroyWhenDone: 1
   soundPrefabIsChild: 0
   pitchRandomMultiplier: 1.4
+--- !u!114 &-8513958763992651529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879798220002124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa284b2e657583d45ac43742333f3d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: FlameExplosion
+  waitTime: 1
+  damage: 10
+  explosionRadius: 1
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 8

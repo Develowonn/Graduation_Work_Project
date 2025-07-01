@@ -7,13 +7,15 @@ public class ExplosionDashPattern : IBossPattern
     private float dashDuration;      // 대쉬 시간
     private string flameName;
     private float flameDuration;
+    private float damage;
 
-    public ExplosionDashPattern( float dashSpeed, float dashDuration, string flameName, float flameDuration)
+    public ExplosionDashPattern(float dashSpeed, float dashDuration, string flameName, float flameDuration, float damage)
     {
         this.dashSpeed = dashSpeed;
         this.dashDuration = dashDuration;
         this.flameName = flameName;
         this.flameDuration = flameDuration;
+        this.damage = damage;
     }
 
     public IEnumerator Execute(BossMonster boss)

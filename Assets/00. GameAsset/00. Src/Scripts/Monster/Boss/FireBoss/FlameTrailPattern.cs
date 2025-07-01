@@ -6,16 +6,18 @@ public class FlameTrailPattern : IBossPattern
     private int flameCount;                 // 생성할 화염(1열 라인) 개수
     private string flameName;               // 오브젝트 이름 (풀링)
     private float distanceBetweenFlames;    // 화염 간 거리
-    private float flameDuration;
+    private float flameDuration;            // 불 지속 시간
+    private float damage;
 
     private WaitForSeconds waitForSeconds;
 
-    public FlameTrailPattern(float flameSpawnDelay, int flameCount, string flameName, float distanceBetweenFlames, float flameDuration)
+    public FlameTrailPattern(float flameSpawnDelay, int flameCount, string flameName, float distanceBetweenFlames, float flameDuration, float damage)
     {
         this.flameCount = flameCount;
         this.flameName = flameName;
         this.distanceBetweenFlames = distanceBetweenFlames;
         this.flameDuration = flameDuration;
+        this.damage = damage;
 
         waitForSeconds = new WaitForSeconds(flameSpawnDelay);
     }
