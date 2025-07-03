@@ -13,7 +13,10 @@ public class BlazingNovaPattern : IBossPattern
     private float damage;
     private WaitForSeconds delay;
 
-    public BlazingNovaPattern(int ringCount, float ringInterval, int baseExplosionsPerRing, int explosionStep, string explosionEffectName, GameObject fireworkEffectObject, float explosionDelay, float damage)
+    private readonly int hashIsExplosion = Animator.StringToHash("IsExplosion");
+    private Animator animator;
+
+    public BlazingNovaPattern(Animator animator, int ringCount, float ringInterval, int baseExplosionsPerRing, int explosionStep, string explosionEffectName, GameObject fireworkEffectObject, float explosionDelay, float damage)
     {
         this.ringCount = ringCount;
         this.ringInterval = ringInterval;
@@ -25,12 +28,15 @@ public class BlazingNovaPattern : IBossPattern
         this.damage = damage;
 
         this.delay = new WaitForSeconds(explosionDelay);
+        this.animator = animator;
     }
 
     public IEnumerator Execute(BossMonster boss)
     {
+        animator.SetTrigger(hashIsExplosion);
         fireworkEffectObject.SetActive(true);
-        yield return new WaitForSeconds(1f);
+
+        yield return new WaitForSeconds(2f);
 
         for (int ring = 1; ring <= ringCount; ring++)
         {

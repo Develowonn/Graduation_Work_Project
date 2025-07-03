@@ -10,8 +10,11 @@ public class FlameTrailPattern : IBossPattern
     private float damage;
 
     private WaitForSeconds waitForSeconds;
+    private Animator animator;
 
-    public FlameTrailPattern(float flameSpawnDelay, int flameCount, string flameName, float distanceBetweenFlames, float flameDuration, float damage)
+    private readonly int hashIsMagic = Animator.StringToHash("IsMagic");
+
+    public FlameTrailPattern(Animator animator, float flameSpawnDelay, int flameCount, string flameName, float distanceBetweenFlames, float flameDuration, float damage)
     {
         this.flameCount = flameCount;
         this.flameName = flameName;
@@ -19,11 +22,14 @@ public class FlameTrailPattern : IBossPattern
         this.flameDuration = flameDuration;
         this.damage = damage;
 
+        this.animator = animator;
         waitForSeconds = new WaitForSeconds(flameSpawnDelay);
     }
 
     public IEnumerator Execute(BossMonster boss)
     {
+        animator.SetTrigger(hashIsMagic);
+
         Vector3 startPosition = boss.transform.position;                    // 시작 지점
         Vector3 forwardDirection = boss.transform.forward.normalized;       // 정면 
         Quaternion rotation = Quaternion.LookRotation(forwardDirection);    // 정면 방향

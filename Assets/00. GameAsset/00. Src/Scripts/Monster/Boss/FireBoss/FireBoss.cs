@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class FireBoss : BossMonster
 {
+    [Header("Component")]
+    private Animator animator;
+
     [Header("Flame")]
     [SerializeField] private string flameName;                  // 오브젝트 이름 (풀링)
 
@@ -28,11 +31,16 @@ public class FireBoss : BossMonster
     [SerializeField] private float explosionDelay;                               // 폭발 딜레이
     [SerializeField] private float blazingNovaPatternDamage;                     // 노바 패턴 데미지
 
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     protected override void Start()
     {
-        AddPattern(new FlameTrailPattern(flameSpawnDelay, flameCount, flameName, distanceBetweenFlames, trailFlameLifetime, flameTrailPatternDamage));
+        AddPattern(new FlameTrailPattern(animator, flameSpawnDelay, flameCount, flameName, distanceBetweenFlames, trailFlameLifetime, flameTrailPatternDamage));
         AddPattern(new ExplosionDashPattern(dashSpeed, dashDuration, flameName, dashFlameLifetime, explosionDashPatternDamage));
-        AddPattern(new BlazingNovaPattern(ringCount, ringInterval, baseExplosionsPerRing, explosionStep, explosionEffectName, fireworkEffectObject, explosionDelay, blazingNovaPatternDamage));
+        AddPattern(new BlazingNovaPattern(animator, ringCount, ringInterval, baseExplosionsPerRing, explosionStep, explosionEffectName, fireworkEffectObject, explosionDelay, blazingNovaPatternDamage));
         base.Start();
     }
 }
