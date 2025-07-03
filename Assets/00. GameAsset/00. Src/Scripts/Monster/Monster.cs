@@ -17,7 +17,7 @@ public class Monster : MonoBehaviour
     protected Transform target;
     protected Rigidbody rb;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody>();
     }

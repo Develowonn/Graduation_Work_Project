@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8036929730973220699}
-  - component: {fileID: 6853177262370834687}
+  - component: {fileID: -6167001686132121531}
   m_Layer: 0
   m_Name: FlameLine
   m_TagString: Untagged
@@ -37,7 +37,7 @@ Transform:
   - {fileID: 3835182791826895539}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6853177262370834687
+--- !u!114 &-6167001686132121531
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,9 +46,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 401734477223868645}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e499fb95554cd3b41b5a2f69d35799d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 47b490a5fa008fc4dae472deb42748e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitBoxSize: {x: 3, y: 0.5, z: 0.5}
+  damage: 10
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 8
+  hitInterval: 1
   disableTime: 3
   objectName: FlameLine
 --- !u!1001 &2337158607685359815

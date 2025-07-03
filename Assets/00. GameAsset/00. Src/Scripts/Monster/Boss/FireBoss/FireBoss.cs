@@ -31,8 +31,9 @@ public class FireBoss : BossMonster
     [SerializeField] private float explosionDelay;                               // 폭발 딜레이
     [SerializeField] private float blazingNovaPatternDamage;                     // 노바 패턴 데미지
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         animator = GetComponent<Animator>();
     }
 
