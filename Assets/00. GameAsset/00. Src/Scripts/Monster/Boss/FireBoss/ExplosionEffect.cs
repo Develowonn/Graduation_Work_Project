@@ -28,6 +28,7 @@ public class ExplosionEffect : MonoBehaviour
     {
         Collider[] targets = Physics.OverlapSphere(transform.position, explosionRadius, targetMask);
 
+        if (targets.Length <= 0) return;
         foreach (Collider target in targets)
         {
             PlayerController player = target.GetComponent<PlayerController>();

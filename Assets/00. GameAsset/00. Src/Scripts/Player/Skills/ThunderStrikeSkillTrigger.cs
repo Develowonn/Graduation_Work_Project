@@ -38,7 +38,7 @@ public class ThunderStrikeSkillTrigger : PlayerAttackSkill
         (targeting as RandomEnemysTargetingStrategy).Init(range, targetCount + level, monsterMask);
         var targets = targeting.GetTargets(transform);
 
-        if (targets.Count > 0)      // 抗寇 贸府
+        if (targets != null || targets.Count > 0)      // 抗寇 贸府
         {
             foreach (var target in targets)
             {

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class BlackHoleEffect : MonoBehaviour
@@ -10,6 +11,11 @@ public class BlackHoleEffect : MonoBehaviour
     private WaitForSeconds delay;
     private float current;
     [SerializeField] private float returnPoolTime;
+
+    [Header("Suction")]
+    [SerializeField] private float suctionRadius = 5f;
+    [SerializeField] private float suctionForce = 10f;
+    [SerializeField] private LayerMask playerMask;
 
     private void Awake()
     {
@@ -26,11 +32,23 @@ public class BlackHoleEffect : MonoBehaviour
     IEnumerator Co_Explosion()
     {
         float size = current / explosionTime;
-        while(current >= 0)
+
+        while (current >= 0)
         {
             size = current / explosionTime;
             gameObject.transform.localScale = new Vector3(size, size, size);
-            Debug.Log(size);
+
+            Collider playerCol = Physics.OverlapSphere(transform.position, suctionRadius * size, playerMask).FirstOrDefault();
+            if (playerCol != null)
+            {
+                Rigidbody playerRb = playerCol.attachedRigidbody;
+                if (playerRb != null)
+                {
+                    Vector3 dir = (transform.position - playerRb.position).normalized;
+                    playerRb.AddForce(dir * suctionForce * Time.deltaTime, ForceMode.VelocityChange);
+                }
+            }
+
             current -= Time.deltaTime;
             yield return null;
         }
@@ -39,5 +57,11 @@ public class BlackHoleEffect : MonoBehaviour
         yield return delay;
         ObjectPool.instance.ReturnToPool(shadowExplosionEffect, exlopsionEffect);
         ObjectPool.instance.ReturnToPool(blackHoleEffect, this.gameObject);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, suctionRadius);
     }
 }

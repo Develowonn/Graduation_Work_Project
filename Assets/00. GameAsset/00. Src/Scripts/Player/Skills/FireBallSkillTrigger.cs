@@ -19,7 +19,7 @@ public class FireBallSkillTrigger : PlayerAttackSkill
     {
         var targets = targeting.GetTargets(transform);
 
-        if (targets.Count <= 0 && targets == null) return; // 抗寇 贸府
+        if (targets == null || targets.Count <= 0) return; // 抗寇 贸府
         foreach (var target in targets)
         {
             FireBallSkill fireBallSkill = ObjectPool.instance.SpawnFromPool(effectName, transform.position).GetComponent<FireBallSkill>();

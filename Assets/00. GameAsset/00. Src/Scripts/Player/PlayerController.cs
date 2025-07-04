@@ -14,15 +14,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float damageInterval = 1f; // 피해 간격
     private float lastDamageTime;
 
-    private void Start()
+    private void Awake()
     {
-        facingDirection   = FacingDirection.Forward;
-        isMovingHash      = Animator.StringToHash("isMovable");
-
         animator          = GetComponent<Animator>();
 
         playerStat        = GetComponent<PlayerStat>();
         movementRigidbody = GetComponent<MovementRigidbody>();
+    }
+
+    private void Start()
+    {
+        facingDirection   = FacingDirection.Forward;
+        isMovingHash      = Animator.StringToHash("isMovable");
     }
 
     private void Update()

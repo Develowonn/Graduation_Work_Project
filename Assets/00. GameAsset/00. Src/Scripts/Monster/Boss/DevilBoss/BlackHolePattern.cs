@@ -7,6 +7,7 @@ public class BlackHolePattern : IBossPattern
     private float blackHoleSpawnDelay;
     private float range;
     private int count;
+    private GameObject playerCharacter;
 
     private readonly int hashIsBlackHole = Animator.StringToHash("IsBlackHole");
 

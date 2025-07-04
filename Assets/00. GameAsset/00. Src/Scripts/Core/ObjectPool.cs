@@ -33,7 +33,10 @@ public class ObjectPool : MonoBehaviour
     {
         if (instance == null) instance = this;
         else Destroy(gameObject);
+    }
 
+    private void Start()
+    {
         Init();
     }
 
@@ -50,6 +53,7 @@ public class ObjectPool : MonoBehaviour
 
             parent.transform.SetParent(transform);
             parent.name = pool.poolName;
+            parent.transform.position = new Vector3(0, 100, 0);
 
             for (int i = 0; i < pool.poolCount; i++)
             {

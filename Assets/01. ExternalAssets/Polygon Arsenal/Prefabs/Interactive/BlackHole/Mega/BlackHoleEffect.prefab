@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: explosionTime
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8173725605931299745, guid: 75f5ad6880835f54a861b2b0b26203a0, type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
