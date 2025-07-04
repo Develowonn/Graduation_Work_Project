@@ -4932,8 +4932,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackHoleEffect: BlackHoleEffect
   shadowExplosionEffect: ShadowExplosion
-  explosionTime: 2
+  explosionTime: 5
   returnPoolTime: 1
+  suctionRadius: 5
+  suctionForce: 100
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &4885880232820279826
 GameObject:
   m_ObjectHideFlags: 0
