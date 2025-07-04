@@ -46,7 +46,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 401734477223868645}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47b490a5fa008fc4dae472deb42748e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 78f3907a7ec7bf242ba9738b5ac9b3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hitBoxSize: {x: 3, y: 0.5, z: 0.5}
@@ -54,8 +54,8 @@ MonoBehaviour:
   targetMask:
     serializedVersion: 2
     m_Bits: 8
-  hitInterval: 1
-  disableTime: 3
+  hitInterval: 0.5
+  disableTime: 0
   objectName: FlameLine
 --- !u!1001 &2337158607685359815
 PrefabInstance:

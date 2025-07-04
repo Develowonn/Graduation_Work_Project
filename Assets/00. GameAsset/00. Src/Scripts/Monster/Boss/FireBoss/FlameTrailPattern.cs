@@ -39,7 +39,7 @@ public class FlameTrailPattern : IBossPattern
             // i번째 불 장판 위치 계산
             Vector3 spawnPos = startPosition + forwardDirection * (i * distanceBetweenFlames);
 
-            ObjectPool.instance.SpawnFromPool(flameName, spawnPos, rotation).GetComponent<FlameLine>().disableTime = flameDuration;
+            ObjectPool.instance.SpawnFromPool(flameName, spawnPos, rotation).GetComponent<FlameLineEffect>().disableTime = flameDuration;
 
             yield return waitForSeconds;
         }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Linq;
 using UnityEngine;
 
-public class FireLineEffect : MonoBehaviour
+public class FlameLineEffect : MonoBehaviour
 {
     [Header("HitBox Size")]
     [SerializeField] private Vector3 hitBoxSize = new Vector3(1f, 1f, 1f);          // 박스 사이즈
@@ -19,12 +19,10 @@ public class FireLineEffect : MonoBehaviour
     private Coroutine hitCoroutine;
     private static readonly Collider[] results = new Collider[1];
     private WaitForSeconds interval;
-    private WaitForSeconds disableWait;
 
     private void Awake()
     {
         interval = new WaitForSeconds(hitInterval);
-        disableWait = new WaitForSeconds(disableTime);
     }
 
     private void OnEnable()
@@ -44,7 +42,8 @@ public class FireLineEffect : MonoBehaviour
 
     IEnumerator WaitDisable()
     {
-        yield return disableWait;
+        yield return null;
+        yield return new WaitForSeconds(disableTime);
         ObjectPool.instance.ReturnToPool(objectName, gameObject);
     }
     

@@ -2071,7 +2071,7 @@ MonoBehaviour:
     poolName: FireBoss
     poolObject: {fileID: 4499363579148558193, guid: 4363d73a7bba0b746a31d27b3b153595, type: 3}
     parentObject: {fileID: 0}
-  - poolCount: 10
+  - poolCount: 20
     poolName: FlameLine
     poolObject: {fileID: 401734477223868645, guid: 6679987eab187aa499b7ea5e152f744d, type: 3}
     parentObject: {fileID: 0}
