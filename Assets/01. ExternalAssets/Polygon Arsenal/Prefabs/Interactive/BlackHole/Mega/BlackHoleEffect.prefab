@@ -55,6 +55,9 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 8
+  damageRadius: 5
+  damage: 10
+  damageInterval: 1
 --- !u!1001 &5256636542998968594
 PrefabInstance:
   m_ObjectHideFlags: 0
