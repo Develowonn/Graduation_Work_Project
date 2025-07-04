@@ -1,22 +1,22 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
-public class ShadowExplosionEffect : MonoBehaviour
+public class BeamRainEffect : MonoBehaviour
 {
-    [SerializeField] private float explosionDelayTime;
     [SerializeField] private float damage;
     [SerializeField] private float range;
+    [SerializeField] private float damageDelayTime;
     [SerializeField] private LayerMask playerLayer;
-    private WaitForSeconds explosionWait;
+    private WaitForSeconds damageDelay;
 
     private void Awake()
     {
-        explosionWait = new WaitForSeconds(explosionDelayTime);
+        damageDelay = new WaitForSeconds(damageDelayTime);
     }
 
     private void OnEnable()
     {
-        StartCoroutine(Co_ShadowExplosion());
+        StartCoroutine(Co_BeamDamage());
     }
 
     private void OnDisable()
@@ -30,9 +30,9 @@ public class ShadowExplosionEffect : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
-    IEnumerator Co_ShadowExplosion()
+    IEnumerator Co_BeamDamage()
     {
-        yield return explosionWait;
+        yield return damageDelay;
         Collider[] player = Physics.OverlapSphere(transform.position, range, playerLayer);
         if (player.Length > 0)
         {

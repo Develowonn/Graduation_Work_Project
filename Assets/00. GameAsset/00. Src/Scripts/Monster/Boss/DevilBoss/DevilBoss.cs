@@ -30,8 +30,8 @@ public class DevilBoss : BossMonster
 
     protected override void Start()
     {
-        //AddPattern(new SkullExplosion(chargingEffect, skullEffect, skullExplosionSkillPos, animator));
-        //AddPattern(new BeamRainPattern(beamRainRange, beamEffectName, beamCount, beamRainDelayTime, animator));
+        AddPattern(new SkullExplosion(chargingEffect, skullEffect, skullExplosionSkillPos, animator));
+        AddPattern(new BeamRainPattern(beamRainRange, beamEffectName, beamCount, beamRainDelayTime, animator));
         AddPattern(new BlackHolePattern(blakHoleEffect, blackHoleSpawnDelay, blackHoleSpawnRange, blackHoleCount, animator));
         base.Start();
     }
