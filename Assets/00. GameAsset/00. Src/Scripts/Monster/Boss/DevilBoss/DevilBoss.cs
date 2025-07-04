@@ -16,6 +16,12 @@ public class DevilBoss : BossMonster
     [SerializeField] private int beamCount;                             // È½¼ö
     [SerializeField] private float beamRainDelayTime;                   // ºö ¹ßµ¿ ÈÄ ¾à°£ÀÇ µô·¹ÀÌ ½Ã°£
 
+    [Header("BlackHole")]
+    [SerializeField] private string blakHoleEffect;
+    [SerializeField] private float blackHoleSpawnDelay;
+    [SerializeField] private float blackHoleSpawnRange;
+    [SerializeField] private int blackHoleCount;
+
     protected override void Awake()
     {
         base.Awake();
@@ -26,6 +32,7 @@ public class DevilBoss : BossMonster
     {
         AddPattern(new SkullExplosion(chargingEffect, skullEffect, skullExplosionSkillPos, animator));
         AddPattern(new BeamRainPattern(beamRainRange, beamEffectName, beamCount, beamRainDelayTime, animator));
+        AddPattern(new BlackHolePattern(blakHoleEffect, blackHoleSpawnDelay, blackHoleSpawnRange, blackHoleCount, animator));
         base.Start();
     }
 }

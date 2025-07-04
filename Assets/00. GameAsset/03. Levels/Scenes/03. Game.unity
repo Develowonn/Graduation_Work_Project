@@ -1982,6 +1982,14 @@ MonoBehaviour:
     poolName: BeamEffect
     poolObject: {fileID: 6643931268488843683, guid: f512d511b14b0b440ad8367bb9a30ca7, type: 3}
     parentObject: {fileID: 0}
+  - poolCount: 10
+    poolName: ShadowExplosion
+    poolObject: {fileID: 6160751335568118249, guid: b0599c0d4c6dbf444b6180fa1666d53b, type: 3}
+    parentObject: {fileID: 0}
+  - poolCount: 10
+    poolName: BlackHoleEffect
+    poolObject: {fileID: 273004432870180875, guid: 08914462a7dff6d45be09658642dba3e, type: 3}
+    parentObject: {fileID: 0}
 --- !u!1 &791148005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f282f0e11ff3cd148a0206aab1ec18b2, type: 3}
@@ -3516,6 +3524,10 @@ MonoBehaviour:
   beamEffectName: BeamEffect
   beamCount: 10
   beamRainDelayTime: 0.2
+  blakHoleEffect: BlackHoleEffect
+  blackHoleSpawnDelay: 0.3
+  blackHoleSpawnRange: 10
+  blackHoleCount: 5
 --- !u!54 &1541781712
 Rigidbody:
   m_ObjectHideFlags: 0

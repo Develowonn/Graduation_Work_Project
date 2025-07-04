@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4883250842768799222}
   - component: {fileID: 4686247505073163746}
   - component: {fileID: 4687850901955369162}
+  - component: {fileID: 8173725605931299745}
   m_Layer: 0
   m_Name: MegaBlackHolePurple
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4883182378037886896}
   - {fileID: 4883088294318556660}
@@ -4917,6 +4918,22 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &8173725605931299745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4884709433383585300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c5b1f72ab19b842a78f46b3b99e626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackHoleEffect: BlackHoleEffect
+  shadowExplosionEffect: ShadowExplosion
+  explosionTime: 2
+  returnPoolTime: 1
 --- !u!1 &4885880232820279826
 GameObject:
   m_ObjectHideFlags: 0
