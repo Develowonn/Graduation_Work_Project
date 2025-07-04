@@ -25,7 +25,5 @@ public class SkullExplosion : IBossPattern
         ObjectPool.instance.SpawnFromPool(chargingEffect, skillPos.position);
         yield return new WaitForSeconds(2.5f);
         ObjectPool.instance.SpawnFromPool(skullEffect, skillPos.position);
-
-        yield return new WaitForSeconds(3f);
     }
 }
