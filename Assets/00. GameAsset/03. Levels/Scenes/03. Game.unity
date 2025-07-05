@@ -4473,11 +4473,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7507501101374053384, guid: 516f5b8c780f050499e83e3e45588ae9, type: 3}
   m_PrefabInstance: {fileID: 2069764525}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2115613646 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2421771731666745838, guid: 4363d73a7bba0b746a31d27b3b153595, type: 3}
-  m_PrefabInstance: {fileID: 1669832426798507031}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2139846982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4713,15 +4708,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3835699067250968011, guid: 4363d73a7bba0b746a31d27b3b153595, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.57
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835699067250968011, guid: 4363d73a7bba0b746a31d27b3b153595, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0000014305115
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835699067250968011, guid: 4363d73a7bba0b746a31d27b3b153595, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.74
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835699067250968011, guid: 4363d73a7bba0b746a31d27b3b153595, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4754,30 +4749,6 @@ PrefabInstance:
     - target: {fileID: 4499363579148558193, guid: 4363d73a7bba0b746a31d27b3b153595, type: 3}
       propertyPath: m_Name
       value: FireBoss
-      objectReference: {fileID: 0}
-    - target: {fileID: 4499363579148558193, guid: 4363d73a7bba0b746a31d27b3b153595, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6384586277122591051, guid: 4363d73a7bba0b746a31d27b3b153595, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6384586277122591051, guid: 4363d73a7bba0b746a31d27b3b153595, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.442
-      objectReference: {fileID: 0}
-    - target: {fileID: 6384586277122591051, guid: 4363d73a7bba0b746a31d27b3b153595, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7155315093772626449, guid: 4363d73a7bba0b746a31d27b3b153595, type: 3}
-      propertyPath: fireworkEffectObject
-      value: 
-      objectReference: {fileID: 2115613646}
-    - target: {fileID: 7722165044282383048, guid: 4363d73a7bba0b746a31d27b3b153595, type: 3}
-      propertyPath: m_Mass
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5122,15 +5093,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8622244381836820400, guid: 12e3667321ce1db4b83e7e02a99a1e87, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.0320227
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8622244381836820400, guid: 12e3667321ce1db4b83e7e02a99a1e87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000020503998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8622244381836820400, guid: 12e3667321ce1db4b83e7e02a99a1e87, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8622244381836820400, guid: 12e3667321ce1db4b83e7e02a99a1e87, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5163,10 +5134,6 @@ PrefabInstance:
     - target: {fileID: 8999191759377261834, guid: 12e3667321ce1db4b83e7e02a99a1e87, type: 3}
       propertyPath: m_Name
       value: DevilBoss
-      objectReference: {fileID: 0}
-    - target: {fileID: 8999191759377261834, guid: 12e3667321ce1db4b83e7e02a99a1e87, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5627,15 +5594,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2959630045196135762, guid: f3130a710d5470a45af058ee57cf0bdf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2785636
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2959630045196135762, guid: f3130a710d5470a45af058ee57cf0bdf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000014066696
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2959630045196135762, guid: f3130a710d5470a45af058ee57cf0bdf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.7306323
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2959630045196135762, guid: f3130a710d5470a45af058ee57cf0bdf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5664,10 +5631,6 @@ PrefabInstance:
     - target: {fileID: 2959630045196135762, guid: f3130a710d5470a45af058ee57cf0bdf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4447771011044058986, guid: f3130a710d5470a45af058ee57cf0bdf, type: 3}
-      propertyPath: cleaveAnimationDelayTime
-      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
