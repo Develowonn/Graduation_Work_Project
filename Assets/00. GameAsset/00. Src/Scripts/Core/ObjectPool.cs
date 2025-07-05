@@ -33,10 +33,6 @@ public class ObjectPool : MonoBehaviour
     {
         if (instance == null) instance = this;
         else Destroy(gameObject);
-    }
-
-    private void Start()
-    {
         Init();
     }
 
