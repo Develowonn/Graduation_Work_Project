@@ -82,18 +82,16 @@ public class PlayerStat : MonoBehaviour
 
 	public float GetAttackPowerStat()
 	{
-		float baseAttack             = attackPower; // ex: 2
-		float targetAttackAtMaxLevel = maxAttackPower; // ex: 20
+		float baseAttack             = attackPower;
+		float targetAttackAtMaxLevel = maxAttackPower;
 		float growthPower            = 1.4f;
 
-		// 정규화된 레벨 비율 (0 ~ 1)
-		float t = (float)(level - 1) / (maxLevel - 1);
+		float t         = Mathf.Max(0f, (float)(level - 1) / (maxLevel - 1));
+		float increase  = targetAttackAtMaxLevel - baseAttack;
 
-		// 목표 증가량 = 만렙 목표 공격력 - 시작 공격력
-		float increase = targetAttackAtMaxLevel - baseAttack;
+		float result    = baseAttack + Mathf.Pow(t, growthPower) * increase;
 
-        Debug.Log(baseAttack + Mathf.Pow(t, growthPower) * increase);
-		return Mathf.Round(baseAttack + Mathf.Pow(t, growthPower) * increase);
+		return Mathf.Round(result);
 	}
 
 	public void SetInvincibility(bool activate)
