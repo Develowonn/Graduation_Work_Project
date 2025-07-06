@@ -601,9 +601,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
-  maxHp: 1
+  maxHp: 250
   dropExp: 10
-  attackPower: 0
+  collisionDamage: 0
   nextPatternTime: 2
   effectName: AxeSlash
   slashCount: 2

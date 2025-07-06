@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
-  maxHp: 1
+  maxHp: 350
   dropExp: 10
   collisionDamage: 0
   nextPatternTime: 2
