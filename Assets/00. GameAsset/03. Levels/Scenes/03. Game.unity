@@ -4246,7 +4246,8 @@ MonoBehaviour:
   maxHP: 100
   currentHP: 0
   movementSpeed: 5
-  attackPower: 0
+  attackPower: 3
+  maxAttackPower: 30
   damageReduction: 0
   expBar: {fileID: 886035690}
   hpBar: {fileID: 100763568}

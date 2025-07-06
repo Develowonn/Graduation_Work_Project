@@ -30,7 +30,8 @@ public class PlayerStat : MonoBehaviour
     [Header("Attack Power Stat")]
     [SerializeField] 
     private float       attackPower;
-    private float       maxAttackPower;
+	[SerializeField]
+	private float       maxAttackPower;
 
     [Header("Damage Reduction Stat")]
     [SerializeField] 
@@ -78,10 +79,24 @@ public class PlayerStat : MonoBehaviour
     public float GetMaxHP()             { return maxHP; }
     public float GetCurrentHP()         { return currentHP; }
     public float GetMovementSpeedStat() { return movementSpeed; }
-    public float GetAttackPowerStat()   { return attackPower; }
     public float GetDamageReduction()   { return damageReduction; }
 
-    public void SetInvincibility(bool activate)
+	public float GetAttackPowerStat()
+	{
+		float baseAttack             = attackPower; // ex: 2
+		float targetAttackAtMaxLevel = maxAttackPower; // ex: 20
+		float growthPower            = 1.4f;
+
+		// 정규화된 레벨 비율 (0 ~ 1)
+		float t = (float)(level - 1) / (maxLevel - 1);
+
+		// 목표 증가량 = 만렙 목표 공격력 - 시작 공격력
+		float increase = targetAttackAtMaxLevel - baseAttack;
+
+		return Mathf.Round(baseAttack + Mathf.Pow(t, growthPower) * increase);
+	}
+
+	public void SetInvincibility(bool activate)
     {
         isInvincibility = activate;
     }
