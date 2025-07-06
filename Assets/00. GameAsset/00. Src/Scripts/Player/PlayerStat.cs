@@ -50,7 +50,6 @@ public class PlayerStat : MonoBehaviour
     {
         currentHP        = maxHP;
         maxMovementSpeed = movementSpeed;
-        maxAttackPower   = attackPower;
     }
 
     private void Update()
@@ -93,6 +92,7 @@ public class PlayerStat : MonoBehaviour
 		// 목표 증가량 = 만렙 목표 공격력 - 시작 공격력
 		float increase = targetAttackAtMaxLevel - baseAttack;
 
+        Debug.Log(baseAttack + Mathf.Pow(t, growthPower) * increase);
 		return Mathf.Round(baseAttack + Mathf.Pow(t, growthPower) * increase);
 	}
 

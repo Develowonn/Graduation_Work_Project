@@ -4242,7 +4242,7 @@ MonoBehaviour:
   - 900
   - 950
   - 1000
-  maxLevel: 13
+  maxLevel: 20
   maxHP: 100
   currentHP: 0
   movementSpeed: 5
