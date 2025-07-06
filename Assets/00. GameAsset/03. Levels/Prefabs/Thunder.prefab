@@ -48,7 +48,7 @@ MonoBehaviour:
   baseCooldown: 3
   level: 1
   effectName: ThunderEffect
-  baseAttackPower: 20
+  baseAttackPower: 30
   attackPowerPerLevel: 0
   range: 10
   targetCount: 3
