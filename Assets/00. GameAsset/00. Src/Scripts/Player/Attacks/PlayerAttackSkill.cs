@@ -20,14 +20,14 @@ public abstract class PlayerAttackSkill : MonoBehaviour
 
     private PlayerStat stat;
 
-    private void Awake()
-    {
-        stat = GetComponentInParent<PlayerStat>();
-    }
-
     private void Start()
     {
         maxCooldown = baseCooldown;
+    }
+
+    public void Init(PlayerStat stat)
+    {
+        this.stat = stat;
     }
 
     /// <summary>
