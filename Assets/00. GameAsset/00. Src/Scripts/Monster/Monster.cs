@@ -63,6 +63,7 @@ public class Monster : MonoBehaviour
 
     public virtual void TakeDamage(float damage)
     {
+        Debug.Log("HIT! Damage : " + damage);
         currentHp -= damage;
         if (currentHp <= 0)
         {

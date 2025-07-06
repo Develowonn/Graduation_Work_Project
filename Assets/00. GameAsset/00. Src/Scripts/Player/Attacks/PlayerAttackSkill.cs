@@ -18,6 +18,13 @@ public abstract class PlayerAttackSkill : MonoBehaviour
 
     protected float timer;
 
+    private PlayerStat stat;
+
+    private void Awake()
+    {
+        stat = GetComponentInParent<PlayerStat>();
+    }
+
     private void Start()
     {
         maxCooldown = baseCooldown;
@@ -88,7 +95,6 @@ public abstract class PlayerAttackSkill : MonoBehaviour
 
     protected float GetAttackPower()
     {
-        float totalAttackPower = baseAttackPower + (GetSkillLevel() * attackPowerPerLevel);
-        return totalAttackPower;
+        return stat.GetAttackPowerStat();
     }
 }
