@@ -604,6 +604,7 @@ MonoBehaviour:
   maxHp: 250
   dropExp: 10
   collisionDamage: 10
+  hitEffectName: HitEffect
   nextPatternTime: 2
   effectName: AxeSlash
   slashCount: 2

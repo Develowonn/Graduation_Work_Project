@@ -4237,6 +4237,10 @@ MonoBehaviour:
     poolName: CrocodileBoss
     poolObject: {fileID: 2475123222371989480, guid: f3130a710d5470a45af058ee57cf0bdf, type: 3}
     parentObject: {fileID: 0}
+  - poolCount: 15
+    poolName: HitEffect
+    poolObject: {fileID: 9127653965126434405, guid: 3c6022ac1a1cc7b438777188ae54da0e, type: 3}
+    parentObject: {fileID: 0}
 --- !u!1 &793378906
 GameObject:
   m_ObjectHideFlags: 0

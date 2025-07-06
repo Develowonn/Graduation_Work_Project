@@ -13,6 +13,7 @@ public class Monster : MonoBehaviour
     [SerializeField] protected float dropExp = 10f;             // 처치 시 경험치 드랍량
     [SerializeField] protected float collisionDamage;           // 부딪혔으 때 데미지
     protected bool isMoveStop = false;                          // 움직임 정지
+    [SerializeField] private string hitEffectName;              // 히트 이펙트
 
     protected Transform target;
     protected Rigidbody rb;
@@ -64,6 +65,7 @@ public class Monster : MonoBehaviour
     public virtual void TakeDamage(float damage)
     {
         Debug.Log("HIT! Damage : " + damage);
+        ObjectPool.instance.SpawnFromPool(hitEffectName, transform.position);
         currentHp -= damage;
         if (currentHp <= 0)
         {

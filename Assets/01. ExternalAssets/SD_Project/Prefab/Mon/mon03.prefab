@@ -123,6 +123,7 @@ MonoBehaviour:
   maxHp: 50
   dropExp: 10
   collisionDamage: 3
+  hitEffectName: HitEffect
 --- !u!1 &106072
 GameObject:
   m_ObjectHideFlags: 0
