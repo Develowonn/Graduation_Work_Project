@@ -7406,7 +7406,7 @@ MonoBehaviour:
   - {fileID: 812073784}
   - {fileID: 302545990}
   - {fileID: 1733132234}
-  usedDisappearDelay: 1.5
+  usedDisappearDelay: 4
   cardCooltime: 10
 --- !u!1 &1865225450
 GameObject:

@@ -12197,7 +12197,7 @@ MonoBehaviour:
   tutorialButton: {fileID: 1894350213}
   tutorialPanel: {fileID: 1629340672}
   tutorialImage: {fileID: 1675067709}
-  tutorialDuration: 5
+  tutorialDuration: 3.5
 --- !u!4 &1791631294
 Transform:
   m_ObjectHideFlags: 0
