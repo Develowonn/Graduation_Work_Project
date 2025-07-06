@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2492492098903246509}
   - component: {fileID: 174400721401263769}
+  - component: {fileID: 1534533820305562811}
   m_Layer: 0
   m_Name: SkullEffect
   m_TagString: Untagged
@@ -51,6 +52,19 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &1534533820305562811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3016897196499514470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc7b0d0626b43f4e89d7908505d21bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundName: "\uC2A4\uCEEC"
 --- !u!1001 &3369296609990691808
 PrefabInstance:
   m_ObjectHideFlags: 0

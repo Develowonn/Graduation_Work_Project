@@ -24,6 +24,7 @@ public class ExplosionDashPattern : IBossPattern
 
         float timer = 0f;
         Rigidbody rb = boss.GetComponent<Rigidbody>();
+        SoundManager.Instance.PlaySFX("∫“∂Û¿Œ");
         Vector3 direction = boss.transform.forward;
 
         while (timer < dashDuration)

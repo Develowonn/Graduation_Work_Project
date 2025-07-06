@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4568590732454361408}
   - component: {fileID: 2516675645355058587}
+  - component: {fileID: 1512282889319676}
   m_Layer: 0
   m_Name: BlackHoleEffect
   m_TagString: Untagged
@@ -58,6 +59,19 @@ MonoBehaviour:
   damageRadius: 5
   damage: 15
   damageInterval: 1
+--- !u!114 &1512282889319676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273004432870180875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc7b0d0626b43f4e89d7908505d21bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundName: "\uBE14\uB799\uD640"
 --- !u!1001 &5256636542998968594
 PrefabInstance:
   m_ObjectHideFlags: 0

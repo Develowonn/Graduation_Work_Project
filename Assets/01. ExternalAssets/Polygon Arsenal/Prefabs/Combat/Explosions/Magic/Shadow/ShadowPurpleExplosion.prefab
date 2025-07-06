@@ -9934,8 +9934,8 @@ GameObject:
   - component: {fileID: 3640726390551924603}
   - component: {fileID: 367774876930652421}
   - component: {fileID: 1949170808708755667}
-  - component: {fileID: 6973432915919757725}
   - component: {fileID: 3814355715976009268}
+  - component: {fileID: 3584712969299536939}
   m_Layer: 0
   m_Name: ShadowPurpleExplosion
   m_TagString: Untagged
@@ -14858,22 +14858,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &6973432915919757725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6160751335568118249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aa5c1e37409a9344a344c0468db383d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabSound: {fileID: 1297775994297274, guid: a2c4f37ca2208fb40b00d3e1df6f0e4f, type: 3}
-  destroyWhenDone: 1
-  soundPrefabIsChild: 0
-  pitchRandomMultiplier: 1.1
 --- !u!114 &3814355715976009268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14892,6 +14876,19 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &3584712969299536939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6160751335568118249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc7b0d0626b43f4e89d7908505d21bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundName: "\uC250\uB3C4\uC6B0\uD3ED\uBC1C"
 --- !u!1 &9060682750711049507
 GameObject:
   m_ObjectHideFlags: 0

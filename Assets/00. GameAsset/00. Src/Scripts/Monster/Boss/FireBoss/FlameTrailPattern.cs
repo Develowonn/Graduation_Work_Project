@@ -30,6 +30,7 @@ public class FlameTrailPattern : IBossPattern
     {
         yield return null;
         animator.SetTrigger(hashIsMagic);
+        SoundManager.Instance.PlaySFX("불라인");
 
         Vector3 startPosition = boss.transform.position;                    // 시작 지점
         Vector3 forwardDirection = boss.transform.forward.normalized;       // 정면 

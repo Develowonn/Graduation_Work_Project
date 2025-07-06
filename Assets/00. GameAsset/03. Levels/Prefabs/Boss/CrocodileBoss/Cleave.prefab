@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4075814181919205329}
   - component: {fileID: 5149561576409179964}
   - component: {fileID: 5462967171618797107}
+  - component: {fileID: 6861562938995151226}
   m_Layer: 0
   m_Name: Cleave
   m_TagString: Untagged
@@ -72,6 +73,19 @@ MonoBehaviour:
   effectName: 
   damage: 0
   returnPoolTime: 2
+--- !u!114 &6861562938995151226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5250520450493256782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc7b0d0626b43f4e89d7908505d21bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundName: "\uC2A4\uD30C\uC774\uD06C"
 --- !u!1001 &851271600200911790
 PrefabInstance:
   m_ObjectHideFlags: 0

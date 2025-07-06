@@ -14729,8 +14729,8 @@ GameObject:
   - component: {fileID: 4752123170018852}
   - component: {fileID: 198094002163677414}
   - component: {fileID: 199346489615907956}
-  - component: {fileID: 114159877719465520}
   - component: {fileID: -8513958763992651529}
+  - component: {fileID: 6775026035807308605}
   m_Layer: 0
   m_Name: FireballExplosionRed
   m_TagString: Untagged
@@ -19626,22 +19626,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &114159877719465520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879798220002124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aa5c1e37409a9344a344c0468db383d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabSound: {fileID: 1297775994297274, guid: 4dd3b5129e9b7704f9d8e1cfaf7ba718, type: 3}
-  destroyWhenDone: 1
-  soundPrefabIsChild: 0
-  pitchRandomMultiplier: 1.4
 --- !u!114 &-8513958763992651529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19661,3 +19645,16 @@ MonoBehaviour:
   targetMask:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &6775026035807308605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879798220002124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc7b0d0626b43f4e89d7908505d21bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundName: "\uBD88\uD3ED\uBC1C"

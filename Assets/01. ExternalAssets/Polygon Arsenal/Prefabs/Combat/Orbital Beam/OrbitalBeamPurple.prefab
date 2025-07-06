@@ -39556,6 +39556,7 @@ GameObject:
   - component: {fileID: 6017978179860155667}
   - component: {fileID: 3211639188806836852}
   - component: {fileID: 7805228043886569598}
+  - component: {fileID: 4380627761951775665}
   m_Layer: 0
   m_Name: OrbitalBeamPurple
   m_TagString: Untagged
@@ -44474,3 +44475,16 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &4380627761951775665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6643931268488843683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abc7b0d0626b43f4e89d7908505d21bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundName: "\uC624\uBE44\uD0C8"
