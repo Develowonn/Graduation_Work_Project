@@ -59,6 +59,8 @@ public class StageManager : MonoBehaviour
     {
         if (levelUpPanel.activeSelf == false)
         {
+            if(GetRandomSkill () == null) return;
+
             Time.timeScale = 0f;
             levelUpPanel.SetActive(true);
             InitLevelUpBtn(GetRandomSkill(), levelUpBtn_1);
