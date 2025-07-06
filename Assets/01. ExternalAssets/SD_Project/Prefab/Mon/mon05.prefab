@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
-  maxHp: 30
+  maxHp: 50
   dropExp: 10
   collisionDamage: 3
 --- !u!1 &139078
