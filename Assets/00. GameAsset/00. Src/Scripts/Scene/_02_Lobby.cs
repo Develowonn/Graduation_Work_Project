@@ -45,6 +45,17 @@ public class _02_Lobby : MonoBehaviour
 	[SerializeField]
 	private TMP_Text playerEnergyText;
 
+	[Header("Tutorial UI")]
+	[SerializeField]
+	private Button	tutorialButton;
+	[SerializeField]
+	private Image	 tutorialPanel;
+	[SerializeField]
+	private Image	 tutorialImage;
+	[SerializeField]
+	private float	 tutorialDuration;
+
+
 	private void Awake()
 	{
 		Instance = this;
@@ -52,6 +63,8 @@ public class _02_Lobby : MonoBehaviour
 
 	private void Start()
 	{
+		tutorialButton.onClick.AddListener(() => OnClickTutorialButton().Forget());
+
 		InitializeDungeonUI();
 
 		UpdatePlayerGoldText();
@@ -116,5 +129,16 @@ public class _02_Lobby : MonoBehaviour
 			}
 			yield return null;
 		}
+	}
+
+	private async UniTaskVoid OnClickTutorialButton()
+	{
+		tutorialPanel.DOFade(0.2f, 0.5f);
+		tutorialImage.DOFade(1.0f, 0.5f);
+
+		await UniTask.Delay(TimeSpan.FromSeconds(tutorialDuration));
+
+		tutorialPanel.DOFade(0f, 1.0f);
+		tutorialImage.DOFade(0f, 1.0f);
 	}
 }

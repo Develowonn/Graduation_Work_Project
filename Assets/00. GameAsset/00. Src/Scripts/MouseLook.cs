@@ -19,6 +19,11 @@ public class MouseLook : MonoBehaviour
 
 	private void Update()
 	{
+		if(StageManager.instance.GetCurrentGameState() == InGameState.end)
+		{
+			return;
+		}
+
 		Rotate();
 	}
 

@@ -39,7 +39,7 @@ public class MonsterSpawner : MonoBehaviour
 
 	private async UniTaskVoid SpawnMonster()
 	{
-		while (true)
+		while (StageManager.instance.GetCurrentGameState() != InGameState.end)
 		{
 			foreach(var monsterSpawnData in monsterSpawnDatas)
 			{

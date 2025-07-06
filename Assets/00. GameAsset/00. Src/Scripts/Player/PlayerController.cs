@@ -30,7 +30,13 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        MoveToForward();
+		if (StageManager.instance.GetCurrentGameState() == InGameState.end)
+		{
+			animator.SetBool(isMovingHash, false);
+			return;
+		}
+
+		MoveToForward();
     }
 
     private void MoveToForward()
@@ -40,7 +46,12 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        float reduceedDamage = damage * (1.0f - playerStat.GetDamageReduction());
+		if (StageManager.instance.GetCurrentGameState() == InGameState.end)
+		{
+			return;
+		}
+
+		float reduceedDamage = damage * (1.0f - playerStat.GetDamageReduction());
         playerStat.ReduceHP(reduceedDamage);
 
         if(playerStat.GetCurrentHP() <= 0.0f)
@@ -51,6 +62,11 @@ public class PlayerController : MonoBehaviour
 
 	public void TakeDamagePercent(float damagePercent)
 	{
+		if (StageManager.instance.GetCurrentGameState() == InGameState.end)
+		{
+			return;
+		}
+
 		playerStat.ReduceHPByPercent(damagePercent);
 
 		if (playerStat.GetCurrentHP() <= 0.0f)

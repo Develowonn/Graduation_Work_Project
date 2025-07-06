@@ -36,7 +36,13 @@ public class MovementRigidbody : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!isMovable) return;
+		if (StageManager.instance.GetCurrentGameState() == InGameState.end)
+		{
+			rigid.linearVelocity = Vector3.zero;
+			return;
+		}
+
+		if (!isMovable) return;
 
         rigid.linearVelocity = MovementDir.normalized * movementSpeed;
     }
