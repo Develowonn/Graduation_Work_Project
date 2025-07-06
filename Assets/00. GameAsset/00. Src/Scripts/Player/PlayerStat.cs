@@ -13,6 +13,8 @@ public class PlayerStat : MonoBehaviour
     private int         level;
     [SerializeField] 
     private List<float> maxExp;
+    [SerializeField]
+    private int         maxLevel;
 
     [Header("HP Stat")]
     [SerializeField] 
@@ -50,9 +52,17 @@ public class PlayerStat : MonoBehaviour
         maxAttackPower   = attackPower;
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyUp(KeyCode.P))
+        {
+            GetExp(100);
+        }
+    }
+
     public void GetExp(float exp)
     {
-        if(level == maxExp.Count) { return; }
+        if(level == maxExp.Count || level >= maxLevel) { return; }
 
         currentExp += exp;
         if (currentExp >= maxExp[level])

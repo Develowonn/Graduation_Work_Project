@@ -285,7 +285,7 @@ MonoBehaviour:
   moveSpeed: 1.5
   maxHp: 30
   dropExp: 10
-  attackPower: 30
+  collisionDamage: 3
 --- !u!1 &139078
 GameObject:
   m_ObjectHideFlags: 0
