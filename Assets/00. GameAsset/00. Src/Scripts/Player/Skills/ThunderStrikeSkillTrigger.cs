@@ -46,6 +46,7 @@ public class ThunderStrikeSkillTrigger : PlayerAttackSkill
                 {
                     GameObject obj = ObjectPool.instance.SpawnFromPool(effectName, target.position);
                     StartCoroutine(Co_EffectDelay(obj));
+                    SoundManager.Instance.PlaySFX("번개효과음");
 
                     if (target.TryGetComponent<Monster>(out var monster))
                     {

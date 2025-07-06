@@ -19,6 +19,7 @@ public class CristalStrike : PlayerAttackSkill
         Collider[] objects = Physics.OverlapSphere(transform.position, rage + (level * (rage / 10)), monsterMask);
         GameObject skillObject = ObjectPool.instance.SpawnFromPool(effectName, transform.position, 0.5f + (level * 0.1f));
         StartCoroutine(Co_EffectDelay(skillObject));
+        SoundManager.Instance.PlaySFX("¼öÁ¤");
 
         foreach (Collider obj in objects)
         {

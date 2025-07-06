@@ -75,6 +75,7 @@ public class Monster : MonoBehaviour
     private void Die()
     {
         StageManager.instance.DieMonster(dropExp);
+        SoundManager.Instance.PlaySFX("Àû Ã³Ä¡");
         ObjectPool.instance.ReturnToPool(monsterName, gameObject);
     }
 }

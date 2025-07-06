@@ -24,6 +24,7 @@ public class FireBallSkillTrigger : PlayerAttackSkill
         {
             FireBallSkill fireBallSkill = ObjectPool.instance.SpawnFromPool(effectName, transform.position).GetComponent<FireBallSkill>();
             fireBallSkill.Init(effectName, fireBallMoveSpeed, GetAttackPower(), level, target);
+            SoundManager.Instance.PlaySFX("파이어볼");
         }
     }
 }
