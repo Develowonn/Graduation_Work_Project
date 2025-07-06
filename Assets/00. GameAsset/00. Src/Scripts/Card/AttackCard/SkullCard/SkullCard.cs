@@ -129,14 +129,18 @@ public class SkullCard : Card
 		skullLegBigAura = Instantiate(skullLegBigAreaVFX, player.position + skullLegBigAuraOffset, Quaternion.Euler(-90, 0, 0));
 		skullLegBigAura.transform.SetParent(player.transform);
 
-		Vector3 origionCameraOffset = camaraFollowTarget.GetOffset();
+		Vector3 origionCameraPosOffset      = camaraFollowTarget.GetPositionOffset();
+		Vector3 origionCameraRotationOffset = camaraFollowTarget.GetRotationOffset();
+
 		camaraFollowTarget.SetOffset(zoomOutOffset);
+		camaraFollowTarget.SetRotation(new Vector3(63, 0, 0 ));
 
 		await UniTask.Delay(TimeSpan.FromSeconds(1.0f));
 		skullLegAttackAura = Instantiate(skullLegAttackAreaVFX, player.position + skullLegAttackAuraOffset, Quaternion.Euler(-90, 0, 0));
 
 		await UniTask.Delay(TimeSpan.FromSeconds(2.0f));
 		player.GetComponent<PlayerController>().SetMovable(true);
-		camaraFollowTarget.SetOffset(origionCameraOffset);
+		camaraFollowTarget.SetOffset(origionCameraPosOffset);
+		camaraFollowTarget.SetRotation(origionCameraRotationOffset);
 	}
 }

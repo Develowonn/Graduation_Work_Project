@@ -3,31 +3,61 @@ using UnityEngine;
 public class CameraFollowTarget : MonoBehaviour
 {
     [SerializeField]
-    private Transform   target;
+    private Transform           target;
     [SerializeField]
-    private int         followSpeed;
+    private int                 followSpeed;
     [SerializeField]
-    private Vector3     offset;
+    private bool                isFollowing;
+
+    [Header("Offset")]
     [SerializeField]
-    private bool        isFollowing;
+    private CameraOffsetData[]  cameraOffsetData;
+    private int                 offsetIndex = 0;
+
 
     private void Start()
     {
-        transform.position = target.position + offset;
+        transform.position     = target.position + cameraOffsetData[offsetIndex].positionOffset;
+
+        Vector3 rotationOffset = cameraOffsetData[offsetIndex].rotationOffset;
+        transform.rotation     = Quaternion.Euler(rotationOffset.x, rotationOffset.y, rotationOffset.z);
     }
 
-    private void FixedUpdate()
+	private void Update()
+	{
+		if(Input.GetKeyDown(KeyCode.R))
+        {
+            offsetIndex++;
+            
+            if(offsetIndex >= cameraOffsetData.Length)
+            {
+                offsetIndex = 0;
+            }
+        }
+	}
+
+	private void FixedUpdate()
     {
         if(!isFollowing) return;
 
-        Vector3 targetPosition = target.position + offset;
+        Vector3 targetPosition = target.position + cameraOffsetData[offsetIndex].positionOffset;
         transform.position     = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * followSpeed);
-    }
-    
-    public Vector3 GetOffset() { return offset; }
 
-    public void SetOffset(Vector3 offset)
+		Vector3 rotationOffset = cameraOffsetData[offsetIndex].rotationOffset;
+		transform.rotation     = Quaternion.Euler(rotationOffset.x, rotationOffset.y, rotationOffset.z);
+	}
+
+	public CameraOffsetData GetOffset()         { return cameraOffsetData[offsetIndex]; }
+	public Vector3          GetPositionOffset() { return cameraOffsetData[offsetIndex].positionOffset; }
+	public Vector3          GetRotationOffset() { return cameraOffsetData[offsetIndex].rotationOffset; }
+
+	public void SetOffset(Vector3 offset)
     {
-        this.offset = offset;
+        cameraOffsetData[offsetIndex].positionOffset = offset;
     }
+
+    public void SetRotation(Vector3 rotation)
+    {
+		cameraOffsetData[offsetIndex].rotationOffset = rotation;
+	}
 }
