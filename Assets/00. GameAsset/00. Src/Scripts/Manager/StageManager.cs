@@ -121,7 +121,16 @@ public class StageManager : MonoBehaviour
         playerStat.GetExp(exp);
     }
 
-    public void EndGame(float time)
+	public void EndGame(float time)
+	{
+		currentGameState = InGameState.end;
+		resultTime = time;
+		int minutes = (int)resultTime / 60;
+		int seconds = (int)resultTime % 60;
+		string timeString = $"{minutes:00}:{seconds:00}";
+	}
+
+	public void EndGame(float time, GameEndType gameEndType)
     {
         currentGameState = InGameState.end;
         resultTime = time;
@@ -129,8 +138,15 @@ public class StageManager : MonoBehaviour
         int seconds = (int)resultTime % 60;
         string timeString = $"{minutes:00}:{seconds:00}";
 
-        int caughtMosnterCount = InGameManager.Instance.GetCaughtMonsterCount();
-	    InGameManager.Instance.GetDefeatPanel().SetActive(999, caughtMosnterCount, timeString);
+		int caughtMosnterCount = InGameManager.Instance.GetCaughtMonsterCount();
+		if (gameEndType == GameEndType.Victory)
+        {
+			InGameManager.Instance.GetVictoryPanel().SetActive(999, caughtMosnterCount, timeString);
+		}
+		else
+		{
+			InGameManager.Instance.GetDefeatPanel().SetActive(999, caughtMosnterCount, timeString);
+		}
     }
 
     public string GetBossMonster()

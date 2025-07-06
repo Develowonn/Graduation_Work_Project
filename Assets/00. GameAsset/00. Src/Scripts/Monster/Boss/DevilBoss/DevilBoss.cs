@@ -35,4 +35,13 @@ public class DevilBoss : BossMonster
         AddPattern(new BlackHolePattern(blakHoleEffect, blackHoleSpawnDelay, blackHoleSpawnRange, blackHoleCount, animator));
         base.Start();
     }
+
+	public override void TakeDamage(float damage)
+	{
+		base.TakeDamage(damage);
+        if(currentHp <= 0)
+        {
+            StageManager.instance.EndGame(TimeManager.instance.GetCurrentTime(), GameEndType.Victory);
+        }
+	}
 }

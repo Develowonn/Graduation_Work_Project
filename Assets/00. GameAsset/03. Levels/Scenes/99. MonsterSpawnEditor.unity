@@ -2477,11 +2477,11 @@ MonoBehaviour:
     monsterObject: {fileID: 100186, guid: aa92e1c586cafa347a209d0192c6d94c, type: 3}
   - monsterName: Golem
     monsterObject: {fileID: 133524, guid: ef9747274640e2b4689be1ed8d812999, type: 3}
-  - monsterName: Crocodile
+  - monsterName: CrocodileBoss
     monsterObject: {fileID: 2475123222371989480, guid: 336b5cc48756743479be0478e25407c1, type: 3}
-  - monsterName: Fire
+  - monsterName: FireBoss
     monsterObject: {fileID: 4499363579148558193, guid: 4e08dc74f2c7e8345b0cc6c3dbe1c434, type: 3}
-  - monsterName: Devil
+  - monsterName: DevilBoss
     monsterObject: {fileID: 8999191759377261834, guid: 3fb29460bd264f8418c7b690a4dbe35a, type: 3}
   timerSliderBar: {fileID: 1138035777}
   currentGameTimeText: {fileID: 2131612364}

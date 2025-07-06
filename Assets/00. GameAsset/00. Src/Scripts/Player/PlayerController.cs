@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
 
         if(playerStat.GetCurrentHP() <= 0.0f)
         {
-            StageManager.instance.EndGame(TimeManager.instance.GetCurrentTime());
+            StageManager.instance.EndGame(TimeManager.instance.GetCurrentTime(), GameEndType.Defeat);
         }
     }
 

@@ -61,7 +61,7 @@ public class Monster : MonoBehaviour
         return collisionDamage;
     }
 
-    public void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage)
     {
         currentHp -= damage;
         if (currentHp <= 0)

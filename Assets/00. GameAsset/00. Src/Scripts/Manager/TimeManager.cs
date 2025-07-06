@@ -54,11 +54,6 @@ public class TimeManager : MonoBehaviour
                 StageManager.instance.EndGame(currentTime);
                 break;
             }
-            else if (maxTime <= currentTime)
-            {
-                StageManager.instance.EndGame(currentTime);
-                break;
-            }
 
             int currentTimeInt = Mathf.FloorToInt(currentTime);
             if (currentTimeInt % Mathf.FloorToInt(bossWaveTime) == 0 && currentTimeInt != lastBossWaveTime)
