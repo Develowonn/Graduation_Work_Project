@@ -42,8 +42,13 @@ public class NicknameManager : MonoBehaviour
 
     private void Start()
     {
-        nicknameSettingPanel.transform.localScale = Vector3.zero;
-        errorMessagePanel.transform.localScale    = Vector3.zero;
+		nicknameSettingPanel.transform.localScale = Vector3.zero;
+		errorMessagePanel.transform.localScale = Vector3.zero;
+
+		if (GameManager.Instance.GetPlayerName() !=  string.Empty)
+        {
+            return;
+        }
 
         Utils.Dotween.PlayScaleAnimation(nicknameSettingPanel.transform, Vector3.one, 0.5f);
 

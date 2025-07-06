@@ -58,9 +58,15 @@ public class _02_Lobby : MonoBehaviour
 		UpdatePlayerEnergyText();
 
 		FadeManager.Instance.Fade();
+
+		if (GameManager.Instance.GetPlayerName() != string.Empty)
+		{
+			SetProfileNicknameText(GameManager.Instance.GetPlayerName());
+		}
 	}
 
-	public void InitializeDungeonUI()
+
+		public void InitializeDungeonUI()
 	{
 		dungeonOpenButton.onClick.AddListener(() => OnClickDungeonOpenButton());
 		dungeonStartButton.onClick.AddListener(() => StartCoroutine(OnClickDungeonStartButtonCoroutine()));

@@ -21,6 +21,7 @@ public class GameManager : Singleton<GameManager>
 	private void Start()
 	{
 		currentEnergy = maxEnergy;
+        playerName    = string.Empty;
 	}
 
 	public void SetPlayerName(string value)
