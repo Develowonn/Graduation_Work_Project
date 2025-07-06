@@ -198,6 +198,7 @@ MonoBehaviour:
   maxHp: 350
   dropExp: 10
   collisionDamage: 10
+  hitEffectName: HitEffect
   nextPatternTime: 2
   flameName: FlameLine
   flameSpawnDelay: 0.1

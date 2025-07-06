@@ -95,6 +95,6 @@ public abstract class PlayerAttackSkill : MonoBehaviour
 
     protected float GetAttackPower()
     {
-        return baseAttackPower + stat.GetAttackPowerStat();
+        return baseAttackPower +stat.GetAttackPowerStat();
     }
 }

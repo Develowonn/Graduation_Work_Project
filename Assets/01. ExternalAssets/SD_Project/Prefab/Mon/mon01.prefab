@@ -302,6 +302,7 @@ MonoBehaviour:
   maxHp: 50
   dropExp: 10
   collisionDamage: 3
+  hitEffectName: HitEffect
 --- !u!54 &2689717139084666450
 Rigidbody:
   m_ObjectHideFlags: 0
