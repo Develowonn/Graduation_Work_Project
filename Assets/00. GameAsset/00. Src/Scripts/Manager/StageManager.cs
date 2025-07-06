@@ -132,6 +132,8 @@ public class StageManager : MonoBehaviour
 
 	public void EndGame(float time, GameEndType gameEndType)
     {
+        if(currentGameState == InGameState.end) { return; }
+
         currentGameState = InGameState.end;
         resultTime = time;
         int minutes = (int)resultTime / 60;
