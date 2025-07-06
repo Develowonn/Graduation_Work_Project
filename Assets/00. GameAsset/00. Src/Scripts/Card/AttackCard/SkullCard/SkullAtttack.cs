@@ -9,9 +9,15 @@ public class SkullAtttack : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Monster monster = other.GetComponent<Monster>();
+        Monster		monster		= other.GetComponent<Monster>();
+		BossMonster bossMonster = other.GetComponent<BossMonster>();
 
-        if (monster != null)
+		if (bossMonster != null)
+		{
+			bossMonster.TakeDamage(bossMonster.GetCurrentHp() / 2);
+			return;
+		}
+		else if (monster != null)
         {
             monster.TakeDamage(Constants.maxDamage);
         }

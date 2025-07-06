@@ -41,4 +41,6 @@ public class BossMonster : Monster
             else currentPatternIndex = Random.Range(0, patternList.Count);
         }
     }
+
+    public float GetCurrentHp() { return currentHp; }
 }

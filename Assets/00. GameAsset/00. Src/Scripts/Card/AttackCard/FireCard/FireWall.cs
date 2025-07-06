@@ -18,9 +18,18 @@ public class FireWall : MonoBehaviour
 
     private void OnMonsterTouchWall(Collision collider)
     {
-        Monster monster = collider.gameObject.GetComponent<Monster>();
+        Monster     monster     = collider.gameObject.GetComponent<Monster>();
+		BossMonster bossMonster = collider.gameObject.GetComponent<BossMonster>();
 
-        if (monster != null)
+		if (bossMonster != null)
+		{
+			GameObject fireEffect = Instantiate(fireVfx, collider.transform.position, Quaternion.Euler(-90, 0, 0));
+			Destroy(fireEffect, fireVfxDestroyTime);
+
+			bossMonster.TakeDamage(bossMonster.GetCurrentHp() / 2);
+            return;
+		}
+		else if (monster != null)
         {
             GameObject fireEffect = Instantiate(fireVfx, collider.transform.position, Quaternion.Euler(-90, 0, 0));
             Destroy(fireEffect, fireVfxDestroyTime);

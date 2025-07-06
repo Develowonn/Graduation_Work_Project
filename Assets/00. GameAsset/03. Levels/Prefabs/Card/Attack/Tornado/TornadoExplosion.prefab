@@ -29624,7 +29624,7 @@ MonoBehaviour:
   prefabSound: {fileID: 1297775994297274, guid: b3c605644a3980b4aa760e7cb1da201b, type: 3}
   destroyWhenDone: 1
   soundPrefabIsChild: 0
-  pitchRandomMultiplier: 1
+  pitchRandomMultiplier: 0.61
 --- !u!135 &8642129131170062202
 SphereCollider:
   m_ObjectHideFlags: 0
