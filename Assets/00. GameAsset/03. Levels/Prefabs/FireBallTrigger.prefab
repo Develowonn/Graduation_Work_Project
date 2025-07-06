@@ -48,7 +48,7 @@ MonoBehaviour:
   baseCooldown: 2
   level: 1
   effectName: FireBallEffect
-  baseAttackPower: 15
+  baseAttackPower: 25
   attackPowerPerLevel: 0
   range: 6
   monsterMask:

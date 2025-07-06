@@ -48,7 +48,7 @@ MonoBehaviour:
   baseCooldown: 1
   level: 0
   effectName: CristalStrike
-  baseAttackPower: 10
+  baseAttackPower: 15
   attackPowerPerLevel: 0
   rage: 2
   monsterMask:
