@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.OpenVR;
 using UnityEngine;
 
 public class BossMonster : Monster
@@ -13,6 +14,7 @@ public class BossMonster : Monster
     {
         InGameManager.Instance.SetBossLogoActivity(true);
 
+        StageManager.instance.BossMonsterHPBarInit(currentHp, maxHp);
         StartCoroutine(ProcessPatternLoop());
     }
 
@@ -50,4 +52,10 @@ public class BossMonster : Monster
     }
 
     public float GetCurrentHp() { return currentHp; }
+
+    public override void TakeDamage(float damage)
+    {
+        base.TakeDamage(damage);
+        StageManager.instance.BossMonsterHPBarInit(currentHp, maxHp);
+    }
 }

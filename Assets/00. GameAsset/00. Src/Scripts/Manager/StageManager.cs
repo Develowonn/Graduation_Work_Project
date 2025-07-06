@@ -40,6 +40,9 @@ public class StageManager : MonoBehaviour
     private int playerLevelUpCount = 0;
     [SerializeField] private List<SkillSO> playerSkillDataList = new List<SkillSO>();
 
+    [Header("Boss")]
+    [SerializeField] private Image bossHpbar;
+
     private void Awake()
     {
         instance = this;
@@ -158,5 +161,11 @@ public class StageManager : MonoBehaviour
         string name = stageData.bossNameList[0];
         //stageData.bossNameList.RemoveAt(0);
         return name;
+    }
+
+    public void BossMonsterHPBarInit(float currentHp, float maxHp)
+    {
+        float targetFill = currentHp / maxHp;
+        bossHpbar.DOFillAmount(targetFill, 0.3f); // 0.3초 동안 자연스럽게 깎임
     }
 }
