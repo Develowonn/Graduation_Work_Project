@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
+
+using DG.Tweening;
 
 public class InGameManager : MonoBehaviour
 {
@@ -8,6 +11,9 @@ public class InGameManager : MonoBehaviour
 	private VictoryPanel	victoryPanel;
 	[SerializeField]
 	private DefeatPanel		defeatPanel;
+
+	[SerializeField]
+	private Image		    bossLogoImage;
 
 	[SerializeField]
 	private GameObject		playerObject;
@@ -29,4 +35,17 @@ public class InGameManager : MonoBehaviour
 	public DefeatPanel  GetDefeatPanel()		{  return defeatPanel; }
 
 	public void IncreaseCaughtMonsterCount() { caughtMonsterCount++; }
+
+	public void SetBossLogoActivity(bool activity)
+	{
+		switch (activity) 
+		{
+			case true:
+				bossLogoImage.DOFade(1.0f, 1.0f);
+				break;
+			case false:
+				bossLogoImage.DOFade(0.0f, 1.0f);
+				break;
+		}
+	}
 }

@@ -11,14 +11,21 @@ public class BossMonster : Monster
 
     protected virtual void Start()
     {
+        InGameManager.Instance.SetBossLogoActivity(true);
+
         StartCoroutine(ProcessPatternLoop());
     }
 
-    /// <summary>
-    /// 패턴 추가 함수
-    /// </summary>
-    /// <param name="pattern">추가할 패턴 코루틴</param>
-    protected void AddPattern(IBossPattern pattern)
+	private void OnDisable()
+	{
+        InGameManager.Instance.SetBossLogoActivity(false);
+	}
+
+	/// <summary>
+	/// 패턴 추가 함수
+	/// </summary>
+	/// <param name="pattern">추가할 패턴 코루틴</param>
+	protected void AddPattern(IBossPattern pattern)
     {
         patternList.Add(pattern);
     }
