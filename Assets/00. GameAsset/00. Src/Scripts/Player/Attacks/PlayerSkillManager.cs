@@ -38,6 +38,7 @@ public class PlayerSkillManager : MonoBehaviour
         {
             EquipSkill(skillData.NewSkill(transform)); // 스킬 생성 및 장착
             skillData.LevelUpSkill(); // 레벨업
+            skillData.inGameSkillObject.Init(GetComponent<PlayerStat>());
         }
     }
 

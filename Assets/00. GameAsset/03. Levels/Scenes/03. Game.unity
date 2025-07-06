@@ -4247,7 +4247,7 @@ MonoBehaviour:
   - 950
   - 1000
   maxLevel: 20
-  maxHP: 100
+  maxHP: 250
   currentHP: 0
   movementSpeed: 5
   attackPower: 3
