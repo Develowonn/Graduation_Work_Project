@@ -2477,6 +2477,12 @@ MonoBehaviour:
     monsterObject: {fileID: 100186, guid: aa92e1c586cafa347a209d0192c6d94c, type: 3}
   - monsterName: Golem
     monsterObject: {fileID: 133524, guid: ef9747274640e2b4689be1ed8d812999, type: 3}
+  - monsterName: Crocodile
+    monsterObject: {fileID: 2475123222371989480, guid: 336b5cc48756743479be0478e25407c1, type: 3}
+  - monsterName: Fire
+    monsterObject: {fileID: 4499363579148558193, guid: 4e08dc74f2c7e8345b0cc6c3dbe1c434, type: 3}
+  - monsterName: Devil
+    monsterObject: {fileID: 8999191759377261834, guid: 3fb29460bd264f8418c7b690a4dbe35a, type: 3}
   timerSliderBar: {fileID: 1138035777}
   currentGameTimeText: {fileID: 2131612364}
   gameTimeInputfield: {fileID: 1878651780}
@@ -3887,67 +3893,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009606334}
   m_CullTransparentMesh: 1
---- !u!1 &1017989626
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1017989628}
-  - component: {fileID: 1017989627}
-  m_Layer: 0
-  m_Name: Monster Pool Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1017989627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1017989626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f18a2f533b931e44b8d21201a6a025c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolList:
-  - poolCount: 25
-    poolName: Mushroom
-    poolObject: {fileID: 130824, guid: b06f66b8a531fbd4eaf051d99b0d428b, type: 3}
-    parentObject: {fileID: 0}
-  - poolCount: 25
-    poolName: Radish
-    poolObject: {fileID: 103534, guid: 8637789483fe8ff4e97e2ab447b76550, type: 3}
-    parentObject: {fileID: 0}
-  - poolCount: 25
-    poolName: Golem
-    poolObject: {fileID: 133524, guid: ef9747274640e2b4689be1ed8d812999, type: 3}
-    parentObject: {fileID: 0}
-  - poolCount: 25
-    poolName: Cat
-    poolObject: {fileID: 100186, guid: aa92e1c586cafa347a209d0192c6d94c, type: 3}
-    parentObject: {fileID: 0}
---- !u!4 &1017989628
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1017989626}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1068762693
 GameObject:
   m_ObjectHideFlags: 0
@@ -5376,6 +5321,15 @@ MonoBehaviour:
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
     - m_Text: "\uC77C\uBC18 : \uACE8\uB818"
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: "\uBCF4\uC2A4 : \uC545\uC5B4 "
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: "\uBCF4\uC2A4 : \uBD88\uACE8\uB818"
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: "\uBCF4\uC2A4 : \uC545\uB9C8"
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_OnValueChanged:
@@ -7101,7 +7055,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 644229434}
-  - {fileID: 1017989628}
   - {fileID: 1604409611}
   - {fileID: 1735983781}
   - {fileID: 1483395061}

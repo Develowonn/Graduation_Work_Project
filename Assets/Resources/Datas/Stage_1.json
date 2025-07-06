@@ -22904,6 +22904,42 @@
                 "y": 0.0,
                 "z": 19.099090576171876
             }
+        },
+        {
+            "monsterName": "Mushroom",
+            "spawnTime": 0,
+            "spawnPosition": {
+                "x": -68.400390625,
+                "y": 0.0,
+                "z": 39.773284912109378
+            }
+        },
+        {
+            "monsterName": "Crocodile",
+            "spawnTime": 60,
+            "spawnPosition": {
+                "x": -7.0218658447265629,
+                "y": 0.0,
+                "z": -3.7449951171875
+            }
+        },
+        {
+            "monsterName": "Fire",
+            "spawnTime": 160,
+            "spawnPosition": {
+                "x": -7.25592041015625,
+                "y": 0.0,
+                "z": -3.3548736572265627
+            }
+        },
+        {
+            "monsterName": "Devil",
+            "spawnTime": 300,
+            "spawnPosition": {
+                "x": -6.631744384765625,
+                "y": 0.0,
+                "z": -3.1208343505859377
+            }
         }
     ]
 }
