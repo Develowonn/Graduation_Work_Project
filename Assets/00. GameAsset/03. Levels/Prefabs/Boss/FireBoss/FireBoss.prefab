@@ -233,11 +233,11 @@ MonoBehaviour:
   flameCount: 20
   distanceBetweenFlames: 0.5
   trailFlameLifetime: 5
-  flameTrailPatternDamage: 4
+  flameTrailPatternDamage: 2
   dashSpeed: 5
   dashDuration: 1.5
   dashFlameLifetime: 2
-  explosionDashPatternDamage: 7
+  explosionDashPatternDamage: 1
   ringCount: 5
   ringInterval: 1
   baseExplosionsPerRing: 5
