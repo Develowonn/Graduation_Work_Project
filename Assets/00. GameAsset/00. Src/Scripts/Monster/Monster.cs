@@ -11,7 +11,7 @@ public class Monster : MonoBehaviour
     protected float currentHp;                                  // 현재 체력
     protected string monsterName;                               // 몬스터 이름
     [SerializeField] protected float dropExp = 10f;             // 처치 시 경험치 드랍량
-    [SerializeField] protected float attackPower;               // 공격력
+    [SerializeField] protected float collisionDamage;           // 부딪혔으 때 데미지
     protected bool isMoveStop = false;                          // 움직임 정지
 
     protected Transform target;
@@ -58,7 +58,7 @@ public class Monster : MonoBehaviour
 
     public float GetAttackPower()
     {
-        return attackPower;
+        return collisionDamage;
     }
 
     public void TakeDamage(float damage)

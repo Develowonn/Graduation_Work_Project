@@ -197,18 +197,18 @@ MonoBehaviour:
   moveSpeed: 1.5
   maxHp: 1
   dropExp: 10
-  attackPower: 0
+  collisionDamage: 0
   nextPatternTime: 2
   flameName: FlameLine
   flameSpawnDelay: 0.1
   flameCount: 20
   distanceBetweenFlames: 0.5
-  trailFlameLifetime: 3
-  flameTrailPatternDamage: 0
+  trailFlameLifetime: 5
+  flameTrailPatternDamage: 6
   dashSpeed: 5
   dashDuration: 1.5
-  dashFlameLifetime: 7
-  explosionDashPatternDamage: 0
+  dashFlameLifetime: 2
+  explosionDashPatternDamage: 10
   ringCount: 5
   ringInterval: 1
   baseExplosionsPerRing: 5
@@ -216,7 +216,7 @@ MonoBehaviour:
   explosionEffectName: FlameExplosion
   fireworkEffectObject: {fileID: 2421771731666745838}
   explosionDelay: 0.3
-  blazingNovaPatternDamage: 0
+  blazingNovaPatternDamage: 12
 --- !u!1001 &3695323085258804529
 PrefabInstance:
   m_ObjectHideFlags: 0

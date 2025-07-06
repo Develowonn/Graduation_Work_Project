@@ -40,6 +40,12 @@ public class FlameLineEffect : MonoBehaviour
         }
     }
 
+    public void Init(float damage, float disableTime)
+    {
+        this.damage = damage;
+        this.disableTime = disableTime;
+    }
+
     IEnumerator WaitDisable()
     {
         yield return null;

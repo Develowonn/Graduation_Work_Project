@@ -606,21 +606,21 @@ MonoBehaviour:
   attackPower: 0
   nextPatternTime: 2
   effectName: AxeSlash
-  slashCount: 5
+  slashCount: 2
   slashDuration: 3
-  slashDamage: 10
+  slashDamage: 15
   slashAttackDelay: 0.3
-  slashSpeed: 5
+  slashSpeed: 10
   mainEffectName: MainSpike
   subEffectName: SubSpike
   subSpikeDelayTime: 0.2
-  mainSpikeDamage: 10
+  mainSpikeDamage: 25
   subSpikeDamage: 5
   subEffectRange: 4
   subEffectCount: 7
   delayAfterMain: 2.5
   cleaveEffectName: CleaveEffect
-  cleaveDamage: 10
+  cleaveDamage: 20
   cleaveAnimationDelayTime: 2.5
 --- !u!1 &3208582594611972351
 GameObject:

@@ -14887,7 +14887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionDelayTime: 0
-  damage: 10
+  damage: 20
   range: 2
   playerLayer:
     serializedVersion: 2

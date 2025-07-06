@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitBoxSize: {x: 3, y: 0.5, z: 0.5}
-  damage: 10
+  damage: 6
   targetMask:
     serializedVersion: 2
     m_Bits: 8

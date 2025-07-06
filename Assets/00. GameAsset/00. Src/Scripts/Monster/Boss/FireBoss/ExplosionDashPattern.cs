@@ -32,8 +32,8 @@ public class ExplosionDashPattern : IBossPattern
             rb.MovePosition(rb.position + dashMove);
 
             timer += Time.fixedDeltaTime;
-            ObjectPool.instance.SpawnFromPool(flameName, boss.transform.position, boss.transform.rotation).GetComponent<FlameLineEffect>().disableTime = flameDuration;
-
+            FlameLineEffect flameLine = ObjectPool.instance.SpawnFromPool(flameName, boss.transform.position, boss.transform.rotation).GetComponent<FlameLineEffect>();
+            flameLine.Init(damage, flameDuration);
             yield return new WaitForFixedUpdate();
         }
 

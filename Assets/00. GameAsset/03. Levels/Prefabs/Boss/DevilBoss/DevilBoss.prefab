@@ -228,7 +228,7 @@ MonoBehaviour:
   moveSpeed: 1.5
   maxHp: 1
   dropExp: 10
-  attackPower: 0
+  collisionDamage: 10
   nextPatternTime: 2
   chargingEffect: ChargingEffect
   skullEffect: SkullEffect

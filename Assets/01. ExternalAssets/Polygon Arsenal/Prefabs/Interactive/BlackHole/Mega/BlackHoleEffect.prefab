@@ -51,12 +51,12 @@ MonoBehaviour:
   returnPoolTime: 1
   effectTransform: {fileID: 808283781509549284}
   suctionRadius: 5
-  suctionForce: 100
+  suctionForce: 80
   playerMask:
     serializedVersion: 2
     m_Bits: 8
   damageRadius: 5
-  damage: 10
+  damage: 15
   damageInterval: 1
 --- !u!1001 &5256636542998968594
 PrefabInstance:
