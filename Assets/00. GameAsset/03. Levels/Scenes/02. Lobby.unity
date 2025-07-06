@@ -3963,7 +3963,8 @@ MonoBehaviour:
   sfxSource: {fileID: 517036352}
   audioMixer: {fileID: 0}
   bgmClips:
-  - {fileID: 8300000, guid: 13a450823d4ad9f48ae611b8ddcd8fca, type: 3}
+  - {fileID: 8300000, guid: 25eacf3fdfb79e74d949d428102d3399, type: 3}
+  - {fileID: 8300000, guid: 3ce3e4906709f6d4a96555c602b90a2f, type: 3}
   sfxClips: []
 --- !u!4 &517036351
 Transform:
@@ -4843,7 +4844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d50d43e6de8f2d449a38e8306102551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicName: "\uBA54\uC778\uD654\uBA74 \uBC30\uACBD\uC74C\uC545"
+  musicName: "\uB85C\uBE44\uC74C\uC545"
 --- !u!4 &604425055
 Transform:
   m_ObjectHideFlags: 0
