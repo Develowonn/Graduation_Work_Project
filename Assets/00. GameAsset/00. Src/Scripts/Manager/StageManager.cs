@@ -123,10 +123,12 @@ public class StageManager : MonoBehaviour
     {
         currentGameState = InGameState.end;
         resultTime = time;
-        resultUI.SetActive(true);
         int minutes = (int)resultTime / 60;
         int seconds = (int)resultTime % 60;
-        resultTimeText.text = $"LifeTime : {minutes:00}:{seconds:00}";
+        string timeString = $"{minutes:00}:{seconds:00}";
+
+        int caughtMosnterCount = InGameManager.Instance.GetCaughtMonsterCount();
+	    InGameManager.Instance.GetDefeatPanel().SetActive(999, caughtMosnterCount, timeString);
     }
 
     public string GetBossMonster()

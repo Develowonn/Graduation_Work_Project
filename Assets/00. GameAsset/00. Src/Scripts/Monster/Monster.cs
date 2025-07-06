@@ -65,8 +65,11 @@ public class Monster : MonoBehaviour
     {
         currentHp -= damage;
         if (currentHp <= 0)
-            Die();
-    }
+        {
+            InGameManager.Instance.IncreaseCaughtMonsterCount();
+			Die();
+		}
+	}
 
     private void Die()
     {

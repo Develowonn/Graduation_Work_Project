@@ -49,7 +49,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void SetMovable(bool value)
+	public void TakeDamagePercent(float damagePercent)
+	{
+		playerStat.ReduceHPByPercent(damagePercent);
+
+		if (playerStat.GetCurrentHP() <= 0.0f)
+		{
+			StageManager.instance.EndGame(TimeManager.instance.GetCurrentTime());
+		}
+	}
+
+	public void SetMovable(bool value)
     {
         switch (value) 
         {

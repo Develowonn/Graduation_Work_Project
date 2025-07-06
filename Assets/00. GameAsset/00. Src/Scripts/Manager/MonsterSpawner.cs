@@ -45,9 +45,12 @@ public class MonsterSpawner : MonoBehaviour
 			{
 				if(elapsedTime == monsterSpawnData.spawnTime)
 				{
-					Vector3 spawnPos = player.transform.position + monsterSpawnData.spawnPosition;
-					Monster monster = ObjectPool.instance.SpawnFromPool(monsterSpawnData.monsterName, spawnPos).GetComponent<Monster>();
-					monster.InitMonster(StageManager.instance.GetPlayerObject().transform, monsterSpawnData.monsterName);
+					if(player != null)
+					{
+						Vector3 spawnPos = player.transform.position + monsterSpawnData.spawnPosition;
+						Monster monster = ObjectPool.instance.SpawnFromPool(monsterSpawnData.monsterName, spawnPos).GetComponent<Monster>();
+						monster.InitMonster(StageManager.instance.GetPlayerObject().transform, monsterSpawnData.monsterName);
+					}
 				}
 			}
 

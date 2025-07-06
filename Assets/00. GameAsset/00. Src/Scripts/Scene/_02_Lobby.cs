@@ -99,8 +99,6 @@ public class _02_Lobby : MonoBehaviour
 
 	private IEnumerator OnClickDungeonStartButtonCoroutine()
 	{
-		float startTime = Time.time;
-
 		AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(dungeonName);
 		asyncLoad.allowSceneActivation = false;
 

@@ -96,7 +96,7 @@ public class PlayerStat : MonoBehaviour
         float damage = currentHP * Mathf.Clamp01(percent); // 0.0~1.0 안전 보정
         currentHP    = Mathf.Clamp(currentHP - damage, 0, maxHP);
         hpBar.fillAmount = currentHP / maxHP;
-    }
+	}
 
     public void SetMovementSpeed(float value)
     {

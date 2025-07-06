@@ -7,13 +7,13 @@ public class FireExplosion : MonoBehaviour
 
     private void AttackToPlayer(Collider other)
     {
-        // 플레이어 체력 퍼센트에 반영해 감소
-        PlayerStat playerStat = other.GetComponent<PlayerStat>();
+		// 플레이어 체력 퍼센트에 반영해 감소
+		PlayerController playerController = other.GetComponent<PlayerController>();
 
-        if (playerStat != null)
+        if (playerController != null)
         {
-            playerStat.ReduceHPByPercent
-                (playerHealthReductionRate);
+			playerController.TakeDamagePercent
+				(playerHealthReductionRate);
         }
     }
 
