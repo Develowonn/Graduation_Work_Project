@@ -104,7 +104,15 @@ public class PlayerStat : MonoBehaviour
         currentHP = Mathf.Clamp(currentHP + value, 0, maxHP);
     }
 
-    public void ReduceHP(float value)
+	public void IncreaseHPByPercent(float percent)
+	{
+		float increaseAmount = maxHP * Mathf.Clamp01(percent);
+		currentHP = Mathf.Clamp(currentHP + increaseAmount, 0, maxHP);
+
+		hpBar.fillAmount = currentHP / maxHP;
+	}
+
+	public void ReduceHP(float value)
     {
         if (isInvincibility) return;
 
