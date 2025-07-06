@@ -4588,12 +4588,12 @@ MonoBehaviour:
   - 900
   - 950
   - 1000
-  maxLevel: 20
+  maxLevel: 50
   maxHP: 250
   currentHP: 0
-  movementSpeed: 5
+  movementSpeed: 5.3
   attackPower: 3
-  maxAttackPower: 30
+  maxAttackPower: 35
   damageReduction: 0
   expBar: {fileID: 886035690}
   hpBar: {fileID: 100763568}

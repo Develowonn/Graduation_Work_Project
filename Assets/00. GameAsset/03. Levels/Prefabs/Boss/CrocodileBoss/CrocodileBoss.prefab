@@ -492,6 +492,7 @@ GameObject:
   - component: {fileID: 7995922928914493494}
   - component: {fileID: 4233074100334360450}
   - component: {fileID: 4447771011044058986}
+  - component: {fileID: 3176682226279651657}
   m_Layer: 6
   m_Name: CrocodileBoss
   m_TagString: Monster
@@ -623,6 +624,69 @@ MonoBehaviour:
   cleaveEffectName: CleaveEffect
   cleaveDamage: 13
   cleaveAnimationDelayTime: 2.5
+--- !u!114 &3176682226279651657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475123222371989480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe91dc294731a9428c0941ea7579110, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  complexMaskingMode: 0
+  drawingMode: 1
+  outlineLayer: 0
+  outlineTargets:
+  - CutoutMask: 8
+    renderer: {fileID: 8611201993524536296}
+    SubmeshIndex: 0
+    BoundsMode: 0
+    Bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    cutoutTextureIndex: 0
+  - CutoutMask: 8
+    renderer: {fileID: 8721104397271557851}
+    SubmeshIndex: 0
+    BoundsMode: 0
+    Bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    cutoutTextureIndex: 0
+  renderStyle: 1
+  outlineParameters:
+    enabled: 1
+    color: {r: 1, g: 0.034202073, b: 0.015686274, a: 1}
+    dilateShift: 1
+    blurShift: 1
+    fillPass:
+      shader: {fileID: 0}
+      serializedProperties: []
+  backParameters:
+    enabled: 1
+    color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    dilateShift: 1
+    blurShift: 1
+    fillPass:
+      shader: {fileID: 0}
+      serializedProperties: []
+  frontParameters:
+    enabled: 1
+    color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    dilateShift: 1
+    blurShift: 1
+    fillPass:
+      shader: {fileID: 0}
+      serializedProperties: []
 --- !u!1 &3208582594611972351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,6 +1211,7 @@ GameObject:
   - component: {fileID: 7587644954661887412}
   - component: {fileID: 6837415826671735313}
   - component: {fileID: 8721104397271557851}
+  - component: {fileID: -8142982583805851069}
   m_Layer: 0
   m_Name: ax
   m_TagString: Untagged
@@ -1222,6 +1287,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-8142982583805851069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7063731423908742926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034bc47afcbf5e141a58d5c20b7808e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7699398788483747227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,6 +1309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1427894410255424611}
   - component: {fileID: 8611201993524536296}
+  - component: {fileID: -1770485785782208405}
   m_Layer: 0
   m_Name: Cylinder007
   m_TagString: Untagged
@@ -1338,6 +1416,18 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0077922344, y: -0.33276248, z: -0.18285704}
     m_Extent: {x: 2.6172867, y: 1.6994765, z: 1.6132088}
   m_DirtyAABB: 0
+--- !u!114 &-1770485785782208405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7699398788483747227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034bc47afcbf5e141a58d5c20b7808e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7874311559889037297
 GameObject:
   m_ObjectHideFlags: 0
