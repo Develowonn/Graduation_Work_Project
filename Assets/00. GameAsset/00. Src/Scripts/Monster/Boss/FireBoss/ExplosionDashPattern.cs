@@ -20,7 +20,7 @@ public class ExplosionDashPattern : IBossPattern
 
     public IEnumerator Execute(BossMonster boss)
     {
-        Debug.Log("불돌진 공격 실행");
+        yield return null;
 
         float timer = 0f;
         Rigidbody rb = boss.GetComponent<Rigidbody>();

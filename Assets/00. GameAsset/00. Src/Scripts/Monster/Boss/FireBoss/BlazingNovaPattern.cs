@@ -33,6 +33,8 @@ public class BlazingNovaPattern : IBossPattern
 
     public IEnumerator Execute(BossMonster boss)
     {
+        yield return null;
+
         animator.SetTrigger(hashIsExplosion);
         fireworkEffectObject.SetActive(true);
 

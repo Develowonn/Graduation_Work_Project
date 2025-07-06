@@ -28,6 +28,7 @@ public class FlameTrailPattern : IBossPattern
 
     public IEnumerator Execute(BossMonster boss)
     {
+        yield return null;
         animator.SetTrigger(hashIsMagic);
 
         Vector3 startPosition = boss.transform.position;                    // 시작 지점
