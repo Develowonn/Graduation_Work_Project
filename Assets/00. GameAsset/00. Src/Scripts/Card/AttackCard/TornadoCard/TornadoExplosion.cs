@@ -13,7 +13,18 @@ public class TornadoExplosion : MonoBehaviour
     [SerializeField]
     private float explosionDamageDelay;
 
-    private async UniTaskVoid Explode(Monster monster)
+	private async UniTaskVoid Explode(BossMonster monster)
+	{
+		await UniTask.Delay(TimeSpan.FromSeconds(explosionDamageDelay));
+
+		if (monster != null)
+		{
+			monster.TakeDamage(monster.GetCurrentHp() / 2);
+		}
+	}
+
+
+	private async UniTaskVoid Explode(Monster monster)
     {
         await UniTask.Delay(TimeSpan.FromSeconds(explosionDamageDelay));
 
@@ -25,7 +36,17 @@ public class TornadoExplosion : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Monster monster = other.gameObject.GetComponent<Monster>();
-        Explode(monster).Forget();
-    }
+        Monster     monster		= other.gameObject.GetComponent<Monster>();
+		BossMonster bossMonster = other.GetComponent<BossMonster>();
+
+		if (bossMonster != null)
+		{
+			Explode(bossMonster).Forget();
+			return;
+		}
+		else if(monster != null)
+		{
+			Explode(monster).Forget();
+		}
+	}
 }
