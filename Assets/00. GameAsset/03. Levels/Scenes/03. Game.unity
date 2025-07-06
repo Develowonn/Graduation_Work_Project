@@ -408,8 +408,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 816597816}
   followSpeed: 10
-  offset: {x: 0, y: 8.5, z: -3.5}
   isFollowing: 1
+  cameraOffsetData:
+  - positionOffset: {x: 0, y: 8, z: -3.5}
+    rotationOffset: {x: 63, y: 0, z: 0}
+  - positionOffset: {x: 0, y: 3, z: -5.4}
+    rotationOffset: {x: 23.45, y: 0, z: 0}
 --- !u!114 &33259127
 MonoBehaviour:
   m_ObjectHideFlags: 0

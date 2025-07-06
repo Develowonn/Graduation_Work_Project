@@ -1,4 +1,9 @@
+// # System
+using System.Collections;
+
+// # Unity
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class _03_Game : MonoBehaviour
 {
@@ -31,6 +36,11 @@ public class _03_Game : MonoBehaviour
         {
 			CheckAnimateState();
         }
+
+		if(Input.GetKeyDown(KeyCode.Escape))
+		{
+			StartCoroutine(LoadSceneCoroutine("02. Lobby"));
+		}
     }
 
     private void TriggerMyDeckIntro()
@@ -56,6 +66,21 @@ public class _03_Game : MonoBehaviour
             }
         }
     }
+
+	public IEnumerator LoadSceneCoroutine(string sceneName)
+	{
+		AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+		asyncLoad.allowSceneActivation = false;
+
+		while (!asyncLoad.isDone)
+		{
+			if (asyncLoad.progress >= 0.9f)
+			{
+				asyncLoad.allowSceneActivation = true;
+			}
+			yield return null;
+		}
+	}
 
 	public bool IsIntro() { return isIntro; }
 }
