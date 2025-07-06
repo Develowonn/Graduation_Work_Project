@@ -1915,7 +1915,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d3a2946fc97d46048b4999f5a996919f, type: 2}
   - {fileID: 11400000, guid: 38d4db6027d27734bb2c6c24df04f011, type: 2}
   - {fileID: 11400000, guid: 4352079014e53c445aa8a46ca0bb9d37, type: 2}
-  bossHpbar: {fileID: 0}
+  bossHpbar: {fileID: 180581273}
 --- !u!1 &282927374
 GameObject:
   m_ObjectHideFlags: 0
