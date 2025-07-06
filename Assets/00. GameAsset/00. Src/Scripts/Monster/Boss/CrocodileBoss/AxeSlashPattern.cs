@@ -36,7 +36,7 @@ public class AxeSlashPattern : IBossPattern
         animator.SetTrigger(hashIsSlash);
         for (int i = 0; i < count; i++)
         {
-
+            SoundManager.Instance.PlaySFX("½½·¡½¬");
             yield return new WaitForSeconds(0.2f);
 
             Vector3 direction = (target.position - boss.transform.position).normalized;
