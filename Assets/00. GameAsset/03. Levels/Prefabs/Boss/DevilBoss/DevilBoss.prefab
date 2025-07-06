@@ -253,8 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea0cb850920384458cef4d370d48d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2.5
-  maxHp: 500
+  moveSpeed: 2
+  maxHp: 650
   dropExp: 10
   collisionDamage: 10
   hitEffectName: HitEffect
