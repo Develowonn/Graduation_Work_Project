@@ -607,6 +607,7 @@ MonoBehaviour:
   collisionDamage: 10
   hitEffectName: HitEffect
   nextPatternTime: 2
+  bossData: {fileID: 11400000, guid: 8dd76d0af9541cd47b6726d2d1b07c08, type: 2}
   effectName: AxeSlash
   slashCount: 2
   slashDuration: 3

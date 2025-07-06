@@ -9,6 +9,15 @@ public class BossMonster : Monster
     private int currentPatternIndex = 0;                                                            // 패턴 인덱스 ( 번갈아 사용하는 용도 )
     private bool isRandom = false;                                                                  // 패턴 랜덤 or 번갈아 사용 선택
     [SerializeField] protected float nextPatternTime;
+    [SerializeField] private BossData bossData;
+    private bool isFirstSpawn = true;
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        if (!isFirstSpawn) BossCodexManager.Instance.DiscoverBoss(bossData.bossID);
+        else isFirstSpawn = false;
+    }
 
     protected virtual void Start()
     {

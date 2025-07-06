@@ -23,7 +23,7 @@ public class Monster : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         currentHp = maxHp;
     }

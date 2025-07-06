@@ -259,6 +259,7 @@ MonoBehaviour:
   collisionDamage: 10
   hitEffectName: HitEffect
   nextPatternTime: 2
+  bossData: {fileID: 11400000, guid: ad1816e065b8e994d81ab56b457416ee, type: 2}
   chargingEffect: ChargingEffect
   skullEffect: SkullEffect
   skullExplosionSkillPos: {fileID: 178756272974764412}
