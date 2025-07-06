@@ -197,7 +197,7 @@ MonoBehaviour:
   moveSpeed: 1.5
   maxHp: 350
   dropExp: 10
-  collisionDamage: 0
+  collisionDamage: 10
   nextPatternTime: 2
   flameName: FlameLine
   flameSpawnDelay: 0.1
