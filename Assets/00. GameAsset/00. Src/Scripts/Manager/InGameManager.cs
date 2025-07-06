@@ -5,47 +5,53 @@ using DG.Tweening;
 
 public class InGameManager : MonoBehaviour
 {
-	public static InGameManager Instance { get; private set; }
+    public static InGameManager Instance { get; private set; }
 
-	[SerializeField]
-	private VictoryPanel	victoryPanel;
-	[SerializeField]
-	private DefeatPanel		defeatPanel;
+    [SerializeField]
+    private VictoryPanel victoryPanel;
+    [SerializeField]
+    private DefeatPanel defeatPanel;
 
-	[SerializeField]
-	private Image		    bossLogoImage;
+    [SerializeField]
+    private Image[] bossLogoImage;
 
-	[SerializeField]
-	private GameObject		playerObject;
+    [SerializeField]
+    private GameObject playerObject;
 
-	private int				caughtMonsterCount;
+    private int caughtMonsterCount;
 
-	private void Awake()
-	{
-		if(Instance == null)
-		{
-			Instance = this;
-		} 
-		else Destroy(gameObject);
-	}
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else Destroy(gameObject);
+    }
 
-	public GameObject   GetPlayerObject()		{ return playerObject; }
-	public int		    GetCaughtMonsterCount() {  return caughtMonsterCount; }
-	public VictoryPanel GetVictoryPanel()		{  return victoryPanel; }
-	public DefeatPanel  GetDefeatPanel()		{  return defeatPanel; }
+    public GameObject GetPlayerObject() { return playerObject; }
+    public int GetCaughtMonsterCount() { return caughtMonsterCount; }
+    public VictoryPanel GetVictoryPanel() { return victoryPanel; }
+    public DefeatPanel GetDefeatPanel() { return defeatPanel; }
 
-	public void IncreaseCaughtMonsterCount() { caughtMonsterCount++; }
+    public void IncreaseCaughtMonsterCount() { caughtMonsterCount++; }
 
-	public void SetBossLogoActivity(bool activity)
-	{
-		switch (activity) 
-		{
-			case true:
-				bossLogoImage.DOFade(1.0f, 1.0f);
-				break;
-			case false:
-				bossLogoImage.DOFade(0.0f, 1.0f);
-				break;
-		}
-	}
+    public void SetBossLogoActivity(bool activity)
+    {
+        switch (activity)
+        {
+            case true:
+                foreach (var image in bossLogoImage)
+                {
+                    image.DOFade(1.0f, 1.0f);
+                }
+                break;
+            case false:
+                foreach (var image in bossLogoImage)
+                {
+                    image.DOFade(0.0f, 1.0f);
+                }
+                break;
+        }
+    }
 }
